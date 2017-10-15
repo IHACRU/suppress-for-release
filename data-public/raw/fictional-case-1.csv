@@ -1,0 +1,17 @@
+disease,year,label_ha,label_hsda,BC_F,BC_M,BC_T,HA_F,HA_M,HA_T,HSDA_F,HSDA_M,HSDA_T
+Flower Deafness,2000,Interior,East Kootenay,45,56,101,7,14,21,2,5,7
+Flower Deafness,2000,Interior,Kootenay Boundary,45,56,101,7,14,21,1,4,5
+Flower Deafness,2000,Interior,Okanagan,45,56,101,7,14,21,2,2,4
+Flower Deafness,2000,Interior,Thompson Cariboo Shuswap,45,56,101,7,14,21,2,3,5
+Flower Deafness,2000,Fraser,Fraser East,45,56,101,10,13,23,1,4,5
+Flower Deafness,2000,Fraser,Fraser North,45,56,101,10,13,23,2,6,8
+Flower Deafness,2000,Fraser,Fraser South,45,56,101,10,13,23,7,3,10
+Flower Deafness,2000,Vancouver Coastal,Richmond,45,56,101,15,12,27,6,9,15
+Flower Deafness,2000,Vancouver Coastal,Vancouver,45,56,101,15,12,27,3,1,4
+Flower Deafness,2000,Vancouver Coastal,North Shore/Coast Garibaldi,45,56,101,15,12,27,6,2,8
+Flower Deafness,2000,Vancouver Island,South Vancouver Island,45,56,101,6,8,14,2,3,5
+Flower Deafness,2000,Vancouver Island,Central Vancouver Island,45,56,101,6,8,14,1,4,5
+Flower Deafness,2000,Vancouver Island,North Vancouver Island,45,56,101,6,8,14,3,1,4
+Flower Deafness,2000,Northern,Northwest,45,56,101,7,9,16,4,0,4
+Flower Deafness,2000,Northern,Northern Interior,45,56,101,7,9,16,2,2,4
+Flower Deafness,2000,Northern,Northeast,45,56,101,7,9,16,1,7,8
