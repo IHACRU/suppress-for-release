@@ -1,91 +1,91 @@
-id_bc,id_ha,id_hsda,id_lha,label_lha,label_hsda,label_ha,label_bc
-0,996,997,998,Unknown LHA,Unknown HSDA,Unknown HA,BC
-0,1,11,1,Fernie,East Kootenay,Interior,BC
-0,1,11,2,Cranbrook,East Kootenay,Interior,BC
-0,1,11,3,Kimberley,East Kootenay,Interior,BC
-0,1,11,4,Windermere,East Kootenay,Interior,BC
-0,1,11,5,Creston,East Kootenay,Interior,BC
-0,1,12,6,Kootenay Lake,Kootenay Boundary,Interior,BC
-0,1,12,7,Nelson,Kootenay Boundary,Interior,BC
-0,1,12,9,Castlegar,Kootenay Boundary,Interior,BC
-0,1,12,10,Arrow Lakes,Kootenay Boundary,Interior,BC
-0,1,12,11,Trail,Kootenay Boundary,Interior,BC
-0,1,12,12,Grand Forks,Kootenay Boundary,Interior,BC
-0,1,12,13,Kettle Valley,Kootenay Boundary,Interior,BC
-0,1,13,14,Southern Okanagan,Okanagan,Interior,BC
-0,1,13,15,Penticton,Okanagan,Interior,BC
-0,1,13,16,Keremeos,Okanagan,Interior,BC
-0,1,13,17,Princeton,Okanagan,Interior,BC
-0,1,11,18,Golden,East Kootenay,Interior,BC
-0,1,14,19,Revelstoke,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,20,Salmon Arm,Thompson Cariboo Shuswap,Interior,BC
-0,1,13,21,Armstrong - Spallumcheen,Okanagan,Interior,BC
-0,1,13,22,Vernon,Okanagan,Interior,BC
-0,1,13,23,Central Okanagan,Okanagan,Interior,BC
-0,1,14,24,Kamloops,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,25,100 Mile House,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,26,North Thompson,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,27,Cariboo - Chilcotin,Thompson Cariboo Shuswap,Interior,BC
-0,5,52,28,Quesnel,Northern Interior,Northern,BC
-0,1,14,29,Lillooet,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,30,South Cariboo,Thompson Cariboo Shuswap,Interior,BC
-0,1,14,31,Merritt,Thompson Cariboo Shuswap,Interior,BC
-0,2,21,32,Hope,Fraser East,Fraser,BC
-0,2,21,33,Chilliwack,Fraser East,Fraser,BC
-0,2,21,34,Abbotsford,Fraser East,Fraser,BC
-0,2,23,35,Langley,Fraser South,Fraser,BC
-0,2,23,37,Delta,Fraser South,Fraser,BC
-0,3,31,38,Richmond,Richmond,Vancouver Coastal,BC
-0,2,22,40,New Westminster,Fraser North,Fraser,BC
-0,2,22,41,Burnaby,Fraser North,Fraser,BC
-0,2,22,42,Maple Ridge,Fraser North,Fraser,BC
-0,2,22,43,Coquitlam,Fraser North,Fraser,BC
-0,3,33,44,North Vancouver,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,3,33,45,West Vancouver-Bowen Island,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,3,33,46,Sunshine Coast,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,3,33,47,Powell River,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,3,33,48,Howe Sound,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,3,33,49,Bella Coola Valley,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,5,51,50,Queen Charlotte,Northwest,Northern,BC
-0,5,51,51,Snow Country,Northwest,Northern,BC
-0,5,51,52,Prince Rupert,Northwest,Northern,BC
-0,5,51,53,Upper Skeena,Northwest,Northern,BC
-0,5,51,54,Smithers,Northwest,Northern,BC
-0,5,52,55,Burns Lake,Northern Interior,Northern,BC
-0,5,52,56,Nechako,Northern Interior,Northern,BC
-0,5,52,57,Prince George,Northern Interior,Northern,BC
-0,5,53,59,Peace River South,Northeast,Northern,BC
-0,5,53,60,Peace River North,Northeast,Northern,BC
-0,4,41,61,Greater Victoria,South Vancouver Island,Vancouver Island,BC
-0,4,41,62,Sooke,South Vancouver Island,Vancouver Island,BC
-0,4,41,63,Saanich,South Vancouver Island,Vancouver Island,BC
-0,4,41,64,Gulf Islands,South Vancouver Island,Vancouver Island,BC
-0,4,42,65,Cowichan,Central Vancouver Island,Vancouver Island,BC
-0,4,42,66,Lake Cowichan,Central Vancouver Island,Vancouver Island,BC
-0,4,42,67,Ladysmith,Central Vancouver Island,Vancouver Island,BC
-0,4,42,68,Nanaimo,Central Vancouver Island,Vancouver Island,BC
-0,4,42,69,Qualicum,Central Vancouver Island,Vancouver Island,BC
-0,4,42,70,Alberni,Central Vancouver Island,Vancouver Island,BC
-0,4,43,71,Courtenay,North Vancouver Island,Vancouver Island,BC
-0,4,43,72,Campbell River,North Vancouver Island,Vancouver Island,BC
-0,2,21,75,Mission,Fraser East,Fraser,BC
-0,2,21,76,Agassiz - Harrison,Fraser East,Fraser,BC
-0,1,13,77,Summerland,Okanagan,Interior,BC
-0,1,13,78,Enderby,Okanagan,Interior,BC
-0,5,51,80,Kitimat,Northwest,Northern,BC
-0,5,53,81,Fort Nelson,Northeast,Northern,BC
-0,3,33,83,Central Coast,North Shore/Coast Garibaldi,Vancouver Coastal,BC
-0,4,43,84,Vancouver Island West,North Vancouver Island,Vancouver Island,BC
-0,4,43,85,Vancouver Island North,North Vancouver Island,Vancouver Island,BC
-0,5,51,87,Stikine,Northwest,Northern,BC
-0,5,51,88,Terrace,Northwest,Northern,BC
-0,5,51,92,Nisga'a,Northwest,Northern,BC
-0,5,51,94,Telegraph Creek,Northwest,Northern,BC
-0,3,32,161,Vancouver - City Centre,Vancouver,Vancouver Coastal,BC
-0,3,32,162,Vancouver - Downtown Eastside,Vancouver,Vancouver Coastal,BC
-0,3,32,163,Vancouver - North East,Vancouver,Vancouver Coastal,BC
-0,3,32,164,Vancouver - Westside,Vancouver,Vancouver Coastal,BC
-0,3,32,165,Vancouver - Midtown,Vancouver,Vancouver Coastal,BC
-0,3,32,166,Vancouver - South,Vancouver,Vancouver Coastal,BC
-0,2,23,201,Surrey,Fraser South,Fraser,BC
-0,2,23,202,South Surrey/White Rock,Fraser South,Fraser,BC
+id_prov,id_ha,id_hsda,id_lha,label_lha,label_hsda,label_ha,label_prov,color_ha,color_ha_label,color_hsda,color_hsda_label
+0,1,11,1,Fernie,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,11,2,Cranbrook,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,11,3,Kimberley,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,11,4,Windermere,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,11,5,Creston,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,11,18,Golden,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green
+0,1,12,6,Kootenay Lake,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,7,Nelson,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,9,Castlegar,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,10,Arrow Lakes,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,11,Trail,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,12,Grand Forks,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,12,13,Kettle Valley,Kootenay Boundary,Interior,BC,#4daf4a,green,#bae4b3,light green
+0,1,13,14,Southern Okanagan,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,15,Penticton,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,16,Keremeos,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,17,Princeton,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,21,Armstrong - Spallumcheen,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,22,Vernon,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,23,Central Okanagan,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,77,Summerland,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,13,78,Enderby,Okanagan,Interior,BC,#4daf4a,green,#74c476,medium green
+0,1,14,19,Revelstoke,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,20,Salmon Arm,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,24,Kamloops,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,25,100 Mile House,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,26,North Thompson,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,27,Cariboo - Chilcotin,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,29,Lillooet,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,30,South Cariboo,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,1,14,31,Merritt,Thompson Cariboo Shuswap,Interior,BC,#4daf4a,green,#238b45,dark green
+0,2,21,32,Hope,Fraser East,Fraser,BC,#e41a1c,red,#fcae91,light red
+0,2,21,33,Chilliwack,Fraser East,Fraser,BC,#e41a1c,red,#fcae91,light red
+0,2,21,34,Abbotsford,Fraser East,Fraser,BC,#e41a1c,red,#fcae91,light red
+0,2,21,75,Mission,Fraser East,Fraser,BC,#e41a1c,red,#fcae91,light red
+0,2,21,76,Agassiz - Harrison,Fraser East,Fraser,BC,#e41a1c,red,#fcae91,light red
+0,2,22,40,New Westminster,Fraser North,Fraser,BC,#e41a1c,red,#fb6a4a,medium red
+0,2,22,41,Burnaby,Fraser North,Fraser,BC,#e41a1c,red,#fb6a4a,medium red
+0,2,22,42,Maple Ridge,Fraser North,Fraser,BC,#e41a1c,red,#fb6a4a,medium red
+0,2,22,43,Coquitlam,Fraser North,Fraser,BC,#e41a1c,red,#fb6a4a,medium red
+0,2,23,35,Langley,Fraser South,Fraser,BC,#e41a1c,red,#cb181d,dark red
+0,2,23,37,Delta,Fraser South,Fraser,BC,#e41a1c,red,#cb181d,dark red
+0,2,23,201,Surrey,Fraser South,Fraser,BC,#e41a1c,red,#cb181d,dark red
+0,2,23,202,South Surrey/White Rock,Fraser South,Fraser,BC,#e41a1c,red,#cb181d,dark red
+0,3,31,38,Richmond,Richmond,Vancouver Coastal,BC,#377eb8,blue,#bdd7e7,light blue
+0,3,32,161,Vancouver - City Centre,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,32,162,Vancouver - Downtown Eastside,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,32,163,Vancouver - North East,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,32,164,Vancouver - Westside,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,32,165,Vancouver - Midtown,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,32,166,Vancouver - South,Vancouver,Vancouver Coastal,BC,#377eb8,blue,#6baed6,medium blue
+0,3,33,44,North Vancouver,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,45,West Vancouver-Bowen Island,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,46,Sunshine Coast,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,47,Powell River,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,48,Howe Sound,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,49,Bella Coola Valley,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,3,33,83,Central Coast,North Shore/Coast Garibaldi,Vancouver Coastal,BC,#377eb8,blue,#2171b5,dark blue
+0,4,41,61,Greater Victoria,South Vancouver Island,Vancouver Island,BC,#984ea3,purple,#cbc9e2,light purple
+0,4,41,62,Sooke,South Vancouver Island,Vancouver Island,BC,#984ea3,purple,#cbc9e2,light purple
+0,4,41,63,Saanich,South Vancouver Island,Vancouver Island,BC,#984ea3,purple,#cbc9e2,light purple
+0,4,41,64,Gulf Islands,South Vancouver Island,Vancouver Island,BC,#984ea3,purple,#cbc9e2,light purple
+0,4,42,65,Cowichan,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,42,66,Lake Cowichan,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,42,67,Ladysmith,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,42,68,Nanaimo,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,42,69,Qualicum,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,42,70,Alberni,Central Vancouver Island,Vancouver Island,BC,#984ea3,purple,#9e9ac8,medium purple
+0,4,43,71,Courtenay,North Vancouver Island,Vancouver Island,BC,#984ea3,purple,#6a51a3,dark purple
+0,4,43,72,Campbell River,North Vancouver Island,Vancouver Island,BC,#984ea3,purple,#6a51a3,dark purple
+0,4,43,84,Vancouver Island West,North Vancouver Island,Vancouver Island,BC,#984ea3,purple,#6a51a3,dark purple
+0,4,43,85,Vancouver Island North,North Vancouver Island,Vancouver Island,BC,#984ea3,purple,#6a51a3,dark purple
+0,5,51,50,Queen Charlotte,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,51,Snow Country,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,52,Prince Rupert,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,53,Upper Skeena,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,54,Smithers,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,80,Kitimat,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,87,Stikine,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,88,Terrace,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,92,Nisga'a,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,51,94,Telegraph Creek,Northwest,Northern,BC,#ff7f00,orange,#fdbe85,light orange
+0,5,52,28,Quesnel,Northern Interior,Northern,BC,#ff7f00,orange,#fd8d3c,medium orange
+0,5,52,55,Burns Lake,Northern Interior,Northern,BC,#ff7f00,orange,#fd8d3c,medium orange
+0,5,52,56,Nechako,Northern Interior,Northern,BC,#ff7f00,orange,#fd8d3c,medium orange
+0,5,52,57,Prince George,Northern Interior,Northern,BC,#ff7f00,orange,#fd8d3c,medium orange
+0,5,53,59,Peace River South,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange
+0,5,53,60,Peace River North,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange
+0,5,53,81,Fort Nelson,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange
+0,996,997,998,Unknown LHA,Unknown HSDA,Unknown HA,BC,,,,
