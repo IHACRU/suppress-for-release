@@ -30,6 +30,8 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 path_input   <- "./data-public/raw/fictional-case-1.csv"
 # path_cdr_2014   <- "./data-unshared/derived/dto_10000.rds"
 path_region_map <- "./data-public/raw/province_health_map.csv"
+
+baseSize = 10
 # ---- utility-functions ----------------------------------------------------- 
 # functions, the use of which is localized to this script
 
@@ -95,6 +97,89 @@ l <- subject
 d <- d_observed
 
 
+# function to prepare the smallest context for graphing
+prepare_for_tiling <- function(d){
+  # extract stable info
+  disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
+  year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
+  # remove stable info from the standard 
+  d1 <- d %>% dplyr::select(-disease, -year) %>% 
+    dplyr::mutate(label_pr = "BC") %>% 
+    dplyr::select(label_pr, dplyr::everything())
+  # split variables into counts and labels
+  (count_variables <- grep("_[MFT]$",names(d), value = T))
+  (label_variables <- setdiff(names(d1), count_variables))
+  d1 %>% print(n = nrow(.))
+  
+  # create data set for the left panel of the graph (labels of health boundries)
+  # d_label_values <- d1 %>%
+  #   dplyr::select_(.dots = label_variables)
+  # names(d_label_values) <- gsub("^label_", "value_", names(d_label_values))
+  # 
+  d_labels <- d1 %>%
+    dplyr::select_(.dots = label_variables) %>% 
+    dplyr::bind_cols(d_label_values) %>% 
+    tidyr::gather_("agg_level", "value", gsub("^label_", "value_",label_variables)) %>% 
+    dplyr::mutate(agg_level = sub("^value_","", agg_level)) 
+  # inspect
+  d_labels %>% print(n=nrow(.))
+  # graph the data
+  g <- d_labels %>%  
+    dplyr::mutate(dummy = "") %>% 
+    ggplot2::ggplot(
+      aes_string(
+        x     = "dummy"
+        ,y     = "label_hsda"
+        ,label = "value" 
+      )
+    )
+  g <- g + geom_tile()
+  g <- g + facet_grid(.~agg_level)
+  g <- g + geom_text(aes(label = value))
+  g_labels <- g
+  g_labels 
+  
+  
+  d_values <- d1 %>% 
+    tidyr::gather_("column_name","value",c( count_variables)) %>%
+    dplyr::mutate(
+      agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name),
+      sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
+    )
+  main_title = "Main title"
+  g <- d_values %>%  
+    ggplot2::ggplot(
+      aes_string(
+        x     = "sex"
+        ,y     = "label_hsda"
+        ,label = "value" 
+        
+      )
+    )
+  g <- g + geom_tile()
+  # g <- g + geom_text(size = baseSize-7, hjust=.4)
+  g <- g + geom_text(size = baseSize-7, hjust=.5)
+  g <- g + facet_grid(. ~ agg_level )
+  # g <- g + scale_y_discrete(limits=rev(cog_measures_sorted_domain))
+  # g <- g + scale_color_manual(values=domain_colors_text)
+  # g <- g + scale_fill_manual(values=domain_colors_fill)
+  # g <- g + annotate(geom="text", size=baseSize, hjust = 1.5, label="XXXX \n SSSSS",x=Inf, y=Inf)
+  # g <- g + theme1
+  g <- g + theme(
+    axis.text.x =  element_blank(),
+    panel.grid.major.x  =  element_blank(),
+    # panel.grid.major.y  =  element_blank(),
+    legend.position="left"
+  )
+  g <- g + guides(color=FALSE)
+  g <- g + labs(title=main_title, x=NULL, y="Cognitive measures", fill="Domains")
+  
+  g_values <- g
+  g_values 
+  
+  
+}  
+  
 
 
 # function to prepare the smallest context for graphing
@@ -103,12 +188,14 @@ prepare_for_tiling <- function(d){
   disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
   year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
   # remove stable info from the standard 
-  d1 <- d %>% dplyr::select(-disease, -year)
+  d1 <- d %>% dplyr::select(-disease, -year) %>% 
+    dplyr::mutate(label_pr = "BC") %>% 
+    dplyr::select(label_pr, dplyr::everything())
   # split variables into counts and labels
-  count_variables <- grep("_[MFT]$",names(d), value = T)
-  label_variables <- setdiff(names(d1), count_variables)
+  (count_variables <- grep("_[MFT]$",names(d), value = T))
+  (label_variables <- setdiff(names(d1), count_variables))
   
-  # record the row coordinate
+  # record the row coordinate / define authoritive sorting for  HSDA
   d_rows <- d1 %>% 
     dplyr::select_("label_hsda") %>% 
     dplyr::rename_("row_name" = "label_hsda") %>%
@@ -117,7 +204,7 @@ prepare_for_tiling <- function(d){
       row = as.integer(row)
     ) #%>% as.data.frame()
   
-  # record the column coordinate
+  # record the column coordinate / define authorit
   d_cols <- names(d1) %>% 
     tibble::as_tibble() %>% 
     dplyr::rename_("column_name" = "value") %>% 
@@ -126,26 +213,70 @@ prepare_for_tiling <- function(d){
       col = as.integer(col)
     ) #%>% as.data.frame()
   
+  
+  d2 <- d1 %>% 
+    tidyr::gather_("column_name","value",c( count_variables)) %>%
+    dplyr::mutate(
+      agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name),
+      sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
+    )
+  
+  d3 <- d1 %>% 
+    dplyr::distinct(label_ha, label_hsda, agg_level)
+  
+  
+  d3 %>% print(n = nrow(.))  
+  g1 <- d %>% 
+    dplyr::distinct(label_ha, label_hsda, agg_level)
+    ggplot2::ggplot(
+      aes_string(
+        x     = "sex"
+        ,y     = "label_hsda"
+        ,label = "value" 
+        
+      )
+    )
+  
+    
+  main_title = "Main title"
+  g <- d2 %>%  
+    ggplot2::ggplot(
+      aes_string(
+        x     = "sex"
+        ,y     = "label_hsda"
+        ,label = "value" 
+        
+      )
+    )
+  g <- g + geom_tile()
+  g <- g + facet_grid(.~agg_level)
+  g
+  
+  g
+  
+  
+  
   # transform for tile graph
   d2 <- d1 %>% 
-    tibble::rownames_to_column("row") %>% # record the row coordinate
+    # tibble::rownames_to_column("row") %>% # record the row coordinate
     # dplyr::select_(.dots = elongation_variables) %>%
-    tidyr::gather_("column_name","value",c(label_variables, count_variables)) %>% 
-    dplyr::left_join(d_cols, by = "column_name") %>% 
+    tidyr::gather_("column_name","value",c( count_variables)) %>% 
+    # dplyr::left_join(d_cols, by = "column_name") %>% # add column coordinate
     # dplyr::left_join(d_rows, by = "row_name") %>% 
-    dplyr::mutate( 
-      col = factor(
-        col, 
-        levels = as.data.frame(d_cols)[,"col"],
-        labels = as.data.frame(d_cols)[,"column_name"] 
-      ),
-      row = factor(
-        row, 
-        levels = as.data.frame(d_rows)[,"row"],
-        labels = as.data.frame(d_rows)[,"row_name"] 
-      )
-    ) %>%  
-    dplyr::select(row, col, column_name, value)
+    # dplyr::mutate( 
+    #   col = factor(
+    #     col, 
+    #     levels = as.data.frame(d_cols)[,"col"],
+    #     labels = as.data.frame(d_cols)[,"column_name"] 
+    #   )#,
+      # row = factor(
+      #   row,
+      #   levels = as.data.frame(d_rows)[,"row"],
+      #   labels = as.data.frame(d_rows)[,"row_name"]
+      # )
+    # ) %>%  
+    # dplyr::select(row, col, column_name, value)
+    dplyr::mutate(dummy = factor("dummy"))
   return(d2)
 } # usage:
 # d <- d_observed %>% prepare_for_tiling()
@@ -161,16 +292,33 @@ show_small_cells <- function(
   d_observed <- l$observed
   d <- d_observed %>% prepare_for_tiling() 
   
-  
-  g <- d %>%  ggplot2::ggplot(aes(x = col,y = row))+
-    geom_raster()+
-    # geom_tile(fill = NA)+
-    # geom_point(shape = NA)+
-    geom_text(aes(label=value), color = "white")
+  main_title = "Main title"
+  g <- d2 %>%  
+    ggplot2::ggplot(
+      aes_string(
+         x     = "dummy"
+        ,y     = "label_hsda"
+        ,label = "value" 
+        
+      )
+    )
+    g <- g + geom_tile()
+  # g <- g + geom_text(size = baseSize-7, hjust=.4)
+  g <- g + geom_text(size = baseSize-7, hjust=.5)
+  g <- g + facet_grid(. ~ column_name )
+  g <- g + scale_y_discrete(limits=rev(cog_measures_sorted_domain))
+  # g <- g + scale_color_manual(values=domain_colors_text)
+  # g <- g + scale_fill_manual(values=domain_colors_fill)
+  # g <- g + annotate(geom="text", size=baseSize, hjust = 1.5, label="XXXX \n SSSSS",x=Inf, y=Inf)
+  # g <- g + theme1
+  g <- g + theme(
+    axis.text.x =  element_blank(),
+    panel.grid.major.x  =  element_blank(),
+    # panel.grid.major.y  =  element_blank(),
+    legend.position="left"
+  )
+  g <- g + guides(color=FALSE)
+  g <- g + labs(title=main_title, x=NULL, y="Cognitive measures", fill="Domains")
+
   g
-  
-  d_observed %>% 
-    ggplot(aes(x))
-  
-  
 }
