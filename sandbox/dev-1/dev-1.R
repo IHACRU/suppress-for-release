@@ -50,6 +50,25 @@ bc_health_map %>%
 
 
 # ---- tweak-data -----------------------------------------------
+ds <- ds %>% 
+  dplyr::mutate(
+    label_pr = "BC"
+  ) %>% 
+  dplyr::select(disease, year, label_pr, dplyr::everything())
+names(ds) <- gsub("^BC_","PR_", names(ds))
+
+bc_health_map <- bc_health_map %>% 
+  dplyr::rename(
+    id_pr = id_prov
+  ) %>% 
+  dplyr::mutate(
+    label_pr = "BC"
+  ) %>% 
+  dplyr::select(id_pr, id_ha, id_hsda, id_lha,
+                label_pr, label_ha, label_hsda, label_lha,
+                dplyr::everything()) %>% 
+  dplyr::select(-label_prov)
+  
 
 # ---- utility-functions -------------------------------------------------------
 # function returning a look up table for HA level of aggregaton
@@ -75,18 +94,19 @@ lookup_meta <- function(
 # lkp_ha <- bc_health_map %>% lookup_meta("ha")
 
 # function to elongate a SAU
-elongate_sau <- function(
+elongate_values <- function( 
   d # a standard SAU: disease-year-labels-values
-  ,meta
+  # ,meta
+  ,regex = "_[MTF]$"
 ){
   d_wide <- d
   
   # obtain lookup tables from the meta-data object  
-  lkp_hsda <- meta %>% lookup_meta("hsda")
-  lkp_ha <- meta %>% lookup_meta("ha")
-  
+  # lkp_hsda <- meta %>% lookup_meta("hsda")
+  # lkp_ha <- meta %>% lookup_meta("ha")
+  # 
   # split variables into counts and labels
-  (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
+  (count_variables <- grep(regex, names(d_wide), value = T))
   (label_variables <- setdiff(names(d_wide), count_variables))
   
   d_long <- d_wide %>% 
@@ -94,21 +114,64 @@ elongate_sau <- function(
     dplyr::mutate(
       agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name)
       ,sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
-      ,agg_level = gsub("^BC$","PR",agg_level)
-      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
-      ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
-      ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
-      ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
-    )%>% 
+      # ,agg_level = gsub("^BC$","PR",agg_level)
+      # ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+      # ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
+      # ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
+      # ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
+    ) #%>%
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
-    dplyr::arrange(label_ha, label_hsda)
+    # dplyr::arrange(label_ha, label_hsda)
   
   return(d_long)
 }
 # usage
-ds_long <-  ds %>% elongate_sau(bc_health_map)
+ds_long_values <-  ds %>% elongate_values()
 
 
+# function to elongate
+elongate_labels <- function(
+  d # a standard SAU: disease-year-labels-values
+  # ,meta
+  ,varnames # names of the variables, which need to be elongated
+){
+  
+  d_wide <- d
+  # meta <- bc_health_map
+  # obtain lookup tables from the meta-data object  
+  # lkp_hsda <- meta %>% lookup_meta("hsda")
+  # lkp_ha   <- meta %>% lookup_meta("ha")
+  
+  # split variables into counts and labels
+  (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
+  (label_variables <- varnames)
+  
+  ######### LEFT PANEL
+  # create data set for the left panel of the graph (labels of health boundries)
+  d_label_values <- d_wide %>% 
+    dplyr::select_(.dots = label_variables)
+  names(d_label_values) <- gsub("^label_", "value_", names(d_label_values))
+  # the intent is to print the following grid of values as a graph:
+  d_label_values
+  # now we construct a long dataset from which the graph will be printed
+  d_long_labels <- d_wide %>%
+    dplyr::select_(.dots = label_variables) %>% 
+    dplyr::bind_cols(d_label_values) %>% 
+    tidyr::gather_("agg_level", "value", gsub("^label_", "value_",label_variables)) %>% 
+    dplyr::mutate(  
+      agg_level  = gsub("^value_","",agg_level)
+      ,agg_level  = toupper(agg_level)
+      ,agg_level  = factor(agg_level,  levels = c("PR","HA","HSDA")) 
+      # ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+      # ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
+      # ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
+      # ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
+    ) #%>% 
+    # dplyr::arrange(desc(label_ha), desc(label_hsda))
+    # dplyr::arrange(label_ha, label_hsda)
+}
+# usage
+# d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
 
 
 # ---- tweak-data -------------------------------------------------------------
@@ -191,80 +254,64 @@ prepare_for_tiling <- function(
   d     # a standard SAU: disease-year-labels-values
   ,meta # meta-data file contains BC health boundries heirarchy and other definitions
 ){
+  # d <- ds
+  # meta <- bc_health_map
+  #(1)######## Establish the reference definitions from the common meta data object
   # obtain lookup tables from the meta-data object  
   lkp_hsda <- meta %>% lookup_meta("hsda")
   lkp_ha <- meta %>% lookup_meta("ha")
-  
   # extract stable info
   disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
   year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
   # remove stable info from the standard input format
-  d_wide <- d %>% dplyr::select(-disease, -year) %>% 
-    dplyr::mutate(label_pr = "BC") %>% # add manually, for balance
-    dplyr::select(label_pr, dplyr::everything()) # sort
+  d_wide <- d %>% dplyr::select(-disease, -year) #%>% 
+    # dplyr::mutate(label_pr = "BC") %>% # add manually, for balance
+    # dplyr::select(label_pr, dplyr::everything()) # sort
   # the object `d_wide` is now the stem for sebsequent operations
-  
-  # split variables into counts and labels
+    # split variables into counts and labels
   (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
   (label_variables <- setdiff(names(d_wide), count_variables))
   # d_wide %>% print(n = nrow(.))
  
-  ######### LEFT PANEL
+  #(2)######## Create data for the LEFT PANEL
   # create data set for the left panel of the graph (labels of health boundries)
-  d_label_values <- d_wide %>%
-    dplyr::select_(.dots = label_variables)
-  names(d_label_values) <- gsub("^label_", "value_", names(d_label_values))
-  # the intent is to print the following grid of values as a graph:
-  d_label_values
-  # now we construct a long dataset from which the graph will be printed
-  d_long_labels <- d_wide %>%
-    dplyr::select_(.dots = label_variables) %>% 
-    dplyr::bind_cols(d_label_values) %>% 
-    tidyr::gather_("agg_level", "value", gsub("^label_", "value_",label_variables)) %>% 
-    dplyr::mutate(  
-       agg_level  = gsub("^value_","",agg_level)
-      ,agg_level  = toupper(agg_level)
-      ,agg_level  = factor(agg_level,  levels = c("PR","HA","HSDA")) 
-      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+  # d_long_labels <- d %>% elongate_labels(c("label_ha","label_hsda")) %>% 
+  d_long_labels <- d %>% elongate_labels(label_variables) %>% 
+    dplyr::mutate(   
+       label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
       ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
       ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
     ) %>% 
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
     dplyr::arrange(label_ha, label_hsda)
-  
-    
-  
-  # inspect if needed
+    # inspect if needed
   # d_long_labels %>% print(n=nrow(.))
 
-  ######### RIGHT PANEL
+  #(3)######## Create data for theRIGHT PANEL
   # the right panel will contain only numbers (FMT counts of variable selected for suppression)
-  d_long_values <- d_wide %>% 
-    tidyr::gather_("column_name","value",c( count_variables)) %>%
-    dplyr::mutate(
-       agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name)
-      ,sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
-      ,agg_level = gsub("^BC$","PR",agg_level)
-      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+  d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
+    dplyr::mutate(   
+      label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
       ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
       ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
-    )%>% 
+    ) %>% 
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
     dplyr::arrange(label_ha, label_hsda)
-  
-  # inspect if needed
+    # inspect if needed
   # d_long_values %>% print(n=nrow(.))
   
-   l <- list(  
-     "disease" = disease 
-    ,"year"    = year 
-    ,"observed"= d_wide
-    ,"labels"  = d_long_labels 
-    ,"values"  = d_long_values 
-   ) 
-   
+  #(4)######## Aseemble the output = list object
+   l <- list(
+     "disease"   = disease
+     ,"year"     = year
+     # ,"observed" = list(
+       ,"wide"     = d_wide
+       ,"labels_long" = d_long_labels 
+       ,"values_long" = d_long_values 
+      # )
+   )
    return(l)
 } # used in make_tile_graph()
 # usage:
@@ -274,15 +321,20 @@ prepare_for_tiling <- function(
 make_tile_graph <- function(
   d   # a dataset containing observed counts for the decision context
   ,meta # a meta data object containing grouping and coloring settings
+  ,...
 ){
   # d <- ds # turn on for testing, if needed
   # meta <- bc_health_map
   
+  # maybe later
+  # font_size_left  <- baseSize + (font_size - baseSize) 
+  # font_size_right <- font_size_left + right_size_adjustment
+    
   l <- d %>% prepare_for_tiling(meta)
   
   # graph labels - LEFT SIDE OF THE TABLET
   # graph the data
-  g <- l$labels %>%  
+  g <- l$labels_long %>%  
     dplyr::mutate(dummy = "") %>% 
     ggplot2::ggplot(
       aes_string(
@@ -293,7 +345,8 @@ make_tile_graph <- function(
     )
   g <- g + geom_tile(fill = "grey99")
   g <- g + facet_grid(.~agg_level)
-  g <- g + geom_text(aes(label = value))
+  # g <- g + geom_text(size = baseSize-7, hjust =.5)
+  g <- g + geom_text(hjust =.5, ...)
   g <- g + theme(
     axis.text.x =  element_blank(),
     axis.text.y = element_blank(),
@@ -309,7 +362,7 @@ make_tile_graph <- function(
   
   # graph values - RIGHT SIDE OF THE TABLET   
   # main_title = "Right side title"
-  g <- l$values %>%  
+  g <- l$values_long %>%  
     dplyr::mutate(
       agg_level = factor(agg_level, levels = c("HSDA","HA","PR"))
     ) %>% 
@@ -323,7 +376,8 @@ make_tile_graph <- function(
     )
   g <- g + geom_tile(fill = "grey99")
   # g <- g + geom_text(size = baseSize-7, hjust=.4)
-  g <- g + geom_text(size = baseSize-7, hjust=.5)
+  # g <- g + geom_text(size = fontsize_right, hjust=.5)
+  g <- g + geom_text(hjust=.5, ...)
   g <- g + facet_grid(. ~ agg_level )
   # g <- g + scale_y_discrete(limits=rev(cog_measures_sorted_domain))
   # g <- g + scale_color_manual(values=domain_colors_text)
@@ -365,18 +419,18 @@ make_tile_graph <- function(
 # ds %>% make_tile_graph(bc_health_map)
 
 
-print_tile_graph <- function(d,meta){
+print_tile_graph <- function(d,meta,...){
   
-  path_save = "./sandbox/dev-1/temp-example.png"
+  path_save = "./sandbox/dev-1/temp-example3.png"
   png(filename = path_save, width = 900, height = 500,res = 100)
   
-  d %>% make_tile_graph(meta)
+  d %>% make_tile_graph(meta,...)
   
   dev.off()
   
 }
 #usage
-ds %>% print_tile_graph(bc_health_map)
+ds %>% print_tile_graph(bc_health_map, size = 3)
 # detect_small_cell() %>% 
   
 
