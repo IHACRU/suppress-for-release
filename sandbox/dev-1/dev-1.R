@@ -74,6 +74,42 @@ lookup_meta <- function(
 # lkp_hsda <- bc_health_map %>% lookup_meta("hsda")
 # lkp_ha <- bc_health_map %>% lookup_meta("ha")
 
+# function to elongate a SAU
+elongate_sau <- function(
+  d # a standard SAU: disease-year-labels-values
+  ,meta
+){
+  d_wide <- d
+  
+  # obtain lookup tables from the meta-data object  
+  lkp_hsda <- meta %>% lookup_meta("hsda")
+  lkp_ha <- meta %>% lookup_meta("ha")
+  
+  # split variables into counts and labels
+  (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
+  (label_variables <- setdiff(names(d_wide), count_variables))
+  
+  d_long <- d_wide %>% 
+    tidyr::gather_("column_name","value",c( count_variables)) %>%
+    dplyr::mutate(
+      agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name)
+      ,sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
+      ,agg_level = gsub("^BC$","PR",agg_level)
+      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+      ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
+      ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
+      ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
+    )%>% 
+    # dplyr::arrange(desc(label_ha), desc(label_hsda))
+    dplyr::arrange(label_ha, label_hsda)
+  
+  return(d_long)
+}
+# usage
+ds_long <-  ds %>% elongate_sau(bc_health_map)
+
+
+
 
 # ---- tweak-data -------------------------------------------------------------
 # a suppression decision is made within a context: disease by year by geography
@@ -91,7 +127,7 @@ bc_health_map
 # ----- logical-filters ------------------------------------
 
 # funtion to return the test whether a cell value is less than 5
-# TEST : IS THE CELL SMALL?
+# TEST : What cells are `too small` ( < 5)
 detect_small_cell <- function(
   d # a standard SAU: disease-year-labels-values
 ){
@@ -116,7 +152,25 @@ d_small_cell <- ds %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
 
-# TEST: 
+# TEST: What cells can help calculated suppressed cells from the same HSDA?
+d_calc_from_hsda <- function(
+  d # a standard SAU: disease-year-labels-values
+){
+  d <- ds
+  # split varnames into two groups
+  (varnames <- names(d))
+  (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
+  (stem_variables <- setdiff(varnames, count_variables)) 
+  
+  d_small_cell <- d %>% detect_small_cell()
+
+  long_ <- ds %>% prepare_for_tiling(bc_health_map)
+  
+  d_out <- d_small_cell %>% 
+    dplyr::group_by(label_hsda) %>% 
+    
+  
+}
 
 # TEST: is this HSDA the only one in its HA that has been suppressed?
 detect_single_suppression <- function(
@@ -137,6 +191,7 @@ prepare_for_tiling <- function(
   d     # a standard SAU: disease-year-labels-values
   ,meta # meta-data file contains BC health boundries heirarchy and other definitions
 ){
+  # obtain lookup tables from the meta-data object  
   lkp_hsda <- meta %>% lookup_meta("hsda")
   lkp_ha <- meta %>% lookup_meta("ha")
   
