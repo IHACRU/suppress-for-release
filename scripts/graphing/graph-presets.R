@@ -10,7 +10,7 @@
 # extrafont::font_import()
 # extrafont::fonts() #This just lists the available fonts for you to read; similar to extrafont::fonttable()
 
-library(extrafont) 
+# library(extrafont) 
 library(grid)
 library(ggplot2)
 library(dichromat)
