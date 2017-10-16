@@ -8,7 +8,7 @@ rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is 
 source("./manipulation/function-support.R")  # assisting functions for data wrangling and testing
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
-# source("./scripts/graphing/graph-presets.R") # font and color conventions
+source("./scripts/graphing/graph-presets.R") # font and color conventions
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)      #For graphing
 library(dplyr)
@@ -89,13 +89,11 @@ bc_health_map
 
 
 # ----- logical-filters ------------------------------------
-subject <- list()
-subject$observed <- ds 
-d_observed <- subject$observed
 
 # funtion to return the test whether a cell value is less than 5
+# TEST : IS THE CELL SMALL?
 detect_small_cell <- function(
-  d # a list object containing observed counts for the decision context
+  d # a standard SAU: disease-year-labels-values
 ){
   # split varnames into two groups
   (varnames <- names(d))
@@ -114,8 +112,23 @@ detect_small_cell <- function(
   return(d_small)
 }
 # usage
-d_small <- ds %>% detect_small_cell()
+d_small_cell <- ds %>% detect_small_cell()
+# creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
+
+# TEST: 
+
+# TEST: is this HSDA the only one in its HA that has been suppressed?
+detect_single_suppression <- function(
+  d
+){
+  
+  d_small <- d %>% detect_small_cell()
+  
+  
+}
+# usage
+  d_single_suppression <- detect_single_suppression()
 
 # ----- graphing-functions --------------------
 # function to prepare the smallest context for graphing by geom_tile
@@ -291,11 +304,28 @@ make_tile_graph <- function(
   print(g_labels,  vp=grid::viewport(layout.pos.row=2, layout.pos.col=1 ))
   print(g_values, vp=grid::viewport(layout.pos.row=2, layout.pos.col=2 ))
   grid::popViewport(0)
- 
-} # usage
-ds %>% make_tile_graph(bc_health_map)
-   
+  return(grid::popViewport(0))
   
+} # usage
+# ds %>% make_tile_graph(bc_health_map)
+
+
+print_tile_graph <- function(d,meta){
+  
+  path_save = "./sandbox/temp2.png"
+  png(filename = path_save, width = 900, height = 500,res = 100)
+  
+  d %>% make_tile_graph(meta)
+  
+  dev.off()
+  
+}
+#usage
+ds %>% print_tile_graph(bc_health_map)
+# detect_small_cell() %>% 
+  
+
+# function that adds results of the test onto the tile graph
 
 
 ####################
