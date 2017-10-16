@@ -52,6 +52,28 @@ bc_health_map %>%
 # ---- tweak-data -----------------------------------------------
 
 # ---- utility-functions -------------------------------------------------------
+# function returning a look up table for HA level of aggregaton
+lookup_meta <- function(
+  meta       # meta-data file contains BC health boundries heirarchy and other definitions
+  ,agg_level = "hsda"  #
+){
+  if(agg_level == "hsda"){
+    lookup_table <- meta %>% 
+      dplyr::distinct(id_ha, id_hsda, label_ha, label_hsda, color_hsda, color_hsda_label) %>% 
+      dplyr::select(id_ha, id_hsda, label_ha, dplyr::everything()) %>% 
+      dplyr::arrange(id_ha, id_hsda)
+  }
+  if(agg_level == "ha"){
+    lookup_table <- meta %>% 
+      dplyr::distinct(id_ha, label_ha, color_ha, color_ha_label) %>% 
+      dplyr::arrange(id_ha)
+  }
+  return(lookup_table)
+}
+# usage
+# lkp_hsda <- bc_health_map %>% lookup_meta("hsda")
+# lkp_ha <- bc_health_map %>% lookup_meta("ha")
+
 
 # ---- tweak-data -------------------------------------------------------------
 # a suppression decision is made within a context: disease by year by geography
@@ -63,19 +85,6 @@ ds
 # the gnesting structure, groupings,  and color definitions
 # are defined in the meta-data 
 bc_health_map
-
-######### REFERENCE MATERIAL
-# extract values from the meta data to use in graphs
-# reference table for HEALTH AUTHORITIES
-ha_ref <- bc_health_map %>% 
-  dplyr::distinct(id_ha, label_ha, color_ha, color_ha_label) %>% 
-  dplyr::arrange(id_ha)
-# reference table for DELIVERY ARIEAS
-hsda_ref <- bc_health_map %>% 
-  dplyr::distinct(id_ha, id_hsda, label_ha, label_hsda, color_hsda, color_hsda_label) %>% 
-  dplyr::select(id_ha, id_hsda, label_ha, dplyr::everything()) %>% 
-  dplyr::arrange(id_ha, id_hsda)
-
 
 
 
@@ -112,8 +121,12 @@ d_small <- ds %>% detect_small_cell()
 # function to prepare the smallest context for graphing by geom_tile
 # input = disease-by-year ds, output = list object with meaningful components
 prepare_for_tiling <- function(
-  d # a standard SAU: disease-year-labels-values
+  d     # a standard SAU: disease-year-labels-values
+  ,meta # meta-data file contains BC health boundries heirarchy and other definitions
 ){
+  lkp_hsda <- meta %>% lookup_meta("hsda")
+  lkp_ha <- meta %>% lookup_meta("ha")
+  
   # extract stable info
   disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
   year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
@@ -140,10 +153,20 @@ prepare_for_tiling <- function(
     dplyr::select_(.dots = label_variables) %>% 
     dplyr::bind_cols(d_label_values) %>% 
     tidyr::gather_("agg_level", "value", gsub("^label_", "value_",label_variables)) %>% 
-    dplyr::mutate( 
-      agg_level = gsub("^value_","",agg_level),
-      agg_level = factor(toupper(agg_level),levels = c("PR","HA","HSDA"))
-    )
+    dplyr::mutate(  
+       agg_level  = gsub("^value_","",agg_level)
+      ,agg_level  = toupper(agg_level)
+      ,agg_level  = factor(agg_level,  levels = c("PR","HA","HSDA")) 
+      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+      ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
+      ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
+      ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
+    ) %>% 
+    # dplyr::arrange(desc(label_ha), desc(label_hsda))
+    dplyr::arrange(label_ha, label_hsda)
+  
+    
+  
   # inspect if needed
   # d_long_labels %>% print(n=nrow(.))
 
@@ -152,9 +175,17 @@ prepare_for_tiling <- function(
   d_long_values <- d_wide %>% 
     tidyr::gather_("column_name","value",c( count_variables)) %>%
     dplyr::mutate(
-      agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name),
-      sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
-    )
+       agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name)
+      ,sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
+      ,agg_level = gsub("^BC$","PR",agg_level)
+      ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
+      ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
+      ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
+      ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
+    )%>% 
+    # dplyr::arrange(desc(label_ha), desc(label_hsda))
+    dplyr::arrange(label_ha, label_hsda)
+  
   # inspect if needed
   # d_long_values %>% print(n=nrow(.))
   
@@ -169,16 +200,17 @@ prepare_for_tiling <- function(
    return(l)
 } # used in make_tile_graph()
 # usage:
-# l <- ds %>% prepare_for_tiling()
+# l <- ds %>% prepare_for_tiling(bc_health_map)
 
 # function that graphs the toosmall decision
 make_tile_graph <- function(
   d   # a dataset containing observed counts for the decision context
-  # ,meta # a meta data object containing grouping and coloring settings
+  ,meta # a meta data object containing grouping and coloring settings
 ){
   # d <- ds # turn on for testing, if needed
+  # meta <- bc_health_map
   
-  l <- d %>% prepare_for_tiling()
+  l <- d %>% prepare_for_tiling(meta)
   
   # graph labels - LEFT SIDE OF THE TABLET
   # graph the data
@@ -211,7 +243,7 @@ make_tile_graph <- function(
   # main_title = "Right side title"
   g <- l$values %>%  
     dplyr::mutate(
-      agg_level = factor(agg_level, levels = c("HSDA","HA","BC"))
+      agg_level = factor(agg_level, levels = c("HSDA","HA","PR"))
     ) %>% 
     ggplot2::ggplot(
       aes_string(
@@ -261,7 +293,7 @@ make_tile_graph <- function(
   grid::popViewport(0)
  
 } # usage
-ds %>% make_tile_graph()
+ds %>% make_tile_graph(bc_health_map)
    
   
 
