@@ -312,7 +312,7 @@ make_tile_graph <- function(
 
 print_tile_graph <- function(d,meta){
   
-  path_save = "./sandbox/temp2.png"
+  path_save = "./sandbox/dev-1/temp-example.png"
   png(filename = path_save, width = 900, height = 500,res = 100)
   
   d %>% make_tile_graph(meta)
