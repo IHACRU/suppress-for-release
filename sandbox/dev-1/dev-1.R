@@ -190,7 +190,7 @@ bc_health_map
 # ----- logical-filters ------------------------------------
 
 # funtion to return the test whether a cell value is less than 5
-# TEST : What cells are `too small` ( < 5)
+# TEST 1: What cells are `too small` ( < 5)
 detect_small_cell <- function(
   d # a standard SAU: disease-year-labels-values
 ){
@@ -211,29 +211,55 @@ detect_small_cell <- function(
   return(d_small)
 }
 # usage
-d_small_cell <- ds %>% detect_small_cell()
+# d_small_cell <- ds %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
 
-# TEST: What cells can help calculated suppressed cells from the same HSDA?
-d_calc_from_hsda <- function(
+# TEST 2: What cells can help calculated suppressed cells from the same HSDA?
+# reverse calculate from:
+detect_recalc_hsda <- function(
   d # a standard SAU: disease-year-labels-values
 ){
-  d <- ds
+  # d <- ds
   # split varnames into two groups
   (varnames <- names(d))
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
   (stem_variables <- setdiff(varnames, count_variables)) 
   
   d_small_cell <- d %>% detect_small_cell()
-
-  long_ <- ds %>% prepare_for_tiling(bc_health_map)
   
-  d_out <- d_small_cell %>% 
-    dplyr::group_by(label_hsda) %>% 
-    
+  d2 <- d_small_cell %>% 
+    elongate_values()  
+    # dplyr::mutate(
+    #   agg_level = gsub("(\\w+)_(\\w+)","\\1", column_name )
+      # sex       = gsub("(\\w+)_(\\w+)","\\2", column_name )
+    # ) %>%
   
-}
+  d3 <- d2 %>% 
+    dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
+    dplyr::mutate( 
+      group_sum = sum(value)
+    ) %>%  
+    dplyr::ungroup() %>% 
+    dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
+    dplyr::mutate(
+      value_new = ifelse( group_sum >= 1, TRUE, value),
+      sum_new = sum(value_new)
+    ) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::arrange(label_ha, label_hsda, agg_level)
+  
+  d4 <- d3 %>% 
+    dplyr::mutate(
+      value = value_new
+    ) %>% 
+  dplyr::select_(.dots = setdiff( names(d2), c("agg_level","sex") ) ) %>% 
+    tidyr::spread(column_name, value) 
+  return(d4)   
+  
+} 
+# usage
+# d4 <- ds %>% recalc_from_hsda()
 
 # TEST: is this HSDA the only one in its HA that has been suppressed?
 detect_single_suppression <- function(
@@ -347,6 +373,7 @@ make_tile_graph <- function(
   g <- g + facet_grid(.~agg_level)
   # g <- g + geom_text(size = baseSize-7, hjust =.5)
   g <- g + geom_text(hjust =.5, ...)
+  g <- g + theme_minimal()
   g <- g + theme(
     axis.text.x =  element_blank(),
     axis.text.y = element_blank(),
@@ -384,12 +411,15 @@ make_tile_graph <- function(
   # g <- g + scale_fill_manual(values=domain_colors_fill)
   # g <- g + annotate(geom="text", size=baseSize, hjust = 1.5, label="XXXX \n SSSSS",x=Inf, y=Inf)
   # g <- g + theme1
+  g <- g + theme_minimal()
   g <- g + theme(
     axis.text.x =  element_blank(),
     axis.text.y = element_blank(),
     axis.ticks = element_blank(),
     panel.grid.major.x  =  element_blank(),
-    # panel.grid.major.y  =  element_blank(),
+    panel.grid.minor.x  =  element_blank(),
+    panel.grid.major.y  =  element_blank(),
+    panel.grid.minor.y  =  element_blank(),
     legend.position="left"
   )
   g <- g + guides(color=FALSE)
@@ -435,6 +465,15 @@ ds %>% print_tile_graph(bc_health_map, size = 3)
   
 
 # function that adds results of the test onto the tile graph
+
+# ----- workflow --------------------------
+
+ds
+l <- list(
+  "observed" = ds %>% prepare_for_tiling(bc_health_map),
+  "small_cell" = ds %>% detect_small_cell() %>% prepare_for_tiling(bc_health_map),
+  "recalc_hsda" = ds %>% detect_recalc_hsda() %>% prepare_for_tiling(bc_health_map)
+) 
 
 
 ####################
