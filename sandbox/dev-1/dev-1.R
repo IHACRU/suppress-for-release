@@ -27,7 +27,8 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
 
-path_input   <- "./data-public/raw/fictional-case-1.csv"
+path_input_folder  <- "./data-public/raw/"
+
 # path_cdr_2014   <- "./data-unshared/derived/dto_10000.rds"
 path_region_map <- "./data-public/raw/province_health_map.csv"
 
@@ -36,13 +37,22 @@ baseSize = 10
 # functions, the use of which is localized to this script
 
 # ---- load-data ---------------------------------------------------------------
-ds <- readr::read_csv(path_input)
+ds0 <- readr::read_csv(path_input)
 bc_health_map <- readr::read_csv(path_region_map)
 # pryr::object_size(ds)
 # ds <- readr::read_csv(path_input) %>% as.data.frame() 
 
+# load the fictional cases created with the help of ./data-public/raw/proto_data_generator.xlsx
+path_input_files <- grep("fictional-case-\\d+.csv$", list.files(path_input_folder, full.names = T), value = T)
+l <- list()
+for(i in seq_along(path_input_files)){
+  l[[i]] <- readr::read_csv(path_input_files[i])
+}
+l
+ds0 <- dplyr::bind_rows(l, .id = "case")
+
 # ---- inspect-data-1 -----------------------------------------------------------
-ds
+ds0 %>% filter(case==1)
 bc_health_map %>% 
   arrange(id_ha, id_hsda, id_lha) %>%  
   knitr::kable() %>% 
@@ -50,11 +60,11 @@ bc_health_map %>%
 
 
 # ---- tweak-data -----------------------------------------------
-ds <- ds %>% 
+ds0 <- ds0 %>% 
   dplyr::mutate(
     label_pr = "BC"
   ) %>% 
-  dplyr::select(disease, year, label_pr, dplyr::everything())
+  dplyr::select(case, disease, year, label_pr, dplyr::everything())
 names(ds) <- gsub("^BC_","PR_", names(ds))
 
 bc_health_map <- bc_health_map %>% 
@@ -68,6 +78,9 @@ bc_health_map <- bc_health_map %>%
                 label_pr, label_ha, label_hsda, label_lha,
                 dplyr::everything()) %>% 
   dplyr::select(-label_prov)
+
+# select data to work with for development
+ds <- ds0 %>% filter(case ==1) %>% select(-case)
   
 
 # ---- utility-functions -------------------------------------------------------
@@ -178,7 +191,7 @@ elongate_labels <- function(
 # a suppression decision is made within a context: disease by year by geography
 # To evaluate this decision we need to derive a data set, which provide such a context 
 # We call this dataset a smallest analyzable subset of data
-ds
+ds 
 
 # ----- graphing-settings ----------------------- 
 # the gnesting structure, groupings,  and color definitions
@@ -217,7 +230,7 @@ detect_small_cell <- function(
 
 # TEST 2: What cells can help calculated suppressed cells from the same HSDA?
 # reverse calculate from:
-detect_recalc_hsda <- function(
+detect_recalc_triple <- function(
   d # a standard SAU: disease-year-labels-values
 ){
   # d <- ds
@@ -226,15 +239,10 @@ detect_recalc_hsda <- function(
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
   (stem_variables <- setdiff(varnames, count_variables)) 
   
-  d_small_cell <- d %>% detect_small_cell()
+  d1 <- d  %>% detect_small_cell()
   
-  d2 <- d_small_cell %>% 
-    elongate_values()  
-    # dplyr::mutate(
-    #   agg_level = gsub("(\\w+)_(\\w+)","\\1", column_name )
-      # sex       = gsub("(\\w+)_(\\w+)","\\2", column_name )
-    # ) %>%
-  
+  d2 <- d1 %>% elongate_values()  
+
   d3 <- d2 %>% 
     dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
     dplyr::mutate( 
@@ -246,32 +254,67 @@ detect_recalc_hsda <- function(
       value_new = ifelse( group_sum >= 1, TRUE, value),
       sum_new = sum(value_new)
     ) %>% 
-    dplyr::ungroup() %>% 
-    dplyr::arrange(label_ha, label_hsda, agg_level)
+    dplyr::ungroup() 
   
   d4 <- d3 %>% 
     dplyr::mutate(
       value = value_new
     ) %>% 
   dplyr::select_(.dots = setdiff( names(d2), c("agg_level","sex") ) ) %>% 
-    tidyr::spread(column_name, value) 
+    tidyr::spread(column_name, value) %>% 
+    dplyr::mutate(
+      label_hsda = factor(label_hsda, levels = as.data.frame(d)[,"label_hsda"])#,
+    ) %>% 
+    dplyr::arrange(label_hsda) %>% 
+    dplyr::mutate(
+      label_hsda = as.character(label_hsda)
+    )
   return(d4)   
   
 } 
 # usage
-# d4 <- ds %>% recalc_from_hsda()
+# d4 <- ds %>% detect_recalc_triple()
 
 # TEST: is this HSDA the only one in its HA that has been suppressed?
 detect_single_suppression <- function(
   d
 ){
+  # d <- ds 
   
-  d_small <- d %>% detect_small_cell()
-  
-  
+  (varnames <- names(d))
+  (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
+  (stem_variables <- setdiff(varnames, count_variables)) 
+  ########### Single suppression at HSDA level
+  d1 <- d %>% detect_recalc_triple()
+  d2 <- d1 %>% 
+    dplyr::group_by(label_ha) %>% 
+    dplyr::mutate(
+      n_sup = sum(HSDA_T)
+    ) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::mutate(
+      HSDA_F = ifelse(n_sup == 1,TRUE,HSDA_F ),
+      HSDA_M = ifelse(n_sup == 1,TRUE,HSDA_M ),
+      HSDA_T = ifelse(n_sup == 1,TRUE,HSDA_T )
+    ) %>% 
+    dplyr::select(-n_sup)
+  ########### Single suppression at HA level
+  d3 <- d2 %>% 
+    dplyr::group_by(label_pr) %>% 
+    dplyr::mutate(
+      n_sup = sum(HA_T)
+    ) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::mutate(
+      HA_F = ifelse(n_sup == 1,TRUE,HA_F ),
+      HA_M = ifelse(n_sup == 1,TRUE,HA_M ),
+      HA_T = ifelse(n_sup == 1,TRUE,HA_T )
+    ) %>% 
+    dplyr::select(-n_sup)
+  return(d3)  
 }
 # usage
-  d_single_suppression <- detect_single_suppression()
+d_single_suppression <- d %>% detect_single_suppression()
 
 # ----- graphing-functions --------------------
 # function to prepare the smallest context for graphing by geom_tile
