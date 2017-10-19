@@ -60,12 +60,17 @@ bc_health_map %>%
 
 
 # ---- tweak-data -----------------------------------------------
+# ideally, these tweaks would be implemented higher upstream, in the ellis island
+# view these corrections as temporary, needed to connect the workflows
 ds0 <- ds0 %>% 
   dplyr::mutate(
     label_pr = "BC"
   ) %>% 
-  dplyr::select(case, disease, year, label_pr, dplyr::everything())
-names(ds) <- gsub("^BC_","PR_", names(ds))
+  dplyr::select(
+    case, disease, year, label_pr, label_ha, label_hsda,
+    HSDA_F,HSDA_M,HSDA_T,HA_F, HA_F, HA_M, HA_T,  BC_F, BC_M, BC_T 
+  )
+names(ds0) <- gsub("^BC_","PR_", names(ds0))
 
 bc_health_map <- bc_health_map %>% 
   dplyr::rename(
@@ -74,7 +79,8 @@ bc_health_map <- bc_health_map %>%
   dplyr::mutate(
     label_pr = "BC"
   ) %>% 
-  dplyr::select(id_pr, id_ha, id_hsda, id_lha,
+  dplyr::select(
+    id_pr, id_ha, id_hsda, id_lha,
                 label_pr, label_ha, label_hsda, label_lha,
                 dplyr::everything()) %>% 
   dplyr::select(-label_prov)
@@ -132,14 +138,17 @@ elongate_values <- function(
       # ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
       # ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
       # ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
-    ) #%>%
+    ) %>%
+    dplyr::select_(.dots =
+      c(label_variables, "column_name","agg_level","sex", "value")
+    )
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
     # dplyr::arrange(label_ha, label_hsda)
   
   return(d_long)
 }
 # usage
-ds_long_values <-  ds %>% elongate_values()
+# ds_long_values <-  ds %>% elongate_values()
 
 
 # function to elongate
@@ -187,23 +196,29 @@ elongate_labels <- function(
 # d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
 
 
-# ---- tweak-data -------------------------------------------------------------
+# ---- inspect-data-2 -------------------------------------------------------------
 # a suppression decision is made within a context: disease by year by geography
 # To evaluate this decision we need to derive a data set, which provide such a context 
 # We call this dataset a smallest analyzable subset of data
 ds 
+# IMPORTANT NOTE: the subsequent functions rely on this shape
+
+# note that it is different from 
+ds0
+# which contains ALL cases, whereas ds contains a single case
 
 # ----- graphing-settings ----------------------- 
 # the gnesting structure, groupings,  and color definitions
 # are defined in the meta-data 
 bc_health_map
-
+# IMPORTANT NOTE: the subsequent functions rely on existance of this object
 
 
 # ----- logical-filters ------------------------------------
 
 # funtion to return the test whether a cell value is less than 5
 # TEST 1: What cells are `too small` ( < 5)
+# Censor 1: What cells should be suppressed as "too small"?
 detect_small_cell <- function(
   d # a standard SAU: disease-year-labels-values
 ){
@@ -227,10 +242,10 @@ detect_small_cell <- function(
 # d_small_cell <- ds %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
-
-# TEST 2: What cells can help calculated suppressed cells from the same HSDA?
+# TEST 2: What cells can help calculated suppressed cells from the same triple?
+# Censor 2: What triples should be suppressed? (eg. F-M-T)
 # reverse calculate from:
-detect_recalc_triple <- function(
+detect_recalc_triplet <- function(
   d # a standard SAU: disease-year-labels-values
 ){
   # d <- ds
@@ -242,7 +257,7 @@ detect_recalc_triple <- function(
   d1 <- d  %>% detect_small_cell()
   
   d2 <- d1 %>% elongate_values()  
-
+  
   d3 <- d2 %>% 
     dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
     dplyr::mutate( 
@@ -260,7 +275,8 @@ detect_recalc_triple <- function(
     dplyr::mutate(
       value = value_new
     ) %>% 
-  dplyr::select_(.dots = setdiff( names(d2), c("agg_level","sex") ) ) %>% 
+    dplyr::select_(.dots = setdiff( names(d2), c("agg_level","sex") ) ) %>% 
+    dplyr::mutate(column_name = factor(column_name, levels = count_variables)) %>% 
     tidyr::spread(column_name, value) %>% 
     dplyr::mutate(
       label_hsda = factor(label_hsda, levels = as.data.frame(d)[,"label_hsda"])#,
@@ -270,22 +286,21 @@ detect_recalc_triple <- function(
       label_hsda = as.character(label_hsda)
     )
   return(d4)   
-  
 } 
 # usage
-# d4 <- ds %>% detect_recalc_triple()
+# d4 <- ds %>% detect_recalc_triplet()
 
-# TEST: is this HSDA the only one in its HA that has been suppressed?
+# TEST 3: Is this is the only triple that is being suppressed in a higher order block?
+# Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
 detect_single_suppression <- function(
   d
 ){
   # d <- ds 
-  
   (varnames <- names(d))
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
   (stem_variables <- setdiff(varnames, count_variables)) 
   ########### Single suppression at HSDA level
-  d1 <- d %>% detect_recalc_triple()
+  d1 <- d %>% detect_recalc_triplet()
   d2 <- d1 %>% 
     dplyr::group_by(label_ha) %>% 
     dplyr::mutate(
@@ -311,17 +326,54 @@ detect_single_suppression <- function(
       HA_T = ifelse(n_sup == 1,TRUE,HA_T )
     ) %>% 
     dplyr::select(-n_sup)
+  
+  d4 <- d3 %>% 
+    elongate_values() %>% 
+    dplyr::mutate(
+      column_name = factor(column_name, levels = count_variables)
+    ) %>% 
+    dplyr::select(-agg_level, -sex) %>% 
+    tidyr::spread(column_name, value)
+  
   return(d3)  
 }
 # usage
-d_single_suppression <- d %>% detect_single_suppression()
+# d_single_suppression <- d %>% detect_single_suppression()
 
 # ----- graphing-functions --------------------
+combine_censors <- function(
+  d
+){
+  # d <- ds
+  # create a list object with progressive stages through chain of decisions/censors
+  l <- list(
+    "observed"                   = d                                 
+   ,"censor1_small_cell"         = d %>% detect_small_cell()         
+   ,"censor2_recalc_triplet"     = d %>% detect_recalc_triplet()    
+   ,"censor3_single_suppression" = d %>% detect_single_suppression() 
+  )
+
+  combined_list <- list()
+  vals <- list()
+  for(i in names(l) ){
+    combined_list[[i]]   <- l[[i]] %>% elongate_values()
+    vals[[i]] <- combined_list[[i]]$value
+  }
+  dvals <- vals %>% dplyr::bind_cols()
+  dd <- combined_list[["observed"]] %>% 
+    dplyr::mutate(censor0=FALSE) %>% 
+    dplyr::bind_cols(dvals) %>% 
+    dplyr::select(-observed)
+  return(dd)
+}
+# usage
+# dd <- ds %>% combine_censors()
+
 # function to prepare the smallest context for graphing by geom_tile
 # input = disease-by-year ds, output = list object with meaningful components
 prepare_for_tiling <- function(
   d     # a standard SAU: disease-year-labels-values
-  ,meta # meta-data file contains BC health boundries heirarchy and other definitions
+  ,meta=bc_health_map # meta-data file contains BC health boundries heirarchy and other definitions
 ){
   # d <- ds
   # meta <- bc_health_map
@@ -359,7 +411,8 @@ prepare_for_tiling <- function(
 
   #(3)######## Create data for theRIGHT PANEL
   # the right panel will contain only numbers (FMT counts of variable selected for suppression)
-  d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
+  # d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
+  d_long_values <- d %>% combine_censors() %>% 
     dplyr::mutate(   
       label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
@@ -375,12 +428,9 @@ prepare_for_tiling <- function(
    l <- list(
      "disease"   = disease
      ,"year"     = year
-     # ,"observed" = list(
-       ,"wide"     = d_wide
-       ,"labels_long" = d_long_labels 
-       ,"values_long" = d_long_values 
-      # )
-   )
+     ,"labels_long" = d_long_labels 
+     ,"values_long" = d_long_values 
+    )
    return(l)
 } # used in make_tile_graph()
 # usage:
@@ -389,11 +439,20 @@ prepare_for_tiling <- function(
 # function that graphs the toosmall decision
 make_tile_graph <- function(
   d   # a dataset containing observed counts for the decision context
-  ,meta # a meta data object containing grouping and coloring settings
+  ,meta=bc_health_map# a meta data object containing grouping and coloring settings
+  ,censor 
   ,...
 ){
   # d <- ds # turn on for testing, if needed
   # meta <- bc_health_map
+  
+  censor_labels <- c(
+        "censor0"                     = "- Observed counts"
+      , "censor1_small_cell"          = "- Censor (1) Small cell?"
+      , "censor2_recalc_triplet"      = "- Censor (2) Recalculate from triplet?"
+      , "censor3_single_suppression"  = "- Censor (3) Single Suppression?"
+  )
+  
   
   # maybe later
   # font_size_left  <- baseSize + (font_size - baseSize) 
@@ -444,11 +503,16 @@ make_tile_graph <- function(
         
       )
     )
-  g <- g + geom_tile(fill = "grey99")
+  
+  g <- g + geom_tile(aes_string(fill = censor))
   # g <- g + geom_text(size = baseSize-7, hjust=.4)
   # g <- g + geom_text(size = fontsize_right, hjust=.5)
-  g <- g + geom_text(hjust=.5, ...)
+  # g <- g + geom_text(aes(color = censor1_small_cell),hjust=.5, ...)
+  g <- g + geom_text(aes_string(color = censor),hjust=.5)
   g <- g + facet_grid(. ~ agg_level )
+  g <- g + scale_fill_manual(values = c("TRUE"="black", "FALSE"="white"))
+  g <- g + scale_color_manual(values = c("TRUE"="white", "FALSE"="black"))
+  
   # g <- g + scale_y_discrete(limits=rev(cog_measures_sorted_domain))
   # g <- g + scale_color_manual(values=domain_colors_text)
   # g <- g + scale_fill_manual(values=domain_colors_fill)
@@ -465,7 +529,7 @@ make_tile_graph <- function(
     panel.grid.minor.y  =  element_blank(),
     legend.position="left"
   )
-  g <- g + guides(color=FALSE)
+  g <- g + guides(color=FALSE, fill=FALSE)
   g <- g + labs(x=NULL, y=NULL)
   
   g_values <- g
@@ -476,13 +540,13 @@ make_tile_graph <- function(
   grid::grid.newpage()    
   #Defnie the relative proportions among the panels in the mosaic.
   layout <- grid::grid.layout(nrow=2, ncol=2,
-                              widths=grid::unit(c(.4, .6) ,c("null","null")),
+                              widths=grid::unit(c(.5, .5) ,c("null","null")),
                               heights=grid::unit(c(.05, .95), c("null","null"))
   )
   grid::pushViewport(grid::viewport(layout=layout))
-  main_title <-paste0(toupper(l$disease)," - ", l$year)
+  main_title <-paste0(toupper(l$disease)," - ", l$year," ", censor_labels[censor] )
   
-  grid::grid.text(main_title, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 1))
+  grid::grid.text(main_title, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 1), just = "left")
   print(g_labels,  vp=grid::viewport(layout.pos.row=2, layout.pos.col=1 ))
   print(g_values, vp=grid::viewport(layout.pos.row=2, layout.pos.col=2 ))
   grid::popViewport(0)
@@ -492,66 +556,64 @@ make_tile_graph <- function(
 # ds %>% make_tile_graph(bc_health_map)
 
 
-print_tile_graph <- function(d,meta,...){
+print_tile_graph <- function(
+  d
+  ,meta=bc_health_map
+  ,path_folder = "./sandbox/dev-1/prints/"
+  ,...
+){
+  # vector containing the list of graphs to create (e.i. censors to apply)
+  censor_vector <- c(
+     "censor0" 
+    , "censor1_small_cell"
+    , "censor2_recalc_triplet"
+    , "censor3_single_suppression"
+  )
   
-  path_save = "./sandbox/dev-1/temp-example3.png"
-  png(filename = path_save, width = 900, height = 500,res = 100)
+  disease <- as.data.frame(d)[1,1]
+  year    <- as.data.frame(d)[1,2]
   
-  d %>% make_tile_graph(meta,...)
+  for(i in seq_along(censor_vector)){
+    path_save = paste0(path_folder,disease,"-",year,"-censor-",i-1,".png")
+    png(filename = path_save, width = 900, height = 500,res = 85)
+    d %>% make_tile_graph(meta,censor = censor_vector[i],...)
+    dev.off()
+  }
+
+}
+#usage
+# ds %>% print_tile_graph(bc_health_map, size = 3)
   
-  dev.off()
+ 
+
+# ----- workflow --------------------------
+# the script loads the fictional examples from ./data-public/raw/ folder
+# place all fictional case you want to graph there, as separate csvs
+# this scripts reads all csv files that start with "fictional-case-" and
+# assembles them into a data frame
+ds0
+ds0 %>% distinct(case) 
+# you can isolate a case 
+ds <- ds0 %>% 
+  filter(case==1) %>% 
+  select(-case)
+# to pass to the graphing funtion:
+# ds %>%
+#   print_tile_graph(path_folder = "./sandbox/dev-1/prints/")
+
+# or use a wrapper function to print directly from ds0
+print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...){
+  d %>% 
+    filter(case==selected_case) %>% 
+    select(-case) %>%
+    print_tile_graph(path_folder=folder,...)
   
 }
 #usage
-ds %>% print_tile_graph(bc_health_map, size = 3)
-# detect_small_cell() %>% 
-  
+# ds0 %>% print_one_case(selected_case = 1)
 
-# function that adds results of the test onto the tile graph
-
-# ----- workflow --------------------------
-
-ds
-l <- list(
-  "observed" = ds %>% prepare_for_tiling(bc_health_map),
-  "small_cell" = ds %>% detect_small_cell() %>% prepare_for_tiling(bc_health_map),
-  "recalc_hsda" = ds %>% detect_recalc_hsda() %>% prepare_for_tiling(bc_health_map)
-) 
-
-
-####################
-
-# function to prepare the smallest context for graphing
-# prepare_for_tiling <- function(d){
-# extract stable info
-disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
-year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
-# remove stable info from the standard 
-d1 <- d %>% dplyr::select(-disease, -year) %>% 
-  dplyr::mutate(label_pr = "BC") %>% 
-  dplyr::select(label_pr, dplyr::everything())
-# split variables into counts and labels
-(count_variables <- grep("_[MFT]$",names(d), value = T))
-(label_variables <- setdiff(names(d1), count_variables))
-
-# record the row coordinate / define authoritive sorting for  HSDA
-d_rows <- d1 %>% 
-  dplyr::select_("label_hsda") %>% 
-  dplyr::rename_("row_name" = "label_hsda") %>%
-  tibble::rownames_to_column("row")%>% 
-  dplyr::mutate(
-    row = as.integer(row)
-  ) #%>% as.data.frame()
-
-# record the column coordinate / define authorit
-d_cols <- names(d1) %>% 
-  tibble::as_tibble() %>% 
-  dplyr::rename_("column_name" = "value") %>% 
-  tibble::rownames_to_column("col") %>% 
-  dplyr::mutate(
-    col = as.integer(col)
-  ) #%>% as.data.frame()
-
-
+for(i in 1:6){
+  ds0 %>% print_one_case(selected_case=i)
+}
 
 
