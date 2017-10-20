@@ -37,7 +37,7 @@ baseSize = 10
 # functions, the use of which is localized to this script
 
 # ---- load-data ---------------------------------------------------------------
-ds0 <- readr::read_csv(path_input)
+# ds0 <- readr::read_csv(path_input_folder)
 bc_health_map <- readr::read_csv(path_region_map)
 # pryr::object_size(ds)
 # ds <- readr::read_csv(path_input) %>% as.data.frame() 
@@ -86,11 +86,11 @@ bc_health_map <- bc_health_map %>%
   dplyr::select(-label_prov)
 
 # select data to work with for development
-ds <- ds0 %>% filter(case ==1) %>% select(-case)
+ds <- ds0 %>% filter(case ==2) %>% select(-case)
   
 
 # ---- utility-functions -------------------------------------------------------
-# function returning a look up table for HA level of aggregaton
+# function returning a look up table for a given level of aggregation
 lookup_meta <- function(
   meta       # meta-data file contains BC health boundries heirarchy and other definitions
   ,agg_level = "hsda"  #
@@ -112,39 +112,25 @@ lookup_meta <- function(
 # lkp_hsda <- bc_health_map %>% lookup_meta("hsda")
 # lkp_ha <- bc_health_map %>% lookup_meta("ha")
 
-# function to elongate a SAU
+# function to elongate a smallest dataframe unit
 elongate_values <- function( 
-  d # a standard SAU: disease-year-labels-values
-  # ,meta
-  ,regex = "_[MTF]$"
+   d                 # dataframe with a single Decision Unit
+  ,regex = "_[MTF]$" # regular expression used to select variables with counts
 ){
-  d_wide <- d
-  
-  # obtain lookup tables from the meta-data object  
-  # lkp_hsda <- meta %>% lookup_meta("hsda")
-  # lkp_ha <- meta %>% lookup_meta("ha")
-  # 
+  d_wide <- d # reminder that a wide format is expected
   # split variables into counts and labels
   (count_variables <- grep(regex, names(d_wide), value = T))
   (label_variables <- setdiff(names(d_wide), count_variables))
-  
+  # convert from wide to long 
   d_long <- d_wide %>% 
     tidyr::gather_("column_name","value",c( count_variables)) %>%
-    dplyr::mutate(
-      agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name)
+    dplyr::mutate( # split column_name into individual variables
+       agg_level = gsub("^(\\w+)_(\\w+)$", "\\1", column_name) # aggregation level
       ,sex       = gsub("^(\\w+)_(\\w+)$", "\\2", column_name)
-      # ,agg_level = gsub("^BC$","PR",agg_level)
-      # ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
-      # ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
-      # ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
-      # ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
     ) %>%
     dplyr::select_(.dots =
       c(label_variables, "column_name","agg_level","sex", "value")
     )
-    # dplyr::arrange(desc(label_ha), desc(label_hsda))
-    # dplyr::arrange(label_ha, label_hsda)
-  
   return(d_long)
 }
 # usage
@@ -153,23 +139,14 @@ elongate_values <- function(
 
 # function to elongate
 elongate_labels <- function(
-  d # a standard SAU: disease-year-labels-values
-  # ,meta
-  ,varnames # names of the variables, which need to be elongated
+   d # a standard SAU: disease-year-labels-values
+  ,varnames # names of the variables (aggregation levels), which need to be elongated
 ){
-  
-  d_wide <- d
-  # meta <- bc_health_map
-  # obtain lookup tables from the meta-data object  
-  # lkp_hsda <- meta %>% lookup_meta("hsda")
-  # lkp_ha   <- meta %>% lookup_meta("ha")
-  
+  d_wide <- d # reminder that a wide format is expected
   # split variables into counts and labels
   (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
   (label_variables <- varnames)
-  
-  ######### LEFT PANEL
-  # create data set for the left panel of the graph (labels of health boundries)
+  # create a duplicate dataframe that will contain values of the labels
   d_label_values <- d_wide %>% 
     dplyr::select_(.dots = label_variables)
   names(d_label_values) <- gsub("^label_", "value_", names(d_label_values))
@@ -181,16 +158,10 @@ elongate_labels <- function(
     dplyr::bind_cols(d_label_values) %>% 
     tidyr::gather_("agg_level", "value", gsub("^label_", "value_",label_variables)) %>% 
     dplyr::mutate(  
-      agg_level  = gsub("^value_","",agg_level)
+       agg_level  = gsub("^value_","",agg_level)
       ,agg_level  = toupper(agg_level)
       ,agg_level  = factor(agg_level,  levels = c("PR","HA","HSDA")) 
-      # ,label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda)
-      # ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
-      # ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
-      # ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
-    ) #%>% 
-    # dplyr::arrange(desc(label_ha), desc(label_hsda))
-    # dplyr::arrange(label_ha, label_hsda)
+    )
 }
 # usage
 # d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
@@ -220,7 +191,7 @@ bc_health_map
 # TEST 1: What cells are `too small` ( < 5)
 # Censor 1: What cells should be suppressed as "too small"?
 detect_small_cell <- function(
-  d # a standard SAU: disease-year-labels-values
+  d # smallest decision unit: disease-year-labels-values
 ){
   # split varnames into two groups
   (varnames <- names(d))
@@ -246,7 +217,7 @@ detect_small_cell <- function(
 # Censor 2: What triples should be suppressed? (eg. F-M-T)
 # reverse calculate from:
 detect_recalc_triplet <- function(
-  d # a standard SAU: disease-year-labels-values
+  d # smallest decision unit: disease-year-labels-values
 ){
   # d <- ds
   # split varnames into two groups
@@ -256,46 +227,27 @@ detect_recalc_triplet <- function(
   
   d1 <- d  %>% detect_small_cell()
   
-  d2 <- d1 %>% elongate_values()  
-  
-  d3 <- d2 %>% 
-    dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
-    dplyr::mutate( 
-      group_sum = sum(value)
-    ) %>%  
-    dplyr::ungroup() %>% 
-    dplyr::group_by(label_ha, label_hsda, agg_level) %>% 
+  # alt
+  d2 <- d1 %>% 
     dplyr::mutate(
-      value_new = ifelse( group_sum >= 1, TRUE, value),
-      sum_new = sum(value_new)
-    ) %>% 
-    dplyr::ungroup() 
-  
-  d4 <- d3 %>% 
-    dplyr::mutate(
-      value = value_new
-    ) %>% 
-    dplyr::select_(.dots = setdiff( names(d2), c("agg_level","sex") ) ) %>% 
-    dplyr::mutate(column_name = factor(column_name, levels = count_variables)) %>% 
-    tidyr::spread(column_name, value) %>% 
-    dplyr::mutate(
-      label_hsda = factor(label_hsda, levels = as.data.frame(d)[,"label_hsda"])#,
-    ) %>% 
-    dplyr::arrange(label_hsda) %>% 
-    dplyr::mutate(
-      label_hsda = as.character(label_hsda)
+      HSDA_F = ifelse(HSDA_M,TRUE, HSDA_F),
+      HSDA_M = ifelse(HSDA_F,TRUE, HSDA_M),
+      HA_M   = ifelse(HA_F,TRUE, HA_M),
+      HA_F   = ifelse(HA_M,TRUE, HA_F),
+      PR_M   = ifelse(PR_F,TRUE, PR_M),
+      PR_F   = ifelse(PR_M,TRUE, PR_F)
     )
-  return(d4)   
+ return(d2)   
 } 
 # usage
-# d4 <- ds %>% detect_recalc_triplet()
+d2 <- ds %>% detect_recalc_triplet()
 
 # TEST 3: Is this is the only triple that is being suppressed in a higher order block?
 # Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
 detect_single_suppression <- function(
   d
 ){
-  # d <- ds 
+  # d <- ds0 %>% filter(case ==2) %>% select(-case) 
   (varnames <- names(d))
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
   (stem_variables <- setdiff(varnames, count_variables)) 
@@ -304,36 +256,43 @@ detect_single_suppression <- function(
   d2 <- d1 %>% 
     dplyr::group_by(label_ha) %>% 
     dplyr::mutate(
-      n_sup = sum(HSDA_T)
+       n_sup = sum(HSDA_F & HSDA_M) # both must be TRUE to count as 1
+      ,n_tot = sum(HSDA_T) # must be TRUE to count
     ) %>% 
     dplyr::ungroup() %>% 
     dplyr::mutate(
-      HSDA_F = ifelse(n_sup == 1,TRUE,HSDA_F ),
-      HSDA_M = ifelse(n_sup == 1,TRUE,HSDA_M ),
-      HSDA_T = ifelse(n_sup == 1,TRUE,HSDA_T )
+      # if totale is TRUE then M and F are too
+      HSDA_T = ifelse(n_tot == 1,TRUE,HSDA_T ),
+      # if one or total is TRUE then other should be too  
+      HSDA_F = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_F ), 
+      HSDA_M = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_M )
     ) %>% 
-    dplyr::select(-n_sup)
+    dplyr::select(-n_sup, -n_tot)
   ########### Single suppression at HA level
   d3 <- d2 %>% 
-    dplyr::group_by(label_pr) %>% 
+    dplyr::group_by(label_pr) %>%
     dplyr::mutate(
-      n_sup = sum(HA_T)
+      n_sup = sum(HA_F & HA_M) # both must be TRUE to count as 1
+     ,n_tot = sum(HA_T) # must be TRUE to count
     ) %>% 
     dplyr::ungroup() %>% 
     dplyr::mutate(
-      HA_F = ifelse(n_sup == 1,TRUE,HA_F ),
-      HA_M = ifelse(n_sup == 1,TRUE,HA_M ),
-      HA_T = ifelse(n_sup == 1,TRUE,HA_T )
-    ) %>% 
+      # if totale is TRUE then M and F are too
+      HA_T = ifelse(n_tot == 1,TRUE,HA_T ),
+      # if one or total is TRUE then other should be too  
+      HA_F = ifelse(n_sup == 1 | HA_T, TRUE, HA_F ), 
+      HA_M = ifelse(n_sup == 1 | HA_T, TRUE, HA_M )
+      ) %>% 
     dplyr::select(-n_sup)
-  
-  d4 <- d3 %>% 
-    elongate_values() %>% 
-    dplyr::mutate(
-      column_name = factor(column_name, levels = count_variables)
-    ) %>% 
-    dplyr::select(-agg_level, -sex) %>% 
-    tidyr::spread(column_name, value)
+ 
+   # Enforce original sorting order (optional)
+  # d4 <- d3 %>% 
+  #   elongate_values() %>% 
+  #   dplyr::mutate(
+  #     column_name = factor(column_name, levels = count_variables)
+  #   ) %>% 
+  #   dplyr::select(-agg_level, -sex) %>% 
+  #   tidyr::spread(column_name, value)
   
   return(d3)  
 }
@@ -409,7 +368,7 @@ prepare_for_tiling <- function(
     # inspect if needed
   # d_long_labels %>% print(n=nrow(.))
 
-  #(3)######## Create data for theRIGHT PANEL
+  #(3)######## Create data for the RIGHT PANEL
   # the right panel will contain only numbers (FMT counts of variable selected for suppression)
   # d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
   d_long_values <- d %>% combine_censors() %>% 
@@ -453,20 +412,19 @@ make_tile_graph <- function(
       , "censor3_single_suppression"  = "- Censor (3) Single Suppression?"
   )
   
-  
   # maybe later
   # font_size_left  <- baseSize + (font_size - baseSize) 
   # font_size_right <- font_size_left + right_size_adjustment
     
   l <- d %>% prepare_for_tiling(meta)
   
-  # graph labels - LEFT SIDE OF THE TABLET
-  # graph the data
+  ##--##--##--##--##--##--##--##--##--##--##
+  # graph the labels - LEFT SIDE OF THE TABLET
   g <- l$labels_long %>%  
     dplyr::mutate(dummy = "") %>% 
     ggplot2::ggplot(
       aes_string(
-        x     = "dummy"
+         x     = "dummy"
         ,y     = "label_hsda"
         ,label = "value" 
       )
@@ -477,11 +435,14 @@ make_tile_graph <- function(
   g <- g + geom_text(hjust =.5, ...)
   g <- g + theme_minimal()
   g <- g + theme(
-    axis.text.x =  element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks = element_blank(),
-    panel.grid.major.x  =  element_blank(),
-    # panel.grid.major.y  =  element_blank(),
+    # axis.text.x =  element_blank(),
+    axis.text.x =  element_text(color = "white"),
+    axis.text.y         = element_blank(),
+    axis.ticks          = element_blank(),
+    panel.grid.major.x  = element_blank(),
+    panel.grid.minor.x  = element_blank(),
+    panel.grid.major.y  = element_blank(),
+    panel.grid.minor.y  = element_blank(),
     legend.position="left"
   )
   g <- g + guides(color=FALSE)
@@ -489,21 +450,19 @@ make_tile_graph <- function(
   g_labels <- g
   g_labels 
   
-  # graph values - RIGHT SIDE OF THE TABLET   
-  # main_title = "Right side title"
+  ##--##--##--##--##--##--##--##--##--##--##
+  # graph the values - RIGHT SIDE OF THE TABLET   
   g <- l$values_long %>%  
     dplyr::mutate(
       agg_level = factor(agg_level, levels = c("HSDA","HA","PR"))
     ) %>% 
     ggplot2::ggplot(
       aes_string(
-        x     = "sex"
+         x     = "sex"
         ,y     = "label_hsda"
         ,label = "value" 
-        
       )
     )
-  
   g <- g + geom_tile(aes_string(fill = censor))
   # g <- g + geom_text(size = baseSize-7, hjust=.4)
   # g <- g + geom_text(size = fontsize_right, hjust=.5)
@@ -520,13 +479,14 @@ make_tile_graph <- function(
   # g <- g + theme1
   g <- g + theme_minimal()
   g <- g + theme(
-    axis.text.x =  element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks = element_blank(),
-    panel.grid.major.x  =  element_blank(),
-    panel.grid.minor.x  =  element_blank(),
-    panel.grid.major.y  =  element_blank(),
-    panel.grid.minor.y  =  element_blank(),
+    # axis.text.x         =  element_blank(),
+    axis.text.x         = element_text(color = "grey50"),
+    axis.text.y         = element_blank(),
+    axis.ticks          = element_blank(),
+    panel.grid.major.x  = element_blank(),
+    panel.grid.minor.x  = element_blank(),
+    panel.grid.major.y  = element_blank(),
+    panel.grid.minor.y  = element_blank(),
     legend.position="left"
   )
   g <- g + guides(color=FALSE, fill=FALSE)
@@ -575,7 +535,7 @@ print_tile_graph <- function(
   
   for(i in seq_along(censor_vector)){
     path_save = paste0(path_folder,disease,"-",year,"-censor-",i-1,".png")
-    png(filename = path_save, width = 900, height = 500,res = 85)
+    png(filename = path_save, width = 900, height = 500,res = 100)
     d %>% make_tile_graph(meta,censor = censor_vector[i],...)
     dev.off()
   }
@@ -583,8 +543,17 @@ print_tile_graph <- function(
 }
 #usage
 # ds %>% print_tile_graph(bc_health_map, size = 3)
+
+# wrapper function to print one case  
+print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...){
+  d %>% 
+    filter(case==selected_case) %>% 
+    select(-case) %>%
+    print_tile_graph(path_folder=folder,...)
   
- 
+}
+#usage
+# ds0 %>% print_one_case(selected_case = 4)
 
 # ----- workflow --------------------------
 # the script loads the fictional examples from ./data-public/raw/ folder
@@ -602,18 +571,11 @@ ds <- ds0 %>%
 #   print_tile_graph(path_folder = "./sandbox/dev-1/prints/")
 
 # or use a wrapper function to print directly from ds0
-print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...){
-  d %>% 
-    filter(case==selected_case) %>% 
-    select(-case) %>%
-    print_tile_graph(path_folder=folder,...)
-  
-}
-#usage
-# ds0 %>% print_one_case(selected_case = 1)
+# ds0 %>% print_one_case(selected_case=2)
 
+# to print multiple cases, use a for loop
 for(i in 1:6){
+# for(i in c(2,5){
   ds0 %>% print_one_case(selected_case=i)
 }
-
 
