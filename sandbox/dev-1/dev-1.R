@@ -92,19 +92,24 @@ ds <- ds0 %>% filter(case ==2) %>% select(-case)
 # ---- utility-functions -------------------------------------------------------
 # function returning a look up table for a given level of aggregation
 lookup_meta <- function(
-  meta       # meta-data file contains BC health boundries heirarchy and other definitions
+  meta=bc_health_map       # meta-data file contains BC health boundries heirarchy and other definitions
   ,agg_level = "hsda"  #
 ){
   if(agg_level == "hsda"){
     lookup_table <- meta %>% 
       dplyr::distinct(id_ha, id_hsda, label_ha, label_hsda, color_hsda, color_hsda_label) %>% 
-      dplyr::select(id_ha, id_hsda, label_ha, dplyr::everything()) %>% 
+      dplyr::select( id_ha, id_hsda, label_ha, dplyr::everything()) %>% 
       dplyr::arrange(id_ha, id_hsda)
   }
   if(agg_level == "ha"){
     lookup_table <- meta %>% 
       dplyr::distinct(id_ha, label_ha, color_ha, color_ha_label) %>% 
       dplyr::arrange(id_ha)
+  }
+  if(agg_level == "pr"){
+    lookup_table <- meta %>% 
+      dplyr::distinct(id_pr, label_pr, color_pr, color_pr_label) %>% 
+      dplyr::arrange(id_pr)
   }
   return(lookup_table)
 }
@@ -328,6 +333,66 @@ combine_censors <- function(
 # usage
 # dd <- ds %>% combine_censors()
 
+
+
+# function that creates dynamic colors 
+
+make_color_scale <- function(
+  meta = bc_health_map
+){
+  
+  lkp_hsda <- meta %>% lookup_meta("hsda")
+  lkp_ha   <- meta %>% lookup_meta("ha")
+  lkp_pr   <- meta %>% lookup_meta("pr")
+  
+  # create a color scale for fill and text
+  # extrac color definitions from the meta data
+  d_color_fill <- 
+    dplyr::bind_rows(
+      list(
+        "hsda" =  lkp_hsda %>% 
+          dplyr::select(label_hsda, color_hsda) %>% 
+          dplyr::rename(label_text = label_hsda, color_value =color_hsda )
+        ,"ha"  = lkp_ha %>% 
+          dplyr::select(label_ha, color_ha) %>% 
+          dplyr::rename(label_text = label_ha, color_value =color_ha )
+        ,"pr"  = lkp_pr %>% 
+          dplyr::select(label_pr, color_pr) %>% 
+          dplyr::rename(label_text = label_pr, color_value =color_pr )
+      )
+    ) %>% 
+    dplyr::distinct()
+  # convert to a named vector
+  v_color_fill <- as.data.frame(d_color_fill)[,"color_value"]
+  names(v_color_fill) <- as.data.frame(d_color_fill)[,"label_text"]
+  v_color_fill # inspect
+  # derived the color of the text by reversing the brightness and hue
+  # see http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+  v_color_text <- 
+    as.data.frame(t(col2rgb(v_color_fill))) %>% 
+    dplyr::mutate(
+      brightness = sqrt(red*red*.241 + green*green*.691 + blue*blue*.068),
+      color      = ifelse(brightness>130, "gray2", "gray98")
+    ) %>%
+    dplyr::select(color) %>% 
+    unlist()
+  names(v_color_text) <- names(v_color_fill)
+  
+  # combine into the final data set
+  d_colors <- dplyr::full_join(
+    as.data.frame(v_color_fill) %>% tibble::rownames_to_column("value")
+    ,as.data.frame(v_color_text) %>% tibble::rownames_to_column("value")
+    , by = "value"
+  )
+  return(d_colors)
+  
+}
+# usage
+# d_colors <- bc_health_map %>% make_color_scale
+
+
+
+
 # function to prepare the smallest context for graphing by geom_tile
 # input = disease-by-year ds, output = list object with meaningful components
 prepare_for_tiling <- function(
@@ -339,7 +404,11 @@ prepare_for_tiling <- function(
   #(1)######## Establish the reference definitions from the common meta data object
   # obtain lookup tables from the meta-data object  
   lkp_hsda <- meta %>% lookup_meta("hsda")
-  lkp_ha <- meta %>% lookup_meta("ha")
+  lkp_ha   <- meta %>% lookup_meta("ha")
+  lkp_pr   <- meta %>% lookup_meta("pr")
+  
+  d_colors <- bc_health_map %>% make_color_scale
+
   # extract stable info
   disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
   year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
@@ -356,7 +425,13 @@ prepare_for_tiling <- function(
   #(2)######## Create data for the LEFT PANEL
   # create data set for the left panel of the graph (labels of health boundries)
   # d_long_labels <- d %>% elongate_labels(c("label_ha","label_hsda")) %>% 
-  d_long_labels <- d %>% elongate_labels(label_variables) %>% 
+  d_long_labels <- d %>% 
+    elongate_labels(label_variables) %>% 
+    # # add color info from the meta data
+    dplyr::left_join(
+      d_colors, by = c("value") # experimental feature, optional at this point
+    ) %>%
+    # make columns into factors to enforce order and aesthetic mapping
     dplyr::mutate(   
        label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
@@ -366,6 +441,7 @@ prepare_for_tiling <- function(
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
     dplyr::arrange(label_ha, label_hsda)
     # inspect if needed
+
   # d_long_labels %>% print(n=nrow(.))
 
   #(3)######## Create data for the RIGHT PANEL
@@ -399,12 +475,12 @@ prepare_for_tiling <- function(
 make_tile_graph <- function(
   d   # a dataset containing observed counts for the decision context
   ,meta=bc_health_map# a meta data object containing grouping and coloring settings
-  ,censor 
+  ,censor="censor0" 
   ,...
 ){
   # d <- ds # turn on for testing, if needed
   # meta <- bc_health_map
-  
+  # censor = "censor0"
   censor_labels <- c(
         "censor0"                     = "- Observed counts"
       , "censor1_small_cell"          = "- Censor (1) Small cell?"
@@ -421,6 +497,7 @@ make_tile_graph <- function(
   ##--##--##--##--##--##--##--##--##--##--##
   # graph the labels - LEFT SIDE OF THE TABLET
   g <- l$labels_long %>%  
+    dplyr::filter(!agg_level=="PR") %>% 
     dplyr::mutate(dummy = "") %>% 
     ggplot2::ggplot(
       aes_string(
@@ -429,10 +506,12 @@ make_tile_graph <- function(
         ,label = "value" 
       )
     )
-  g <- g + geom_tile(fill = "grey99")
+  g <- g + geom_tile(fill = "white")
+  # g <- g + geom_tile(aes_string(fill = "v_color_fill"))
   g <- g + facet_grid(.~agg_level)
-  # g <- g + geom_text(size = baseSize-7, hjust =.5)
-  g <- g + geom_text(hjust =.5, ...)
+  g <- g + geom_text(size = baseSize-7, hjust =.5)
+  # g <- g + geom_text(aes_string(color = "v_color_fill"),hjust =.5, ...)
+  # g <- g + geom_text(aes_string(color = "v_color_text"),hjust =.5)
   g <- g + theme_minimal()
   g <- g + theme(
     # axis.text.x =  element_blank(),
@@ -443,7 +522,7 @@ make_tile_graph <- function(
     panel.grid.minor.x  = element_blank(),
     panel.grid.major.y  = element_blank(),
     panel.grid.minor.y  = element_blank(),
-    legend.position="left"
+    legend.position="none"
   )
   g <- g + guides(color=FALSE)
   g <- g + labs(x=NULL, y=NULL)
@@ -463,6 +542,7 @@ make_tile_graph <- function(
         ,label = "value" 
       )
     )
+  # g <- g + geom_tile(aes_string(fill = "agg_level"))
   g <- g + geom_tile(aes_string(fill = censor))
   # g <- g + geom_text(size = baseSize-7, hjust=.4)
   # g <- g + geom_text(size = fontsize_right, hjust=.5)
@@ -513,7 +593,7 @@ make_tile_graph <- function(
   return(grid::popViewport(0))
   
 } # usage
-# ds %>% make_tile_graph(bc_health_map)
+# ds %>% make_tile_graph(bc_health_map, "censor0")
 
 
 print_tile_graph <- function(
