@@ -83,14 +83,14 @@ bc_health_map <- bc_health_map %>%
     id_pr, id_ha, id_hsda, id_lha,
                 label_pr, label_ha, label_hsda, label_lha,
                 dplyr::everything()) %>% 
-  dplyr::select(-label_prov)
+  dplyr::select(-label_pr)
 
 # select data to work with for development
-ds <- ds0 %>% filter(case ==2) %>% select(-case)
+ds <- ds0 %>% filter(case ==7) %>% select(-case)
   
 
 # ---- utility-functions -------------------------------------------------------
-# function returning a look up table for a given level of aggregation
+# function returning a lookup table for a given level of aggregation
 lookup_meta <- function(
   meta=bc_health_map       # meta-data file contains BC health boundries heirarchy and other definitions
   ,agg_level = "hsda"  #
@@ -169,7 +169,7 @@ elongate_labels <- function(
     )
 }
 # usage
-# d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
+d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
 
 
 # ---- inspect-data-2 -------------------------------------------------------------
@@ -654,7 +654,7 @@ ds <- ds0 %>%
 # ds0 %>% print_one_case(selected_case=2)
 
 # to print multiple cases, use a for loop
-for(i in 1:6){
+for(i in 7:7){
 # for(i in c(2,5){
   ds0 %>% print_one_case(selected_case=i)
 }
