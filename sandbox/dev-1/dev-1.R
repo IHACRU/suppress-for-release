@@ -64,7 +64,7 @@ bc_health_map %>%
 # view these corrections as temporary, needed to connect the workflows
 ds0 <- ds0 %>% 
   dplyr::mutate(
-    label_pr = "BC"
+  label_pr = "BC"
   ) %>% 
   dplyr::select(
     case, disease, year, label_pr, label_ha, label_hsda,
@@ -83,7 +83,7 @@ bc_health_map <- bc_health_map %>%
     id_pr, id_ha, id_hsda, id_lha,
                 label_pr, label_ha, label_hsda, label_lha,
                 dplyr::everything()) %>% 
-  dplyr::select(-label_pr)
+  dplyr::select(-label_prov)
 
 # select data to work with for development
 ds <- ds0 %>% filter(case ==7) %>% select(-case)
@@ -218,7 +218,7 @@ detect_small_cell <- function(
 # d_small_cell <- ds %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
-# TEST 2: What cells can help calculated suppressed cells from the same triple?
+# TEST 2: What cells can help calculate the suppressed cells from the same triple?
 # Censor 2: What triples should be suppressed? (eg. F-M-T)
 # reverse calculate from:
 detect_recalc_triplet <- function(
@@ -407,7 +407,7 @@ prepare_for_tiling <- function(
   lkp_ha   <- meta %>% lookup_meta("ha")
   lkp_pr   <- meta %>% lookup_meta("pr")
   
-  d_colors <- bc_health_map %>% make_color_scale
+  d_colors <- bc_health_map %>% make_color_scale()
 
   # extract stable info
   disease = as.data.frame(d %>% dplyr::distinct(disease))[1,1]
@@ -633,11 +633,11 @@ print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...
   
 }
 #usage
-# ds0 %>% print_one_case(selected_case = 4)
+ds0 %>% print_one_case(selected_case = 4)
 
 # ----- workflow --------------------------
 # the script loads the fictional examples from ./data-public/raw/ folder
-# place all fictional case you want to graph there, as separate csvs
+# place all fictional cases you want to graph there, as separate csvs
 # this scripts reads all csv files that start with "fictional-case-" and
 # assembles them into a data frame
 ds0
@@ -651,7 +651,7 @@ ds <- ds0 %>%
 #   print_tile_graph(path_folder = "./sandbox/dev-1/prints/")
 
 # or use a wrapper function to print directly from ds0
-# ds0 %>% print_one_case(selected_case=2)
+ds0 %>% print_one_case(selected_case=2)
 
 # to print multiple cases, use a for loop
 for(i in 7:7){
