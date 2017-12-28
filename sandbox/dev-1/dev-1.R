@@ -633,7 +633,7 @@ print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...
   
 }
 #usage
-ds0 %>% print_one_case(selected_case = 5)
+# ds0 %>% print_one_case(selected_case = 8)
 
 # ----- workflow --------------------------
 # the script loads the fictional examples from ./data-public/raw/ folder
@@ -651,7 +651,7 @@ ds <- ds0 %>%
 #   print_tile_graph(path_folder = "./sandbox/dev-1/prints/")
 
 # or use a wrapper function to print directly from ds0
-ds0 %>% print_one_case(selected_case=2)
+ds0 %>% print_one_case(selected_case=8)
 
 # to print multiple cases, use a for loop
 for(i in 7:7){
