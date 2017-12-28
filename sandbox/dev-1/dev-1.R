@@ -245,7 +245,7 @@ detect_recalc_triplet <- function(
  return(d2)   
 } 
 # usage
-d2 <- ds %>% detect_recalc_triplet()
+# d2 <- ds %>% detect_recalc_triplet()
 
 # TEST 3: Is this is the only triple that is being suppressed in a higher order block?
 # Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
@@ -633,7 +633,7 @@ print_one_case <- function(d,folder="./sandbox/dev-1/prints/", selected_case,...
   
 }
 #usage
-ds0 %>% print_one_case(selected_case = 4)
+ds0 %>% print_one_case(selected_case = 5)
 
 # ----- workflow --------------------------
 # the script loads the fictional examples from ./data-public/raw/ folder
