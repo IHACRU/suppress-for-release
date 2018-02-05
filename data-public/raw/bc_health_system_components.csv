@@ -1,0 +1,115 @@
+REGION,REGION_DESC
+BC,BC                               
+HA-01,01 Interior                      
+HA-02,02 Fraser                        
+HA-03,03 Vancouver Coastal             
+HA-04,04 Vancouver Island              
+HA-05,05 Northern                      
+HA-99,Unknown HA                       
+HSDA-11,11 East Kootenay                 
+HSDA-12,12 Kootenay Boundary             
+HSDA-13,13 Okanagan                      
+HSDA-14,14 Thompson Cariboo Shuswap      
+HSDA-21,21 Fraser East                   
+HSDA-22,22 Fraser North                  
+HSDA-23,23 Fraser South                  
+HSDA-31,31 Richmond                      
+HSDA-32,32 Vancouver                     
+HSDA-33,33 North Shore/Coast Garibaldi   
+HSDA-41,41 South Vancouver Island        
+HSDA-42,42 Central Vancouver Island      
+HSDA-43,43 North Vancouver Island        
+HSDA-51,51 Northwest                     
+HSDA-52,52 Northern Interior             
+HSDA-53,53 Northeast                     
+HSDA-99,Unknown HSDA                     
+LHA-001,001 Fernie                       
+LHA-002,002 Cranbrook                    
+LHA-003,003 Kimberley                    
+LHA-004,004 Windermere                   
+LHA-005,005 Creston                      
+LHA-006,006 Kootenay Lake                
+LHA-007,007 Nelson                       
+LHA-009,009 Castlegar                    
+LHA-010,010 Arrow Lakes                  
+LHA-011,011 Trail                        
+LHA-012,012 Grand Forks                  
+LHA-013,013 Kettle Valley                
+LHA-014,014 Southern Okanagan            
+LHA-015,015 Penticton                    
+LHA-016,016 Keremeos                     
+LHA-017,017 Princeton                    
+LHA-018,018 Golden                       
+LHA-019,019 Revelstoke                   
+LHA-020,020 Salmon Arm                   
+LHA-021,021 Armstrong - Spallumcheen     
+LHA-022,022 Vernon                       
+LHA-023,023 Central Okanagan             
+LHA-024,024 Kamloops                     
+LHA-025,025 100 Mile House               
+LHA-026,026 North Thompson               
+LHA-027,027 Cariboo - Chilcotin          
+LHA-028,028 Quesnel                      
+LHA-029,029 Lillooet                     
+LHA-030,030 South Cariboo                
+LHA-031,031 Merritt                      
+LHA-032,032 Hope                         
+LHA-033,033 Chilliwack                   
+LHA-034,034 Abbotsford                   
+LHA-035,035 Langley                      
+LHA-037,037 Delta                        
+LHA-038,038 Richmond                     
+LHA-040,040 New Westminster              
+LHA-041,041 Burnaby                      
+LHA-042,042 Maple Ridge                  
+LHA-043,043 Coquitlam                    
+LHA-044,044 North Vancouver              
+LHA-045,045 West Vancouver-Bowen Island  
+LHA-046,046 Sunshine Coast               
+LHA-047,047 Powell River                 
+LHA-048,048 Howe Sound                   
+LHA-049,049 Bella Coola Valley           
+LHA-050,050 Queen Charlotte              
+LHA-051,051 Snow Country                 
+LHA-052,052 Prince Rupert                
+LHA-053,053 Upper Skeena                 
+LHA-054,054 Smithers                     
+LHA-055,055 Burns Lake                   
+LHA-056,056 Nechako                      
+LHA-057,057 Prince George                
+LHA-059,059 Peace River South            
+LHA-060,060 Peace River North            
+LHA-061,061 Greater Victoria             
+LHA-062,062 Sooke                        
+LHA-063,063 Saanich                      
+LHA-064,064 Gulf Islands                 
+LHA-065,065 Cowichan                     
+LHA-066,066 Lake Cowichan                
+LHA-067,067 Ladysmith                    
+LHA-068,068 Nanaimo                      
+LHA-069,069 Qualicum                     
+LHA-070,070 Alberni                      
+LHA-071,071 Courtenay                    
+LHA-072,072 Campbell River               
+LHA-075,075 Mission                      
+LHA-076,076 Agassiz - Harrison           
+LHA-077,077 Summerland                   
+LHA-078,078 Enderby                      
+LHA-080,080 Kitimat                      
+LHA-081,081 Fort Nelson                  
+LHA-083,083 Central Coast                
+LHA-084,084 Vancouver Island West        
+LHA-085,085 Vancouver Island North       
+LHA-087,087 Stikine                      
+LHA-088,088 Terrace                      
+LHA-092,092 Nisga'a                      
+LHA-094,094 Telegraph Creek              
+LHA-161,161 Vancouver - City Centre      
+LHA-162,162 Vancouver - Downtown Eastside
+LHA-163,163 Vancouver - North East       
+LHA-164,164 Vancouver - Westside         
+LHA-165,165 Vancouver - Midtown          
+LHA-166,166 Vancouver - South            
+LHA-201,201 Surrey                       
+LHA-202,202 South Surrey/White Rock      
+LHA-998,998 Unknown LHA                  
