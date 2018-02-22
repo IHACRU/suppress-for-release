@@ -1,4 +1,4 @@
-id_prov,id_ha,id_hsda,id_lha,label_lha,label_hsda,label_ha,label_prov,color_ha,color_ha_label,color_hsda,color_hsda_label,color_pr,color_pr_label
+id_prov,id_ha,id_hsda,id_lha,label_lha,label_hsda,label_ha,label_prov,color_ha,color_ha_label,color_hsda,color_hsda_label,color_prov,color_prov_label
 0,1,11,1,Fernie,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green,#ffffff,white
 0,1,11,2,Cranbrook,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green,#ffffff,white
 0,1,11,3,Kimberley,East Kootenay,Interior,BC,#4daf4a,green,#edf8e9,pale green,#ffffff,white
@@ -88,4 +88,3 @@ id_prov,id_ha,id_hsda,id_lha,label_lha,label_hsda,label_ha,label_prov,color_ha,c
 0,5,53,59,Peace River South,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange,#ffffff,white
 0,5,53,60,Peace River North,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange,#ffffff,white
 0,5,53,81,Fort Nelson,Northeast,Northern,BC,#ff7f00,orange,#d94701,dark orange,#ffffff,white
-0,996,997,998,Unknown LHA,Unknown HSDA,Unknown HA,BC,#ffffff,white,#ffffff,white,#ffffff,white
