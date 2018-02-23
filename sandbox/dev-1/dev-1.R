@@ -27,7 +27,7 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
 
-path_input_folder  <- "./data-public/raw/fictional_cases"
+path_input_folder  <- "./data-public/raw/fictional-cases/manual/"
 
 # path_cdr_2014   <- "./data-unshared/derived/dto_10000.rds"
 path_region_map <- "./data-public/raw/bc_health_system_map.csv"
