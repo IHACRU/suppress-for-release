@@ -27,10 +27,10 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
 
-path_input_folder  <- "./data-public/raw/"
+path_input_folder  <- "./data-public/raw/fictional_cases"
 
 # path_cdr_2014   <- "./data-unshared/derived/dto_10000.rds"
-path_region_map <- "./data-public/raw/province_health_map.csv"
+path_region_map <- "./data-public/raw/bc_health_system_map.csv"
 
 baseSize = 10
 # ---- utility-functions ----------------------------------------------------- 
@@ -64,10 +64,10 @@ bc_health_map %>%
 # view these corrections as temporary, needed to connect the workflows
 ds0 <- ds0 %>% 
   dplyr::mutate(
-  label_pr = "BC"
+  label_prov = "BC"
   ) %>% 
   dplyr::select(
-    case, disease, year, label_pr, label_ha, label_hsda,
+    case, disease, year, label_prov, label_ha, label_hsda,
     HSDA_F,HSDA_M,HSDA_T,HA_F, HA_F, HA_M, HA_T,  BC_F, BC_M, BC_T 
   )
 names(ds0) <- gsub("^BC_","PR_", names(ds0))
@@ -77,13 +77,13 @@ bc_health_map <- bc_health_map %>%
     id_pr = id_prov
   ) %>% 
   dplyr::mutate(
-    label_pr = "BC"
+    label_prov = "BC"
   ) %>% 
   dplyr::select(
     id_pr, id_ha, id_hsda, id_lha,
-                label_pr, label_ha, label_hsda, label_lha,
+                label_prov, label_ha, label_hsda, label_lha,
                 dplyr::everything()) %>% 
-  dplyr::select(-label_prov)
+  dplyr::select(-label_provov)
 
 # select data to work with for development
 ds <- ds0 %>% filter(case ==7) %>% select(-case)
@@ -108,7 +108,7 @@ lookup_meta <- function(
   }
   if(agg_level == "pr"){
     lookup_table <- meta %>% 
-      dplyr::distinct(id_pr, label_pr, color_pr, color_pr_label) %>% 
+      dplyr::distinct(id_pr, label_prov, color_pr, color_pr_label) %>% 
       dplyr::arrange(id_pr)
   }
   return(lookup_table)
@@ -169,7 +169,7 @@ elongate_labels <- function(
     )
 }
 # usage
-d_long_labels <- ds %>% elongate_labels(c("label_pr", "label_ha","label_hsda"))
+d_long_labels <- ds %>% elongate_labels(c("label_prov", "label_ha","label_hsda"))
 
 
 # ---- inspect-data-2 -------------------------------------------------------------
@@ -275,7 +275,7 @@ detect_single_suppression <- function(
     dplyr::select(-n_sup, -n_tot)
   ########### Single suppression at HA level
   d3 <- d2 %>% 
-    dplyr::group_by(label_pr) %>%
+    dplyr::group_by(label_prov) %>%
     dplyr::mutate(
       n_sup = sum(HA_F & HA_M) # both must be TRUE to count as 1
      ,n_tot = sum(HA_T) # must be TRUE to count
@@ -357,8 +357,8 @@ make_color_scale <- function(
           dplyr::select(label_ha, color_ha) %>% 
           dplyr::rename(label_text = label_ha, color_value =color_ha )
         ,"pr"  = lkp_pr %>% 
-          dplyr::select(label_pr, color_pr) %>% 
-          dplyr::rename(label_text = label_pr, color_value =color_pr )
+          dplyr::select(label_prov, color_pr) %>% 
+          dplyr::rename(label_text = label_prov, color_value =color_pr )
       )
     ) %>% 
     dplyr::distinct()
@@ -414,8 +414,8 @@ prepare_for_tiling <- function(
   year    = as.data.frame(d %>% dplyr::distinct(year))[1,1]
   # remove stable info from the standard input format
   d_wide <- d %>% dplyr::select(-disease, -year) #%>% 
-    # dplyr::mutate(label_pr = "BC") %>% # add manually, for balance
-    # dplyr::select(label_pr, dplyr::everything()) # sort
+    # dplyr::mutate(label_prov = "BC") %>% # add manually, for balance
+    # dplyr::select(label_prov, dplyr::everything()) # sort
   # the object `d_wide` is now the stem for sebsequent operations
     # split variables into counts and labels
   (count_variables <- grep("_[MFT]$",names(d_wide), value = T))
