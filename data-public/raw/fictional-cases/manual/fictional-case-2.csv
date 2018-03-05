@@ -1,17 +1,17 @@
-disease,year,label_ha,label_hsda,BC_F,BC_M,BC_T,HA_F,HA_M,HA_T,HSDA_F,HSDA_M,HSDA_T
-Flower Deafness,2002,Interior,East Kootenay,60,78,138,16,15,31,7,4,11
-Flower Deafness,2002,Interior,Kootenay Boundary,60,78,138,16,15,31,9,4,13
-Flower Deafness,2002,Interior,Okanagan,60,78,138,16,15,31,0,7,7
-Flower Deafness,2002,Interior,Thompson Cariboo Shuswap,60,78,138,16,15,31,0,0,0
-Flower Deafness,2002,Fraser,Fraser East,60,78,138,11,15,26,0,4,4
-Flower Deafness,2002,Fraser,Fraser North,60,78,138,11,15,26,1,6,7
-Flower Deafness,2002,Fraser,Fraser South,60,78,138,11,15,26,10,5,15
-Flower Deafness,2002,Vancouver Coastal,Richmond,60,78,138,7,21,28,2,2,4
-Flower Deafness,2002,Vancouver Coastal,Vancouver,60,78,138,7,21,28,1,9,10
-Flower Deafness,2002,Vancouver Coastal,North Shore/Coast Garibaldi,60,78,138,7,21,28,4,10,14
-Flower Deafness,2002,Vancouver Island,South Vancouver Island,60,78,138,11,13,24,1,9,10
-Flower Deafness,2002,Vancouver Island,Central Vancouver Island,60,78,138,11,13,24,3,0,3
-Flower Deafness,2002,Vancouver Island,North Vancouver Island,60,78,138,11,13,24,7,4,11
-Flower Deafness,2002,Northern,Northwest,60,78,138,15,14,29,5,3,8
-Flower Deafness,2002,Northern,Northern Interior,60,78,138,15,14,29,3,6,9
-Flower Deafness,2002,Northern,Northeast,60,78,138,15,14,29,7,5,12
+disease,year,label_prov,label_ha,label_hsda,BC_F,BC_M,BC_T,HA_F,HA_M,HA_T,HSDA_F,HSDA_M,HSDA_T
+Flower Deafness,2002,BC,Interior,East Kootenay,60,78,138,16,15,31,7,4,11
+Flower Deafness,2002,BC,Interior,Kootenay Boundary,60,78,138,16,15,31,9,4,13
+Flower Deafness,2002,BC,Interior,Okanagan,60,78,138,16,15,31,0,7,7
+Flower Deafness,2002,BC,Interior,Thompson Cariboo Shuswap,60,78,138,16,15,31,0,0,0
+Flower Deafness,2002,BC,Fraser,Fraser East,60,78,138,11,15,26,0,4,4
+Flower Deafness,2002,BC,Fraser,Fraser North,60,78,138,11,15,26,1,6,7
+Flower Deafness,2002,BC,Fraser,Fraser South,60,78,138,11,15,26,10,5,15
+Flower Deafness,2002,BC,Vancouver Coastal,Richmond,60,78,138,7,21,28,2,2,4
+Flower Deafness,2002,BC,Vancouver Coastal,Vancouver,60,78,138,7,21,28,1,9,10
+Flower Deafness,2002,BC,Vancouver Coastal,North Shore/Coast Garibaldi,60,78,138,7,21,28,4,10,14
+Flower Deafness,2002,BC,Vancouver Island,South Vancouver Island,60,78,138,11,13,24,1,9,10
+Flower Deafness,2002,BC,Vancouver Island,Central Vancouver Island,60,78,138,11,13,24,3,0,3
+Flower Deafness,2002,BC,Vancouver Island,North Vancouver Island,60,78,138,11,13,24,7,4,11
+Flower Deafness,2002,BC,Northern,Northwest,60,78,138,15,14,29,5,3,8
+Flower Deafness,2002,BC,Northern,Northern Interior,60,78,138,15,14,29,3,6,9
+Flower Deafness,2002,BC,Northern,Northeast,60,78,138,15,14,29,7,5,12
