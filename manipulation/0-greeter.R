@@ -20,16 +20,16 @@ requireNamespace("dplyr", quietly=TRUE)
 requireNamespace("DT", quietly=TRUE) # for dynamic tables
 
 # ---- declare-globals ---------------------------------------------------------
-# link to the source of the location mapping
+# declare the location of the data sources to be used in this script
 path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
 path_region_map     <- "./data-public/raw/bc-health-system-map.csv"
 path_fictional_case <- "./data-public/raw/fictional-cases/fictional-case-0.csv"
 
 # test whether the file exists / the link is good
 testit::assert("File does not exist", base::file.exists(path_input))
-# declare where you will store the product of this script
-path_save <- "./data-unshared/derived/dto-0-greeted"
 
+# declare where you will store the product of this script
+path_save           <- "./data-unshared/derived/dto-0-greeted"
 
 # ---- utility-functions ----------------------------------------------------- 
 # functions, the use of which is localized to this script
@@ -91,6 +91,8 @@ dto[["meta"]] <- bc_health_map
 # finally, let's store the target shape of the data that will be crucial to keep in mind
 dto[["target"]] <- fictional_case
 
+dto[["FRAMED"]] <- list() # a shell to hold the frames of different content
+dto[["FRAMED"]][["raw"]] <- list() # the first element will break up the raw data into digestable frame
 
 # now we will deconstruct the flat data frame into a list object in which 
 #  level-1 components correspond to diseases and 
@@ -125,10 +127,13 @@ for(disease_ in diseases_available){
     greeted_list[[disease_]][[year_]] <- d1
   }
 }
-sapply(greeted_list, names)
+sapply(dto, names) 
+sapply(greeted_list, names) 
 # this list object in which the smallest unit is the analytic frame: disease * year
-dto[["greeted"]] <- greeted_list
+dto[["FRAMED"]][["raw"]] <- greeted_list
 
+sapply(dto$FRAMED, names) 
+sapply(dto$FRAMED$raw, names) 
 
 # ---- save-to-disk --------------------
 saveRDS(dto, paste0(path_save,".rds"))

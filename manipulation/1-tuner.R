@@ -133,20 +133,23 @@ full_join_multi <- function(list_object){
 # ---- load-data ---------------------------------------------------------------
 dto <- readRDS(path_input) 
 
+# Contents
+# dto$raw    - dframe - flat data file as obtained from MoH
+# dto$meta   - dframe - heirachical map and other meta information
+# dto$target - dframe - a fictional case of surveillance, target shape for mechanized suppression
+# dto$FRAMED - list - 
+# dto$FRAMED$raw - deconstructed `dto$raw` with each frame = disease * year
+
 # ---- inspect-data ---------------------------
 lapply(dto, names)
-lapply(dto$greeted, names)
+lapply(dto$FRAMED, names)
 
 # select a unit for suppression decision; all transformation will be keyed to this shape
-df <- dto$greeted$`Flower Deafness`$`1999`
+df <- dto$FRAMED$raw$`Flower Deafness`$`2000`
 df %>% print(n = nrow(.))
 # compare it to the shape we need it to be to apply mechanized suppression
 dto$target
 # this script will develop and apply the function that bring `greeted`` formed into `tuned` form
-
-
-
-# ----- define-utility-functions ----------------------------
 
 # ---- tweak-data -------------
 # now we will create a list object                  dto$tuned, 
@@ -154,32 +157,31 @@ dto$target
 # but will contain frames conformed to the shape of dto$target
 
 # let's remind ourselves what we are doing
-dto$target # this is where we want the data to get
+# dto$target # this is where we want the data to get
 # create a stem to which one can attach the counts 
 dstem <- dto$meta %>% 
   lookup_meta("hsda") %>% 
   dplyr::select(label_prov, label_ha, label_hsda)
 # we will use this stem in tidy_frame() function
 
-lapply(dto$greeted, names)
-# loop through available diseases
-dto[["tuned"]] <- dto[["greeted"]] # start with the same structure, replace with transformed frames
-lapply(dto$tuned, names)
+lapply(dto$FRAMED$raw, names)
+# start with the same structure, to be replaced with transformed frames
+dto[["FRAMED"]][["tuned"]] <- dto[["FRAMED"]][["raw"]] 
+lapply(dto$FRAMED$tuned, names)
 
-for(disease_ in names(dto$greeted)){
+for(disease_ in names(dto$FRAMED$raw)){
   # loop through available years
-  for(year_ in names(dto$greeted[[disease_]]) ){
-    # year_ <- names(dto$greeted[[disease_]])[1]
-    dto[["tuned"]][[disease_]][[year_]] <- 
-      dto[["greeted"]][[disease_]][[year_]] %>% 
+  for(year_ in names(dto$FRAMED$raw[[disease_]]) ){
+    dto$FRAMED$tuned[[disease_]][[year_]] <- 
+      dto$FRAMED$raw[[disease_]][[year_]] %>% 
       tidy_frame(stem = dstem)
   }
 }
 
 # ---- explore-data ------------------------------------------
 # compare results
-dto$greeted$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$tuned$`Flower Deafness`$`1999`
+dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$tuned$`Flower Deafness`$`1999`
 
 
 # ---- save-to-disk ----------------
