@@ -1,6 +1,8 @@
 # load common object definitions
 source("./manipulation/object-glossary.R")
 
+# ----- utility-functions --------------------------
+
 # function returning a lookup table for a given level of aggregation
 lookup_meta <- function(
   meta=bc_health_map       # meta-data file contains BC health boundries heirarchy and other definitions
@@ -27,3 +29,5 @@ lookup_meta <- function(
 # usage
 # lkp_hsda <- bc_health_map %>% lookup_meta("hsda")
 # lkp_ha <- bc_health_map %>% lookup_meta("ha")
+
+
