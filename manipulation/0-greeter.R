@@ -9,6 +9,7 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
+
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
 # library(dplyr)    # data wrangling
@@ -24,10 +25,8 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
 path_region_map     <- "./data-public/raw/bc-health-system-map.csv"
 path_fictional_case <- "./data-public/raw/fictional-cases/fictional-case-0.csv"
-
 # test whether the file exists / the link is good
 testit::assert("File does not exist", base::file.exists(path_input))
-
 # declare where you will store the product of this script
 path_save           <- "./data-unshared/derived/dto-0-greeted"
 
@@ -38,6 +37,26 @@ path_save           <- "./data-unshared/derived/dto-0-greeted"
 ds             <- readr::read_csv(path_input) %>% as.data.frame() %>% tibble::as_tibble()
 bc_health_map  <- readr::read_csv(path_region_map)
 fictional_case <- readr::read_csv(path_fictional_case)
+
+# Contents
+# This is our starting point at which we begin to assemble our 
+# (d)ata (t)ransfer (u)nit or `dto`, as we will refer to it in the future
+
+# Components available initially:
+# ds                 - dframe - flat data file as obtained from MoH
+# bc_health_map      - dframe - heirachical map and other meta information
+# fictional_case     - dframe - a fictional case of surveillance, target shape
+
+# To be created in this script:
+# dto$raw            - dframe - flat data file as obtained from MoH
+# dto$meta           - dframe - heirachical map and other meta information
+# dto$target         - dframe - a fictional case of surveillance, target shape for mechanized suppression
+# dto$FRAMED         - list   - a list, each element of which is (disease*year) = FRAME 
+# dto$FRAMED$raw     - dframe [L] deconstructed `dto$raw` with each frame = disease * year
+
+# this script kick-offs a data transfer object and
+# introduces the FRAME as the focal structre in the analysis
+# the FRAME contains all data relevant to surveillance of (disease*year) unit
 
 # ---- inspect-data -----------------------------------------------------------
 # surveillance file from MoH comes as a flat .csv with

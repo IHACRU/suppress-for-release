@@ -9,9 +9,10 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
+
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
-# library(dplyr)    # data wrangling
+# library(dplyr)  # data wrangling
 library(magrittr) # pipes
 
 requireNamespace("knitr", quietly=TRUE)
@@ -22,123 +23,32 @@ requireNamespace("DT", quietly=TRUE) # for dynamic tables
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
 path_input          <- "./data-unshared/derived/dto-0-greeted.rds"
-
 path_fictional_case <- "./data-public/raw/fictional-cases/fictional-case-0.csv"
-
 # test whether the file exists / the link is good
 testit::assert("File does not exist", base::file.exists(path_input))
 # declare where you will store the product of this script
 path_save <- "./data-unshared/derived/dto-1-tuned"
 
-
 # ---- utility-functions ----------------------------------------------------- 
 # functions, the use of which is localized to this script
 
-# function to transform the analytic frame into target shape
-tidy_frame <- function(
-  d      # a single data frame from the greeted element
-  ,stem  # a foundation for assembling individual frames used in analysis
-){
-  # d <-df
-  # subset values to be evaluated
-  # we make a conscious decision to avoid sex == `U` and therefore remove it from the suppression logic
-  d1 <- d %>% 
-    dplyr::filter(
-      ! sex %in% c("U") # remove counts for unknown or unidentified sex
-    ) %>% 
-    # counts in the `Unknown` locales are not passed for public release
-    dplyr::filter(
-      ! region_desc %in% c("Unknown HSDA","Unknown HA","Unknown LHA")
-    )
-  # d1 %>% print(n = nrow(.))
-  dview <- d1 
-  
-  # use www.regex101.com to develop the regular expression for this case
-  regex_region = "^(\\w+)-?(\\d+)?"
-  regex_desc   = "^(\\d+)* ?(.*)"
-  d2 <- d1 %>% 
-    dplyr::mutate(
-      region_id    = gsub(pattern = regex_region, replacement = "\\2", x = region) %>% as.integer()
-      ,region_label = gsub(pattern = regex_region, replacement = "\\1", x = region)
-      ,desc_label   = gsub(pattern = regex_desc,   replacement = "\\2", x = region_desc)
-    ) %>% 
-    dplyr::mutate(
-      region_id = ifelse( region_label == "BC" , 0, region_id )
-      ,region_id = as.integer(region_id) 
-    )
-  # inspect the results of deconstruction
-  # d2 %>% print(n = 25)
-  dview <- d2
-  
-  d3 <- d2 %>% 
-    # dplyr::filter(sex == "F") %>% 
-    # dplyr::select(-region, -region_desc, -region_id) %>% 
-    dplyr::mutate( 
-      newvar = paste0("label_", tolower(region_label))
-      ,newvar = ifelse(region_label == "BC","label_prov", newvar)
-    ) %>% 
-    tidyr::spread( key = newvar, value = desc_label) %>% 
-    dplyr::mutate(
-      region_by_sex = paste0(region_label,"_",sex)
-    ) %>% 
-    tidyr::spread( key = region_by_sex, value = incase) %>% 
-    dplyr::arrange(sex)
-  dview <- d3
-  
-  ls4 <- list()
-  for(i in c("HSDA_F","HSDA_M","HSDA_T") ){
-    ls4[["hsda"]][[i]] <- d3 %>% 
-      dplyr::select_(.dots = c("label_hsda", i)) %>% 
-      dplyr::filter(stats::complete.cases(.))
-  } 
-  for(i in c("HA_F","HA_M","HA_T") ){
-    ls4[["ha"]][[i]] <- d3 %>% 
-      dplyr::select_(.dots = c("label_ha", i)) %>% 
-      dplyr::filter(stats::complete.cases(.))
-  }
-  for(i in c("BC_F","BC_M","BC_T") ){
-    ls4[["prov"]][[i]] <- d3 %>% 
-      dplyr::select_(.dots = c("label_prov", i)) %>% 
-      dplyr::filter(stats::complete.cases(.))
-  } 
-  ls4
-  
-  
-  ls5 <- list()
-  for(i in names(ls4)){
-    ls5[[i]] <- ls4[[i]] %>% full_join_multi()
-  }
-  
-  # ls6 <- list()
-  # ls6[["stem"]] <- dstem
-  
-  d4 <- stem %>% 
-    dplyr::left_join(ls5$prov) %>% 
-    dplyr::left_join(ls5$ha) %>%
-    dplyr::left_join(ls5$hsda)
-  
-  return(d4)
-  
-}
-# usage
-# d <- dto$greeted$`Flower Deafness`$`1999` %>% tidy_frame(dstem)
-
-# function to carry out a full join among all components of the list object
-full_join_multi <- function(list_object){
-  # list_object <- datas[["physical"]][["161"]]
-  d <- list_object %>%
-    Reduce(function(dtf1,dtf2) dplyr::full_join(dtf1,dtf2), .)
-}
 
 # ---- load-data ---------------------------------------------------------------
 dto <- readRDS(path_input) 
 
 # Contents
-# dto$raw    - dframe - flat data file as obtained from MoH
-# dto$meta   - dframe - heirachical map and other meta information
-# dto$target - dframe - a fictional case of surveillance, target shape for mechanized suppression
-# dto$FRAMED - list - 
-# dto$FRAMED$raw - deconstructed `dto$raw` with each frame = disease * year
+# dto$raw            - dframe - flat data file as obtained from MoH
+# dto$meta           - dframe - heirachical map and other meta information
+# dto$target         - dframe - a fictional case of surveillance, target shape for mechanized suppression
+# dto$FRAMED         - list   - a list, each element of which is disease*year  
+# dto$FRAMED$raw     - dframe [L] deconstructed from `dto$raw` with each frame = disease * year
+
+# To be added in this script:
+# dto$FRAMED$cleaned - dframe [L] tidies values in `region` and `region_desc`
+# dto$FRAMED$tuned   - dframe [W] spread into wide from `cleaned` and shape into decision frame
+
+# this script will develop and apply the function that 
+# brings `raw` form first into `cleaned` and then into `tuned` forms
 
 # ---- inspect-data ---------------------------
 lapply(dto, names)
@@ -149,11 +59,11 @@ df <- dto$FRAMED$raw$`Flower Deafness`$`2000`
 df %>% print(n = nrow(.))
 # compare it to the shape we need it to be to apply mechanized suppression
 dto$target
-# this script will develop and apply the function that bring `greeted`` formed into `tuned` form
+
 
 # ---- tweak-data -------------
 # now we will create a list object                  dto$tuned, 
-# which will mirrow the tructure of                 dto$greeted
+# which will mirrow the tructure of                 dto$raw
 # but will contain frames conformed to the shape of dto$target
 
 # let's remind ourselves what we are doing
@@ -166,12 +76,20 @@ dstem <- dto$meta %>%
 
 lapply(dto$FRAMED$raw, names)
 # start with the same structure, to be replaced with transformed frames
-dto[["FRAMED"]][["tuned"]] <- dto[["FRAMED"]][["raw"]] 
+dto[["FRAMED"]][["cleaned"]] <- dto[["FRAMED"]][["raw"]] 
+dto[["FRAMED"]][["tuned"]]   <- dto[["FRAMED"]][["raw"]] 
 lapply(dto$FRAMED$tuned, names)
 
 for(disease_ in names(dto$FRAMED$raw)){
   # loop through available years
   for(year_ in names(dto$FRAMED$raw[[disease_]]) ){
+    
+    # create a long form to connect back to the raw
+    dto$FRAMED$cleaned[[disease_]][[year_]] <- 
+      dto$FRAMED$raw[[disease_]][[year_]] %>% 
+      clean_raw(stem = dstem)
+    
+    # creat a wide form to connect to the logical test
     dto$FRAMED$tuned[[disease_]][[year_]] <- 
       dto$FRAMED$raw[[disease_]][[year_]] %>% 
       tidy_frame(stem = dstem)
@@ -181,6 +99,7 @@ for(disease_ in names(dto$FRAMED$raw)){
 # ---- explore-data ------------------------------------------
 # compare results
 dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$cleaned$`Flower Deafness`$`1999`
 dto$FRAMED$tuned$`Flower Deafness`$`1999`
 
 

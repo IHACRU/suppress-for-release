@@ -31,3 +31,10 @@ lookup_meta <- function(
 # lkp_ha <- bc_health_map %>% lookup_meta("ha")
 
 
+# function to carry out a full join among all components of the list object
+full_join_multi <- function(list_object){
+  # list_object <- datas[["physical"]][["161"]]
+  d <- list_object %>%
+    Reduce(function(dtf1,dtf2) dplyr::full_join(dtf1,dtf2), .)
+}
+

@@ -90,7 +90,7 @@ d_long_labels <- df %>% elongate_labels(c("label_prov", "label_ha","label_hsda")
 d_colors <- bc_health_map %>% make_color_scale()
 
 # apply sequential logical tests to suppress desired cells
-d_combined_censors <- df %>% combine_censors()
+d_combined_tests <- df %>% combine_logical_tests()
 
 # ---- graphing-functions ------------------------
 # prepare the context for suppression = smallest decision frame
@@ -136,6 +136,7 @@ for(disease_i in diseases_available){
     dplyr::arrange(year) %>% 
     dplyr::distinct(year) %>% 
     as.list() %>% unlist() %>% as.character()
+  
   # loop through available years
   for(year_i in years_available ){
     d1 <- ds0 %>% 
