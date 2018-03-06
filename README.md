@@ -8,6 +8,8 @@ When a surveillance agency intends to release incidence counts of some health co
 
 For detailed background of the problem this project addresses, please view the slides from the Community of Practice [presentation][cop-presentation] at BCCDC on 2018-03-07 by Brent and Andriy. 
 
+## Workflow
+
 The following scripts comprise the workflow of the mechanized redaction of small cells:
 
 - [`./manipulation/0-greeter.R`][greeter] - imports data, establishes decison frame
@@ -15,10 +17,11 @@ The following scripts comprise the workflow of the mechanized redaction of small
 - [`./manipulation/2-tester.R`][tester] - applies logical tests to each frame
 - [`./manipulation/3-grapher.R`][grapher] - redacts and plots decisions
 
-The workflow can be summarized in the following pictogram:  
+ 
 [![workflow](./libs/materials/suppress-for-release-image-support/Slide2.JPG)][workflow]
 
-The dependency of key function is schematized as:  
+## Key functions
+
 [![dependency_tree](libs/materials/suppress-for-release-image-support/Slide3.JPG)][dependency_tree]
 
 
