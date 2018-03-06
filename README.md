@@ -8,7 +8,7 @@ When a surveillance agency intends to release incidence counts of some health co
 
 For detailed background of the problem this project addresses, please view the slides from the Community of Practice [presentation][cop-presentation] at BCCDC on 2018-03-07 by Brent and Andriy. 
 
-## Workflow
+# Workflow
 
 The following scripts comprise the workflow of the mechanized redaction of small cells:
 
@@ -20,10 +20,21 @@ The following scripts comprise the workflow of the mechanized redaction of small
  
 [![workflow](./libs/materials/suppress-for-release-image-support/Slide2.JPG)][workflow]
 
-## Key functions
+# Key functions
 
 [![dependency_tree](libs/materials/suppress-for-release-image-support/Slide3.JPG)][dependency_tree]
 
+
+# Team & Funders
+
+The project emerged as the applied collaboration between regional epidemiologist for Interior Health Authority and an officer of the [BC Observatory for Population and Public Health][observatory] [Brent Harris](mailto:Brent.andrew.harris@gmail.com) and [CIHR][cihr]'s [Health System Impact Fellow (2017)][hsif], [Andriy Koval](mailto:koval.andrey@gmail.com) (corresponding author). 
+
+
+
+[hsif]:http://www.cihr-irsc.gc.ca/e/50268.html
+[observatory]:http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health
+[bccdc]:http://www.bccdc.ca/
+[cihr]:http://www.cihr-irsc.gc.ca/
 
 [cop-presentation]:https://rawgit.com/IHACRU/suppress-for-release/master/libs/materials/community-of-practice-2018-03-07.pdf
 
