@@ -15,11 +15,11 @@ The following scripts comprise the workflow of the mechanized redaction of small
 - [`./manipulation/2-tester.R`][tester] - applies logical tests to each frame
 - [`./manipulation/3-grapher.R`][grapher] - redacts and plots decisions
 
-The workflow can be summarized in the following pictogram:
-[![workflow][libs/materials/suppress-for-release-image-support/Slide2.JPG]][workflow]
+The workflow can be summarized in the following pictogram:  
+[![workflow](./libs/materials/suppress-for-release-image-support/Slide2.JPG)][workflow]
 
-The dependency of key function is schematized as:
-[![dependency_tree][libs/materials/suppress-for-release-image-support/Slide3.JPG]][dependency_tree]
+The dependency of key function is schematized as:  
+[![dependency_tree](libs/materials/suppress-for-release-image-support/Slide3.JPG)][dependency_tree]
 
 
 [cop-presentation]:https://rawgit.com/IHACRU/suppress-for-release/master/libs/materials/community-of-practice-2018-03-07.pdf
@@ -31,7 +31,7 @@ The dependency of key function is schematized as:
 
 [workflow]:https://raw.githubusercontent.com/IHACRU/suppress-for-release/master/libs/materials/suppress-for-release-image-support/Slide2.JPG
 
-[dependency_tree]:[workflow]:https://raw.githubusercontent.com/IHACRU/suppress-for-release/master/libs/materials/suppress-for-release-image-support/Slide3.JPG
+[dependency_tree]:https://raw.githubusercontent.com/IHACRU/suppress-for-release/master/libs/materials/suppress-for-release-image-support/Slide3.JPG
 
 [observatory]:http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health
 
