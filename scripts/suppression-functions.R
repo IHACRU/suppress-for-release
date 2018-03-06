@@ -1,3 +1,142 @@
+# ---- cleaning-and-tuning -------------------------------
+
+# function to carry out a full join among all components of the list object
+full_join_multi <- function(list_object){
+  # list_object <- datas[["physical"]][["161"]]
+  d <- list_object %>%
+    Reduce(function(dtf1,dtf2) dplyr::full_join(dtf1,dtf2), .)
+}
+
+# function to split up `region` and `region_desc` into three variables
+clean_raw <- function(
+  d      # a single data frame from the raw element
+  ,stem  # a foundation for assembling individual frames used in analysis
+){
+  # NOTE: this should be identical to the first two steps of `tidy_frame()`
+  # d <-df
+  # subset values to be evaluated
+  # we make a conscious decision to avoid sex == `U` and therefore remove it from the suppression logic
+  d1 <- d %>% 
+    dplyr::filter(
+      ! sex %in% c("U") # remove counts for unknown or unidentified sex
+    ) %>% 
+    # counts in the `Unknown` locales are not passed for public release
+    dplyr::filter(
+      ! region_desc %in% c("Unknown HSDA","Unknown HA","Unknown LHA")
+    )
+  # d1 %>% print(n = nrow(.))
+  dview <- d1 
+  
+  # use www.regex101.com to develop the regular expression for this case
+  regex_region = "^(\\w+)-?(\\d+)?"
+  regex_desc   = "^(\\d+)* ?(.*)"
+  d2 <- d1 %>% 
+    dplyr::mutate(
+      region_id    = gsub(pattern = regex_region, replacement = "\\2", x = region) %>% as.integer()
+      ,region_label = gsub(pattern = regex_region, replacement = "\\1", x = region)
+      ,desc_label   = gsub(pattern = regex_desc,   replacement = "\\2", x = region_desc)
+    ) %>% 
+    dplyr::mutate(
+      region_id = ifelse( region_label == "BC" , 0, region_id )
+      ,region_id = as.integer(region_id) 
+    )
+  # inspect the results of deconstruction
+  # d2 %>% print(n = 25)
+  dview <- d2
+  return(d2)
+}
+
+# function to transform the analytic frame into target shape
+tidy_frame <- function(
+  d      # a single data frame from the raw element
+  ,stem  # a foundation for assembling individual frames used in analysis
+){
+  # d <-df
+  # subset values to be evaluated
+  # we make a conscious decision to avoid sex == `U` and therefore remove it from the suppression logic
+  d1 <- d %>% 
+    dplyr::filter(
+      ! sex %in% c("U") # remove counts for unknown or unidentified sex
+    ) %>% 
+    # counts in the `Unknown` locales are not passed for public release
+    dplyr::filter(
+      ! region_desc %in% c("Unknown HSDA","Unknown HA","Unknown LHA")
+    )
+  # d1 %>% print(n = nrow(.))
+  dview <- d1 
+  
+  # use www.regex101.com to develop the regular expression for this case
+  regex_region = "^(\\w+)-?(\\d+)?"
+  regex_desc   = "^(\\d+)* ?(.*)"
+  d2 <- d1 %>% 
+    dplyr::mutate(
+      region_id    = gsub(pattern = regex_region, replacement = "\\2", x = region) %>% as.integer()
+      ,region_label = gsub(pattern = regex_region, replacement = "\\1", x = region)
+      ,desc_label   = gsub(pattern = regex_desc,   replacement = "\\2", x = region_desc)
+    ) %>% 
+    dplyr::mutate(
+      region_id = ifelse( region_label == "BC" , 0, region_id )
+      ,region_id = as.integer(region_id) 
+    )
+  # inspect the results of deconstruction
+  # d2 %>% print(n = 25)
+  dview <- d2
+  
+  d3 <- d2 %>% 
+    # dplyr::filter(sex == "F") %>% 
+    # dplyr::select(-region, -region_desc, -region_id) %>% 
+    dplyr::mutate( 
+      newvar = paste0("label_", tolower(region_label))
+      ,newvar = ifelse(region_label == "BC","label_prov", newvar)
+    ) %>% 
+    tidyr::spread( key = newvar, value = desc_label) %>% 
+    dplyr::mutate(
+      region_by_sex = paste0(region_label,"_",sex)
+    ) %>% 
+    tidyr::spread( key = region_by_sex, value = incase) %>% 
+    dplyr::arrange(sex)
+  dview <- d3
+  
+  ls4 <- list()
+  for(i in c("HSDA_F","HSDA_M","HSDA_T") ){
+    ls4[["hsda"]][[i]] <- d3 %>% 
+      dplyr::select_(.dots = c("label_hsda", i)) %>% 
+      dplyr::filter(stats::complete.cases(.))
+  } 
+  for(i in c("HA_F","HA_M","HA_T") ){
+    ls4[["ha"]][[i]] <- d3 %>% 
+      dplyr::select_(.dots = c("label_ha", i)) %>% 
+      dplyr::filter(stats::complete.cases(.))
+  }
+  for(i in c("BC_F","BC_M","BC_T") ){
+    ls4[["prov"]][[i]] <- d3 %>% 
+      dplyr::select_(.dots = c("label_prov", i)) %>% 
+      dplyr::filter(stats::complete.cases(.))
+  } 
+  ls4
+  
+  
+  ls5 <- list()
+  for(i in names(ls4)){
+    ls5[[i]] <- ls4[[i]] %>% full_join_multi()
+  }
+  
+  # ls6 <- list()
+  # ls6[["stem"]] <- dstem
+  
+  d4 <- stem %>% 
+    dplyr::left_join(ls5$prov) %>% 
+    dplyr::left_join(ls5$ha) %>%
+    dplyr::left_join(ls5$hsda)
+  
+  return(d4)
+  
+}
+# usage
+# d <- dto$greeted$`Flower Deafness`$`1999` %>% tidy_frame(dstem)
+
+
+
 
 # ----- logical-filters ------------------------------------
 
@@ -173,7 +312,7 @@ elongate_labels <- function(
 
 # ----- graphing-functions --------------------
 # apply sequential logical tests to suppress desired cells
-combine_censors <- function(
+combine_logical_tests <- function(
   d
 ){
   # d <- df
@@ -199,7 +338,7 @@ combine_censors <- function(
   return(dd)
 }
 # usage
-# d_combined_censors <- df %>% combine_censors()
+# d_combined_censors <- df %>% combine_logical_tests()
 
 
 # create color scale to highlight suppression decisions
@@ -310,7 +449,7 @@ prepare_for_tiling <- function(
   #(3)######## Create data for the RIGHT PANEL
   # the right panel will contain only numbers (FMT counts of variable selected for suppression)
   # d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
-  d_long_values <- d %>% combine_censors() %>% 
+  d_long_values <- d %>% combine_logical_tests() %>% 
     dplyr::mutate(   
       label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
@@ -508,3 +647,4 @@ print_one_frame <- function(
 #     ,folder  = "./sandbox/examiner-1/prints/"
 #   )
 
+# ----- redaction-functions ---------------------------
