@@ -30,7 +30,19 @@ The following scripts comprise the workflow of the mechanized redaction of small
 The project emerged as the applied collaboration between regional epidemiologist for Interior Health Authority and an officer of the [BC Observatory for Population and Public Health][observatory] [Brent Harris](mailto:Brent.andrew.harris@gmail.com) and [CIHR][cihr]'s [Health System Impact Fellow (2017)][hsif], [Andriy Koval](mailto:koval.andrey@gmail.com) (corresponding author). 
 
 
+# Reproduction
+If you wish to follow along, please install the latest version of [RStuido][Rstudio], clone/download this repository and makes sure the followoing script can execute without errors:
+```r
+library(ggplot2)   
+library(magrittr)  
+library(dplyr)     
+library(readr)     
+library(testit)    
+library(tidyr)     
+library(rmarkdown) 
+```
 
+[Rstudio]:https://www.rstudio.com/products/rstudio/download/
 [hsif]:http://www.cihr-irsc.gc.ca/e/50268.html
 [observatory]:http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health
 [bccdc]:http://www.bccdc.ca/
