@@ -27,9 +27,10 @@ The following scripts comprise the workflow of the mechanized redaction of small
 
 # Team & Funders
 
-The project emerged as the applied collaboration between regional epidemiologist for Interior Health Authority and an officer of the [BC Observatory for Population and Public Health][observatory] [Brent Harris](mailto:Brent.andrew.harris@gmail.com) and [CIHR][cihr]'s [Health System Impact Fellow (2017)][hsif], [Andriy Koval](mailto:koval.andrey@gmail.com) (corresponding author). 
+-  [Andriy Koval](mailto:koval.andrey@gmail.com), [Health System Impact Fellow (2017)][hsif] [Health System Impact Fellow (2017)][hsif] , BC Centre for Disease Control
+-  [Brent Harris](mailto:Brent.andrew.harris@gmail.com), Regional Epidemiologist with Interior Health Authority of British Columbia.
 
-
+The automated small cell suppression for public release project is part of the work flow for annual updates and public release of the [ Chronic Disease Dashboard][dashboard] developed by the  [BC Observatory for Population & Public Health][observatory] based on data provided by the BC Ministry of Health, Provincial Health Officer's Office. 
 
 [hsif]:http://www.cihr-irsc.gc.ca/e/50268.html
 [observatory]:http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health
