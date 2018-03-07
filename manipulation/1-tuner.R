@@ -11,14 +11,11 @@ source("./scripts/common-functions.R")       # reporting functions and quick vie
 source("./scripts/graphing/graph-presets.R") # font and color conventions
 
 # ---- load-packages -----------------------------------------------------------
-library(ggplot2)  # graphing
-# library(dplyr)  # data wrangling
 library(magrittr) # pipes
-
-requireNamespace("knitr", quietly=TRUE)
-requireNamespace("scales", quietly=TRUE) #For formating values in graphs
 requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
+requireNamespace("readr", quietly=TRUE)
+requireNamespace("testit", quietly=TRUE)
+requireNamespace("tidyr", quietly=TRUE)
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping

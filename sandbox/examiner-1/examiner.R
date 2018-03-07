@@ -12,19 +12,13 @@ source("./scripts/graphing/graph-presets.R") # font and color conventions
 source("./scripts/suppression-functions.R")  # mechanized suppression of small cells
 
 # ---- load-packages -----------------------------------------------------------
-library(ggplot2)      #For graphing
-library(dplyr)
-library(magrittr)     #Pipes
-library(rmarkdown)
-# library(kableExtra)   # Currently absent
-# library(DT)           # Current absent
-
-# requireNamespace("readxl")
-requireNamespace("knitr", quietly=TRUE)
-requireNamespace("scales", quietly=TRUE) #For formating values in graphs
-requireNamespace("RColorBrewer", quietly=TRUE)
+library(ggplot2)  # graphing
+library(magrittr) # pipes
 requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
+requireNamespace("readr", quietly=TRUE)
+requireNamespace("testit", quietly=TRUE)
+requireNamespace("tidyr", quietly=TRUE)
+requireNamespace("rmarkdown", quietly=TRUE)
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
