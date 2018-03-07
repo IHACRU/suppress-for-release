@@ -33,7 +33,7 @@ The following scripts comprise the workflow of the mechanized redaction of small
 
 The automated small cell suppression for public release project is part of the work flow for annual updates and public release of the [ Chronic Disease Dashboard][dashboard] developed by the  [BC Observatory for Population & Public Health][observatory] based on data provided by the BC Ministry of Health, Provincial Health Officer's Office. 
 
-=======
+
 # Reproduction
 If you wish to follow along, please install the latest version of [RStudio][Rstudio], clone/download this repository and makes sure the 
 following script can execute without errors:
