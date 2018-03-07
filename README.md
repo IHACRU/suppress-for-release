@@ -30,7 +30,25 @@ The following scripts comprise the workflow of the mechanized redaction of small
 -  [Andriy Koval](mailto:koval.andrey@gmail.com), [Health System Impact Fellow (2017)][hsif] [Health System Impact Fellow (2017)][hsif] , BC Centre for Disease Control
 -  [Brent Harris](mailto:Brent.andrew.harris@gmail.com), Regional Epidemiologist with Interior Health Authority of British Columbia.
 
+
 The automated small cell suppression for public release project is part of the work flow for annual updates and public release of the [ Chronic Disease Dashboard][dashboard] developed by the  [BC Observatory for Population & Public Health][observatory] based on data provided by the BC Ministry of Health, Provincial Health Officer's Office. 
+
+=======
+# Reproduction
+If you wish to follow along, please install the latest version of [RStudio][Rstudio], clone/download this repository and makes sure the 
+following script can execute without errors:
+
+```r
+library(ggplot2)   
+library(magrittr)  
+library(dplyr)     
+library(readr)     
+library(testit)    
+library(tidyr)     
+library(rmarkdown) 
+```
+
+[Rstudio]:https://www.rstudio.com/products/rstudio/download/
 
 [hsif]:http://www.cihr-irsc.gc.ca/e/50268.html
 [observatory]:http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health
