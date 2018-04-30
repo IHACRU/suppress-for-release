@@ -60,3 +60,8 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
+
+# ---- keep-local-due-to-size -------------------------
+manipulation/prints/*.png
+sandbox/examiner-1/prints/*.png
+
