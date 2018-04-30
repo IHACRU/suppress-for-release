@@ -1,0 +1,481 @@
+disease,region,region_desc,year,sex,incase,region_id,region_label,desc_label,redact_row
+Flower Deafness,BC,BC,1999,F,16683,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2000,F,16737,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2001,F,15691,0,BC,BC,FALSE
+Orange Nose,BC,BC,2000,F,16737,0,BC,BC,FALSE
+Orange Nose,BC,BC,2001,F,15691,0,BC,BC,FALSE
+Flower Deafness,HA-01,01 Interior,1999,F,2693,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2000,F,2757,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2001,F,2447,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2000,F,2757,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2001,F,2447,1,HA,Interior,FALSE
+Flower Deafness,HA-02,02 Fraser,1999,F,5945,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2000,F,5894,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2001,F,5727,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2000,F,5894,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2001,F,5727,2,HA,Fraser,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,3847,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,3804,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,3535,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,3804,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,3535,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,2973,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,3036,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,2813,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2000,F,3036,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2001,F,2813,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-05,05 Northern,1999,F,1159,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2000,F,1180,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2001,F,1111,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2000,F,1180,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2001,F,1111,5,HA,Northern,FALSE
+Flower Deafness,HA-99,Unknown HA,1999,F,66,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2000,F,66,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2001,F,58,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2000,F,66,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2001,F,58,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,268,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,283,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,205,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,283,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,205,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,295,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,271,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,249,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,271,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,249,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,1277,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,1341,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,1213,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2000,F,1341,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2001,F,1213,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,853,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,862,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,780,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,862,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,780,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,1142,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,1147,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,1087,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2000,F,1147,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2001,F,1087,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,2059,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,2101,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,1972,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2000,F,2101,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2001,F,1972,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,2744,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,2646,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,2668,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2000,F,2646,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2001,F,2668,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-31,31 Richmond,1999,F,608,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2000,F,580,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2001,F,476,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2000,F,580,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2001,F,476,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,2314,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,2314,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,2183,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2000,F,2314,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2001,F,2183,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,925,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,910,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,876,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,910,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,876,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,1390,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,1410,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,1352,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,1410,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,1352,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,1087,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,1105,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,995,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,1105,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,995,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,496,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,521,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,466,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,521,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,466,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-51,51 Northwest,1999,F,316,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2000,F,330,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2001,F,280,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2000,F,330,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2001,F,280,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,612,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,595,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,633,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,595,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,633,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-53,53 Northeast,1999,F,231,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2000,F,255,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2001,F,198,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2000,F,255,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2001,F,198,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-99,Unknown HSDA,1999,F,66,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2000,F,66,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2001,F,58,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2000,F,66,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2001,F,58,NA,NA,NA,NA
+Flower Deafness,BC,BC,1999,M,14341,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2000,M,14357,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2001,M,13722,0,BC,BC,FALSE
+Orange Nose,BC,BC,2000,M,14357,0,BC,BC,FALSE
+Orange Nose,BC,BC,2001,M,13722,0,BC,BC,FALSE
+Flower Deafness,HA-01,01 Interior,1999,M,2352,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2000,M,2226,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2001,M,1992,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2000,M,2226,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2001,M,1992,1,HA,Interior,FALSE
+Flower Deafness,HA-02,02 Fraser,1999,M,5118,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2000,M,5271,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2001,M,5232,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2000,M,5271,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2001,M,5232,2,HA,Fraser,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,3345,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,3363,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,3216,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,3363,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,3216,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,2391,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,2380,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,2199,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2000,M,2380,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2001,M,2199,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-05,05 Northern,1999,M,1041,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2000,M,1015,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2001,M,988,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2000,M,1015,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2001,M,988,5,HA,Northern,FALSE
+Flower Deafness,HA-99,Unknown HA,1999,M,94,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2000,M,102,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2001,M,95,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2000,M,102,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2001,M,95,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,230,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,203,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,172,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,203,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,172,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,284,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,229,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,187,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,229,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,187,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,1070,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,1046,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,1004,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2000,M,1046,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2001,M,1004,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,768,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,748,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,629,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,748,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,629,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,955,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,996,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,1026,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2000,M,996,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2001,M,1026,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,1758,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,1808,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,1791,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2000,M,1808,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2001,M,1791,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,2405,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,2467,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,2415,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2000,M,2467,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2001,M,2415,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-31,31 Richmond,1999,M,535,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2000,M,480,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2001,M,448,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2000,M,480,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2001,M,448,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,2057,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,2139,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,2010,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2000,M,2139,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2001,M,2010,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,753,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,744,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,758,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,744,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,758,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,1051,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,1087,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,967,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,1087,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,967,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,925,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,887,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,845,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,887,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,845,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,415,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,406,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,387,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,406,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,387,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-51,51 Northwest,1999,M,310,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2000,M,254,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2001,M,271,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2000,M,254,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2001,M,271,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,512,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,524,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,512,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,524,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,512,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-53,53 Northeast,1999,M,219,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2000,M,237,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2001,M,205,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2000,M,237,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2001,M,205,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-99,Unknown HSDA,1999,M,94,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2000,M,102,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2001,M,95,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2000,M,102,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2001,M,95,NA,NA,NA,NA
+Flower Deafness,BC,BC,1999,T,31032,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2000,T,31103,0,BC,BC,FALSE
+Flower Deafness,BC,BC,2001,T,29415,0,BC,BC,FALSE
+Orange Nose,BC,BC,2000,T,31103,0,BC,BC,FALSE
+Orange Nose,BC,BC,2001,T,29415,0,BC,BC,FALSE
+Flower Deafness,HA-01,01 Interior,1999,T,5046,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2000,T,4985,1,HA,Interior,FALSE
+Flower Deafness,HA-01,01 Interior,2001,T,4439,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2000,T,4985,1,HA,Interior,FALSE
+Orange Nose,HA-01,01 Interior,2001,T,4439,1,HA,Interior,FALSE
+Flower Deafness,HA-02,02 Fraser,1999,T,11065,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2000,T,11169,2,HA,Fraser,FALSE
+Flower Deafness,HA-02,02 Fraser,2001,T,10961,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2000,T,11169,2,HA,Fraser,FALSE
+Orange Nose,HA-02,02 Fraser,2001,T,10961,2,HA,Fraser,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,7194,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,7167,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,6751,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,7167,3,HA,Vancouver Coastal,FALSE
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,6751,3,HA,Vancouver Coastal,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,5367,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,5418,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,5012,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2000,T,5418,4,HA,Vancouver Island,FALSE
+Orange Nose,HA-04,04 Vancouver Island,2001,T,5012,4,HA,Vancouver Island,FALSE
+Flower Deafness,HA-05,05 Northern,1999,T,2200,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2000,T,2196,5,HA,Northern,FALSE
+Flower Deafness,HA-05,05 Northern,2001,T,2099,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2000,T,2196,5,HA,Northern,FALSE
+Orange Nose,HA-05,05 Northern,2001,T,2099,5,HA,Northern,FALSE
+Flower Deafness,HA-99,Unknown HA,1999,T,160,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2000,T,168,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2001,T,153,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2000,T,168,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2001,T,153,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,498,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,486,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,377,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,486,11,HSDA,East Kootenay,FALSE
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,377,11,HSDA,East Kootenay,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,580,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,500,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,436,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,500,12,HSDA,Kootenay Boundary,FALSE
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,436,12,HSDA,Kootenay Boundary,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,2347,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,2388,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,2217,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2000,T,2388,13,HSDA,Okanagan,FALSE
+Orange Nose,HSDA-13,13 Okanagan,2001,T,2217,13,HSDA,Okanagan,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,1621,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,1611,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,1409,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,1611,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,1409,14,HSDA,Thompson Cariboo Shuswap,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,2097,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,2143,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,2114,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2000,T,2143,21,HSDA,Fraser East,FALSE
+Orange Nose,HSDA-21,21 Fraser East,2001,T,2114,21,HSDA,Fraser East,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,3818,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,3909,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,3764,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2000,T,3909,22,HSDA,Fraser North,FALSE
+Orange Nose,HSDA-22,22 Fraser North,2001,T,3764,22,HSDA,Fraser North,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,5150,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,5117,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,5083,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2000,T,5117,23,HSDA,Fraser South,FALSE
+Orange Nose,HSDA-23,23 Fraser South,2001,T,5083,23,HSDA,Fraser South,FALSE
+Flower Deafness,HSDA-31,31 Richmond,1999,T,1143,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2000,T,1060,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-31,31 Richmond,2001,T,924,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2000,T,1060,31,HSDA,Richmond,FALSE
+Orange Nose,HSDA-31,31 Richmond,2001,T,924,31,HSDA,Richmond,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,4373,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,4453,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,4193,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2000,T,4453,32,HSDA,Vancouver,FALSE
+Orange Nose,HSDA-32,32 Vancouver,2001,T,4193,32,HSDA,Vancouver,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,1678,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,1654,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,1634,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,1654,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,1634,33,HSDA,North Shore/Coast Garibaldi,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,2442,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,2498,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,2319,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,2498,41,HSDA,South Vancouver Island,FALSE
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,2319,41,HSDA,South Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,2014,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,1992,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,1840,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,1992,42,HSDA,Central Vancouver Island,FALSE
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,1840,42,HSDA,Central Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,911,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,928,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,853,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,928,43,HSDA,North Vancouver Island,FALSE
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,853,43,HSDA,North Vancouver Island,FALSE
+Flower Deafness,HSDA-51,51 Northwest,1999,T,626,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2000,T,584,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-51,51 Northwest,2001,T,551,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2000,T,584,51,HSDA,Northwest,FALSE
+Orange Nose,HSDA-51,51 Northwest,2001,T,551,51,HSDA,Northwest,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,1124,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,1120,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,1145,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,1120,52,HSDA,Northern Interior,FALSE
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,1145,52,HSDA,Northern Interior,FALSE
+Flower Deafness,HSDA-53,53 Northeast,1999,T,450,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2000,T,492,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-53,53 Northeast,2001,T,403,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2000,T,492,53,HSDA,Northeast,FALSE
+Orange Nose,HSDA-53,53 Northeast,2001,T,403,53,HSDA,Northeast,FALSE
+Flower Deafness,HSDA-99,Unknown HSDA,1999,T,160,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2000,T,168,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2001,T,153,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2000,T,168,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2001,T,153,NA,NA,NA,NA
+Flower Deafness,BC,BC,1999,U,8,NA,NA,NA,NA
+Flower Deafness,BC,BC,2000,U,9,NA,NA,NA,NA
+Flower Deafness,BC,BC,2001,U,1,NA,NA,NA,NA
+Orange Nose,BC,BC,2000,U,9,NA,NA,NA,NA
+Orange Nose,BC,BC,2001,U,3,NA,NA,NA,NA
+Flower Deafness,HA-01,01 Interior,1999,U,2,NA,NA,NA,NA
+Flower Deafness,HA-01,01 Interior,2000,U,4,NA,NA,NA,NA
+Flower Deafness,HA-01,01 Interior,2001,U,0,NA,NA,NA,NA
+Orange Nose,HA-01,01 Interior,2000,U,4,NA,NA,NA,NA
+Orange Nose,HA-01,01 Interior,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HA-02,02 Fraser,1999,U,2,NA,NA,NA,NA
+Flower Deafness,HA-02,02 Fraser,2000,U,1,NA,NA,NA,NA
+Flower Deafness,HA-02,02 Fraser,2001,U,3,NA,NA,NA,NA
+Orange Nose,HA-02,02 Fraser,2000,U,3,NA,NA,NA,NA
+Orange Nose,HA-02,02 Fraser,2001,U,4,NA,NA,NA,NA
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,U,1,NA,NA,NA,NA
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,U,0,NA,NA,NA,NA
+Orange Nose,HA-03,03 Vancouver Coastal,2000,U,0,NA,NA,NA,NA
+Orange Nose,HA-03,03 Vancouver Coastal,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HA-04,04 Vancouver Island,1999,U,1,NA,NA,NA,NA
+Flower Deafness,HA-04,04 Vancouver Island,2000,U,3,NA,NA,NA,NA
+Flower Deafness,HA-04,04 Vancouver Island,2001,U,0,NA,NA,NA,NA
+Orange Nose,HA-04,04 Vancouver Island,2000,U,3,NA,NA,NA,NA
+Orange Nose,HA-04,04 Vancouver Island,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HA-05,05 Northern,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HA-05,05 Northern,2000,U,3,NA,NA,NA,NA
+Flower Deafness,HA-05,05 Northern,2001,U,0,NA,NA,NA,NA
+Orange Nose,HA-05,05 Northern,2000,U,2,NA,NA,NA,NA
+Orange Nose,HA-05,05 Northern,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HA-99,Unknown HA,2001,U,0,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2000,U,0,NA,NA,NA,NA
+Orange Nose,HA-99,Unknown HA,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-11,11 East Kootenay,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-11,11 East Kootenay,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-11,11 East Kootenay,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-13,13 Okanagan,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-13,13 Okanagan,2000,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-13,13 Okanagan,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-13,13 Okanagan,2000,U,2,NA,NA,NA,NA
+Orange Nose,HSDA-13,13 Okanagan,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,U,4,NA,NA,NA,NA
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,U,3,NA,NA,NA,NA
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-21,21 Fraser East,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-21,21 Fraser East,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-21,21 Fraser East,2001,U,3,NA,NA,NA,NA
+Orange Nose,HSDA-21,21 Fraser East,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-21,21 Fraser East,2001,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-22,22 Fraser North,1999,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-22,22 Fraser North,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-22,22 Fraser North,2001,U,4,NA,NA,NA,NA
+Orange Nose,HSDA-22,22 Fraser North,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-22,22 Fraser North,2001,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-23,23 Fraser South,1999,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-23,23 Fraser South,2000,U,2,NA,NA,NA,NA
+Flower Deafness,HSDA-23,23 Fraser South,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-23,23 Fraser South,2000,U,4,NA,NA,NA,NA
+Orange Nose,HSDA-23,23 Fraser South,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-31,31 Richmond,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-31,31 Richmond,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-31,31 Richmond,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-31,31 Richmond,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-31,31 Richmond,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-32,32 Vancouver,1999,U,4,NA,NA,NA,NA
+Flower Deafness,HSDA-32,32 Vancouver,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-32,32 Vancouver,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-32,32 Vancouver,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-32,32 Vancouver,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,U,4,NA,NA,NA,NA
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,U,3,NA,NA,NA,NA
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,U,2,NA,NA,NA,NA
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,U,4,NA,NA,NA,NA
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,U,4,NA,NA,NA,NA
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,U,3,NA,NA,NA,NA
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-51,51 Northwest,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-51,51 Northwest,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-51,51 Northwest,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-51,51 Northwest,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-51,51 Northwest,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-52,52 Northern Interior,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-52,52 Northern Interior,2000,U,3,NA,NA,NA,NA
+Flower Deafness,HSDA-52,52 Northern Interior,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-52,52 Northern Interior,2000,U,4,NA,NA,NA,NA
+Orange Nose,HSDA-52,52 Northern Interior,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-53,53 Northeast,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-53,53 Northeast,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-53,53 Northeast,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-53,53 Northeast,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-53,53 Northeast,2001,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,1999,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2000,U,0,NA,NA,NA,NA
+Flower Deafness,HSDA-99,Unknown HSDA,2001,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2000,U,0,NA,NA,NA,NA
+Orange Nose,HSDA-99,Unknown HSDA,2001,U,0,NA,NA,NA,NA
