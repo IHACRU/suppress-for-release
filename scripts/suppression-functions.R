@@ -253,6 +253,65 @@ detect_single_suppression <- function(
 # d3_single_suppression <- df %>% detect_single_suppression()
 
 
+# TEST 3a: Redact
+detect_single_suppression_2 <- function(
+  d
+){
+  # d <- ds0 %>% filter(case ==2) %>% select(-case) 
+  (varnames <- names(d))
+  (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
+  (stem_variables <- setdiff(varnames, count_variables)) 
+  ########### Single suppression at HSDA level
+  d1 <- d %>% detect_recalc_triplet()
+  d2 <- d1 %>% 
+    dplyr::group_by(label_ha) %>% 
+    dplyr::mutate(
+      n_sup = sum(HSDA_F & HSDA_M) # both must be TRUE to count as 1
+      ,n_tot = sum(HSDA_T) # must be TRUE to count
+    ) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::mutate(
+      # if total is TRUE then M and F are also TRUE
+      HSDA_Tn = ifelse(n_tot == 1,TRUE,HSDA_T ),
+      # if one or total is TRUE then other should be too  
+      HSDA_Fn = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_F ), 
+      HSDA_Mn = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_M )
+    ) %>% 
+    dplyr::select(-n_sup, -n_tot)
+  # dview <- d1
+  # dview <- d2
+  # dview <- d3
+  ########### Single suppression at HA level
+  d3 <- d2 %>% 
+    dplyr::group_by(label_prov) %>%
+    dplyr::mutate(
+      n_sup = sum(HA_F & HA_M) # both must be TRUE to count as 1
+      ,n_tot = sum(HA_T) # must be TRUE to count
+    ) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::mutate(
+      # if totale is TRUE then M and F are too
+      HA_T = ifelse(n_tot == 1,TRUE,HA_T ),
+      # if one or total is TRUE then other should be too  
+      HA_F = ifelse(n_sup == 1 | HA_T, TRUE, HA_F ), 
+      HA_M = ifelse(n_sup == 1 | HA_T, TRUE, HA_M )
+    ) %>% 
+    dplyr::select(-n_sup, -n_tot)
+  
+  # Enforce original sorting order (optional)
+  # d4 <- d3 %>% 
+  #   elongate_values() %>% 
+  #   dplyr::mutate(
+  #     column_name = factor(column_name, levels = count_variables)
+  #   ) %>% 
+  #   dplyr::select(-agg_level, -sex) %>% 
+  #   tidyr::spread(column_name, value)
+  
+  return(d3)  
+}
+# usage
+# d3_single_suppression <- df %>% detect_single_suppression()
+
 # ---- tidy-functions ------------------------
 
 # function to elongate (value column in the)  smallest decision frame
