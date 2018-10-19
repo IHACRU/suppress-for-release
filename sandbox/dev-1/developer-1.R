@@ -1,5 +1,8 @@
+# The purpose of this script is to study and further develop existing suppression function
+# This script represents a simplified version of greeter-tuner-tester-grapher workflow
+# The master copy of the functions studied in the script are stored in ./scripts/suppression-functions.R
+
 # knitr::stitch_rmd(script="./manipulation/0-ellis-map.R", output="./manipulation/stitched-output/0-ellis-map.md")
-# This script reads two files: encounter counts with location mapping and encounter timelines for selected individuals
 cat("\014")
 rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is not called by knitr, because it's above the first chunk.
 # ---- load-sources ------------------------------------------------------------
@@ -14,40 +17,35 @@ library(ggplot2)      #For graphing
 library(dplyr)
 library(magrittr)     #Pipes
 library(rmarkdown)
-# library(kableExtra)   # Currently absent
-# library(DT)           # Current absent
 
-# requireNamespace("readxl")
 requireNamespace("knitr", quietly=TRUE)
 requireNamespace("scales", quietly=TRUE) #For formating values in graphs
 requireNamespace("RColorBrewer", quietly=TRUE)
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
 
 # ---- declare-globals ---------------------------------------------------------
-# link to the source of the location mapping
+# create objects storing links to the location of the input files
 
+# folder stores manually created cases of surveillance
 path_input_folder  <- "./data-public/raw/fictional-cases/manual/"
-
-# path_cdr_2014   <- "./data-unshared/derived/dto_10000.rds"
+# file stores the map of relationship among heirarchies of admin units in BC 
 path_region_map <- "./data-public/raw/bc-health-system-map.csv"
 
-baseSize = 10
+baseSize = 10 # declares a stardard fontsize used in graphics
+
 # ---- utility-functions ----------------------------------------------------- 
 # functions, the use of which is localized to this script
 
 # ---- load-data ---------------------------------------------------------------
-# ds0 <- readr::read_csv(path_input_folder)
+# to have a relational map of the geographies of surveillance
 bc_health_map <- readr::read_csv(path_region_map)
-# pryr::object_size(ds)
-# ds <- readr::read_csv(path_input) %>% as.data.frame() 
+
 # load the fictional cases created with the help of ./data-public/raw/proto_data_generator.xlsx
 path_input_files <- grep("fictional-case-\\d+.csv$", list.files(path_input_folder, full.names = T), value = T)
-l <- list()
-for(i in seq_along(path_input_files)){
+l <- list() # create a shell to populate
+for(i in seq_along(path_input_files)){ # input all available cases
   l[[i]] <- readr::read_csv(path_input_files[i])
 }
-l
+# to have all cases in a single data frame
 ds0 <- dplyr::bind_rows(l, .id = "case")
 
 # ---- inspect-data-1 -----------------------------------------------------------
@@ -83,7 +81,7 @@ bc_health_map <- bc_health_map %>%
                 label_prov, label_ha, label_hsda, label_lha,
                 dplyr::everything()) #%>% 
   # dplyr::select(-label_prov)
-
+bc_health_map %>% glimpse()
 # select data to work with for development
 ds <- ds0 %>% filter(case ==7) %>% select(-case)
   
