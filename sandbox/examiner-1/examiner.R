@@ -35,6 +35,12 @@ baseSize = 10
 ds0 <- readr::read_csv(path_input)
 bc_health_map <- readr::read_csv(path_region_map)
 
+# # save this example for future reference in other repos
+# list(
+#   "bc_data" = ds0,
+#   "bc_health_map" = bc_health_map
+# ) %>% saveRDS("../../dss-ialh/graph-making-scenarios/data-public/raw/scenario-2/example-data.rds")
+
 # ---- inspect-data-1 -----------------------------------------------------------
 ds0 %>% filter(year==1995)
 
@@ -86,6 +92,13 @@ d_colors <- bc_health_map %>% make_color_scale()
 # apply sequential logical tests to suppress desired cells
 d_combined_tests <- df %>% combine_logical_tests()
 
+# # save this example for future reference in other repos
+# list(
+#   "raw_wide" = df,
+#   "redacted_long" = d_combined_tests,
+#   "bc_health_map" = bc_health_map
+# ) %>% saveRDS("../../dss-ialh/graph-making-scenarios/data-public/raw/scenario-2/example-data.rds")
+
 # ---- graphing-functions ------------------------
 # prepare the context for suppression = smallest decision frame
 # create a list object containing required data in required shape to generate graphs
@@ -111,7 +124,7 @@ df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-1/print
 ds0 %>% # notice that it takes the file with ALL suppression framed
   print_one_frame(
     disease_ = "Flower Deafness"
-    ,year_   =  1992
+    ,year_   =  1995
     ,folder  = "./sandbox/examiner-1/prints/"
   )
 
