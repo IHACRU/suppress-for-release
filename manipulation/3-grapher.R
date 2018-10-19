@@ -221,7 +221,8 @@ df <- dto$FRAMED$tuned[[disease_]][[year_]] %>%
   dplyr::select(disease, year, dplyr::everything())
 # create a list object with data shape suited for plotting
 l <- df %>% prepare_for_tiling(dto$meta)
-
+saveRDS(df,"./data-public/derived/example-for-graph-making.rds") # a case for graphing scenario
+# saveRDS(l,"./data-public/derived/example-for-graph-making.rds") # a case for graphing scenario
 # generate a graph of a single logical test
 df %>% make_tile_graph(dto$meta, "censor0")
 df %>% make_tile_graph(dto$meta, "censor1_small_cell")
