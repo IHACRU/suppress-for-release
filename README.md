@@ -4,7 +4,7 @@ Demonstrates the methods of suppressing small counts in a provincial surveillanc
 
 # Background
 
-When a surveillance agency intends to release incidence counts of some health conditions (like in [BC Chronic Disease Dashboard][dashboard]), one must take precaution NOT to disclose values considered "too small", which may present a privacy/re-identification risk. To avoid manual redaction, which is prone to human error and lacks transparency, [BC Observatory][observatory] has developed a suite of R functions to arrive at recommendation for redaction automatically, based on logical tests developed for standard data forms.
+When a surveillance agency intends to release incidence counts of some health conditions (like in [BC Chronic Disease Dashboard][dashboard]), one must take precaution NOT to disclose values considered "too small", which may present a privacy/re-identification risk. Howeever, redacted values sometimes can be re-calculated from the context, so an analyst must detect these patterns and redact more values in order to remove the possiblity of re-calculation. To avoid manual redaction, which is prone to human error and lacks transparency, [BC Observatory][observatory] has developed a suite of R functions to arrive at recommendation for redaction automatically, based on logical tests developed for standard data forms.
 
 For detailed background of the problem this project addresses, please view the slides from the Community of Practice [presentation][cop-presentation] at BCCDC on 2018-03-07 by Brent and Andriy. 
 
@@ -55,7 +55,7 @@ library(rmarkdown)
 [bccdc]:http://www.bccdc.ca/
 [cihr]:http://www.cihr-irsc.gc.ca/
 
-[cop-presentation]:https://rawgit.com/IHACRU/suppress-for-release/master/libs/materials/community-of-practice-2018-03-07.pdf
+[cop-presentation]:http://htmlpreview.github.io/http://github.com/IHACRU/suppress-for-release/master/libs/materials/community-of-practice-2018-03-07.pdf
 
 [greeter]:https://github.com/IHACRU/suppress-for-release/blob/master/manipulation/0-greeter.R
 [tuner]:https://github.com/IHACRU/suppress-for-release/blob/master/manipulation/1-tuner.R
