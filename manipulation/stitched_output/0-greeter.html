@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>This report was automatically generated with the R package <strong>knitr</strong>
+(version 1.20).</p>
+
+<pre><code class="r"># Run to stitch a tech report of this script (used only in RStudio)
+# knitr::stitch_rmd(
+#   script = &quot;./manipulation/0-greeter.R&quot;,
+#   output = &quot;./manipulation/stitched_output/0-greeter.md&quot;
+# )
+
+# This script inputs the raw data and prepares it for tuning.
+rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. 
+# This is not called by knitr, because it&#39;s above the first chunk.
+</code></pre>
+
+<pre><code class="r">#Load any source files that contain/define functions, but that don&#39;t load any other types of variables
+#   into memory.  Avoid side effects and don&#39;t pollute the global environment.
+source(&quot;./manipulation/function-support.R&quot;)  # assisting functions for data wrangling and testing
+source(&quot;./manipulation/object-glossary.R&quot;)   # object definitions
+source(&quot;./scripts/common-functions.R&quot;)       # reporting functions and quick views
+source(&quot;./scripts/graphing/graph-presets.R&quot;) # font and color conventions
+</code></pre>
+
+<pre><code class="r">library(magrittr) # pipes
+requireNamespace(&quot;dplyr&quot;, quietly=TRUE)
+requireNamespace(&quot;readr&quot;, quietly=TRUE)
+requireNamespace(&quot;testit&quot;, quietly=TRUE)
+</code></pre>
+
+<pre><code class="r"># declare the location of the data sources to be used in this script
+path_input          &lt;- &quot;./data-public/raw/fictional-input-from-MoH.csv&quot;
+path_region_map     &lt;- &quot;./data-public/raw/bc-health-system-map.csv&quot;
+path_fictional_case &lt;- &quot;./data-public/raw/fictional-cases/fictional-case-0.csv&quot;
+# test whether the file exists / the link is good
+testit::assert(&quot;File does not exist&quot;, base::file.exists(path_input))
+# declare where you will store the product of this script
+path_save           &lt;- &quot;./data-unshared/derived/dto-0-greeted&quot;
+</code></pre>
+
+<pre><code class="r"># functions, the use of which is localized to this script
+</code></pre>
+
+<pre><code class="r">ds             &lt;- readr::read_csv(path_input) %&gt;% as.data.frame() %&gt;% tibble::as_tibble()
+</code></pre>
+
+<pre><code>## Parsed with column specification:
+## cols(
+##   DISEASE = col_character(),
+##   REGION = col_character(),
+##   REGION_DESC = col_character(),
+##   YEAR = col_integer(),
+##   SEX = col_character(),
+##   INCASE = col_integer()
+## )
+</code></pre>
+
+<pre><code class="r">bc_health_map  &lt;- readr::read_csv(path_region_map)
+</code></pre>
+
+<pre><code>## Parsed with column specification:
+## cols(
+##   id_prov = col_integer(),
+##   id_ha = col_integer(),
+##   id_hsda = col_integer(),
+##   id_lha = col_integer(),
+##   label_lha = col_character(),
+##   label_hsda = col_character(),
+##   label_ha = col_character(),
+##   label_prov = col_character(),
+##   color_ha = col_character(),
+##   color_ha_label = col_character(),
+##   color_hsda = col_character(),
+##   color_hsda_label = col_character(),
+##   color_prov = col_character(),
+##   color_prov_label = col_character()
+## )
+</code></pre>
+
+<pre><code class="r">fictional_case &lt;- readr::read_csv(path_fictional_case)
+</code></pre>
+
+<pre><code>## Parsed with column specification:
+## cols(
+##   disease = col_character(),
+##   year = col_integer(),
+##   label_prov = col_character(),
+##   label_ha = col_character(),
+##   label_hsda = col_character(),
+##   BC_F = col_integer(),
+##   BC_M = col_integer(),
+##   BC_T = col_integer(),
+##   HA_F = col_integer(),
+##   HA_M = col_integer(),
+##   HA_T = col_integer(),
+##   HSDA_F = col_integer(),
+##   HSDA_M = col_integer(),
+##   HSDA_T = col_integer()
+## )
+</code></pre>
+
+<pre><code class="r"># Contents
+# This is our starting point at which we begin to assemble our 
+# (d)ata (t)ransfer (u)nit or `dto`, as we will refer to it in the future
+
+# Components available initially:
+# ds                 - dframe - flat data file as obtained from MoH
+# bc_health_map      - dframe - heirachical map and other meta information
+# fictional_case     - dframe - a fictional case of surveillance, target shape for mechanized suppression
+
+# To be created in this script:
+# dto$raw            - dframe - flat data file as obtained from MoH
+# dto$meta           - dframe - heirachical map and other meta information
+# dto$target         - dframe - a fictional case of surveillance, target shape for mechanized suppression
+# dto$FRAMED         - list   - a list, each element of which is (DISEASE*YEAR) = FRAME 
+# dto$FRAMED$raw     - dframe [L] deconstructed `dto$raw` with each frame = disease * year
+
+# this script kick-offs a data transfer object and
+# introduces the FRAME as the focal structre in the analysis
+# the FRAME contains all data relevant to surveillance of (DISEASE*YEAR) unit
+</code></pre>
+
+<pre><code class="r"># surveillance file from MoH comes as a flat .csv with
+# each row = disease * year * locale
+ds %&gt;% dplyr::glimpse()
+</code></pre>
+
+<pre><code>## Observations: 480
+## Variables: 6
+## $ DISEASE     &lt;chr&gt; &quot;Flower Deafness&quot;, &quot;Flower Deafness&quot;, &quot;Flower Deaf...
+## $ REGION      &lt;chr&gt; &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;B...
+## $ REGION_DESC &lt;chr&gt; &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;B...
+## $ YEAR        &lt;int&gt; 1999, 1999, 1999, 1999, 2000, 2000, 2000, 2000, 20...
+## $ SEX         &lt;chr&gt; &quot;T&quot;, &quot;U&quot;, &quot;M&quot;, &quot;F&quot;, &quot;T&quot;, &quot;U&quot;, &quot;M&quot;, &quot;F&quot;, &quot;T&quot;, &quot;U&quot;, ...
+## $ INCASE      &lt;int&gt; 31032, 8, 14341, 16683, 31103, 9, 14357, 16737, 29...
+</code></pre>
+
+<pre><code class="r"># we have created a logical map of heirarchical map of HSDA -&gt; HA with some meta added
+bc_health_map %&gt;% dplyr::glimpse()
+</code></pre>
+
+<pre><code>## Observations: 89
+## Variables: 14
+## $ id_prov          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+## $ id_ha            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+## $ id_hsda          &lt;int&gt; 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 1...
+## $ id_lha           &lt;int&gt; 1, 2, 3, 4, 5, 18, 6, 7, 9, 10, 11, 12, 13, 1...
+## $ label_lha        &lt;chr&gt; &quot;Fernie&quot;, &quot;Cranbrook&quot;, &quot;Kimberley&quot;, &quot;Winderme...
+## $ label_hsda       &lt;chr&gt; &quot;East Kootenay&quot;, &quot;East Kootenay&quot;, &quot;East Koote...
+## $ label_ha         &lt;chr&gt; &quot;Interior&quot;, &quot;Interior&quot;, &quot;Interior&quot;, &quot;Interior...
+## $ label_prov       &lt;chr&gt; &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC&quot;, &quot;BC...
+## $ color_ha         &lt;chr&gt; &quot;#4daf4a&quot;, &quot;#4daf4a&quot;, &quot;#4daf4a&quot;, &quot;#4daf4a&quot;, &quot;...
+## $ color_ha_label   &lt;chr&gt; &quot;green&quot;, &quot;green&quot;, &quot;green&quot;, &quot;green&quot;, &quot;green&quot;, ...
+## $ color_hsda       &lt;chr&gt; &quot;#edf8e9&quot;, &quot;#edf8e9&quot;, &quot;#edf8e9&quot;, &quot;#edf8e9&quot;, &quot;...
+## $ color_hsda_label &lt;chr&gt; &quot;pale green&quot;, &quot;pale green&quot;, &quot;pale green&quot;, &quot;pa...
+## $ color_prov       &lt;chr&gt; &quot;#ffffff&quot;, &quot;#ffffff&quot;, &quot;#ffffff&quot;, &quot;#ffffff&quot;, &quot;...
+## $ color_prov_label &lt;chr&gt; &quot;white&quot;, &quot;white&quot;, &quot;white&quot;, &quot;white&quot;, &quot;white&quot;, ...
+</code></pre>
+
+<pre><code class="r"># we can take a direct subset of metadata to limit our focus by granularity of the smallest unit
+bc_health_map_hsda &lt;- bc_health_map %&gt;% 
+  dplyr::select(-id_lha, -label_lha) %&gt;%  # this level is not supported at this time
+  dplyr::distinct() %&gt;% 
+  print(n = nrow(.))
+</code></pre>
+
+<pre><code>## # A tibble: 16 x 12
+##    id_prov id_ha id_hsda label_hsda        label_ha    label_prov color_ha
+##      &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;   
+##  1       0     1      11 East Kootenay     Interior    BC         #4daf4a 
+##  2       0     1      12 Kootenay Boundary Interior    BC         #4daf4a 
+##  3       0     1      13 Okanagan          Interior    BC         #4daf4a 
+##  4       0     1      14 Thompson Cariboo~ Interior    BC         #4daf4a 
+##  5       0     2      21 Fraser East       Fraser      BC         #e41a1c 
+##  6       0     2      22 Fraser North      Fraser      BC         #e41a1c 
+##  7       0     2      23 Fraser South      Fraser      BC         #e41a1c 
+##  8       0     3      31 Richmond          Vancouver ~ BC         #377eb8 
+##  9       0     3      32 Vancouver         Vancouver ~ BC         #377eb8 
+## 10       0     3      33 North Shore/Coas~ Vancouver ~ BC         #377eb8 
+## 11       0     4      41 South Vancouver ~ Vancouver ~ BC         #984ea3 
+## 12       0     4      42 Central Vancouve~ Vancouver ~ BC         #984ea3 
+## 13       0     4      43 North Vancouver ~ Vancouver ~ BC         #984ea3 
+## 14       0     5      51 Northwest         Northern    BC         #ff7f00 
+## 15       0     5      52 Northern Interior Northern    BC         #ff7f00 
+## 16       0     5      53 Northeast         Northern    BC         #ff7f00 
+## # ... with 5 more variables: color_ha_label &lt;chr&gt;, color_hsda &lt;chr&gt;,
+## #   color_hsda_label &lt;chr&gt;, color_prov &lt;chr&gt;, color_prov_label &lt;chr&gt;
+</code></pre>
+
+<pre><code class="r"># or better yet, let us create a lookup table for the selected level of granularity
+# using a custom function to shape the file for future use
+(lkp_hsda &lt;- lookup_meta(meta = bc_health_map, agg_level = &quot;hsda&quot;))
+</code></pre>
+
+<pre><code>## # A tibble: 16 x 8
+##    id_prov id_ha id_hsda label_prov label_ha    label_hsda      color_hsda
+##      &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;           &lt;chr&gt;     
+##  1       0     1      11 BC         Interior    East Kootenay   #edf8e9   
+##  2       0     1      12 BC         Interior    Kootenay Bound~ #bae4b3   
+##  3       0     1      13 BC         Interior    Okanagan        #74c476   
+##  4       0     1      14 BC         Interior    Thompson Carib~ #238b45   
+##  5       0     2      21 BC         Fraser      Fraser East     #fcae91   
+##  6       0     2      22 BC         Fraser      Fraser North    #fb6a4a   
+##  7       0     2      23 BC         Fraser      Fraser South    #cb181d   
+##  8       0     3      31 BC         Vancouver ~ Richmond        #bdd7e7   
+##  9       0     3      32 BC         Vancouver ~ Vancouver       #6baed6   
+## 10       0     3      33 BC         Vancouver ~ North Shore/Co~ #2171b5   
+## 11       0     4      41 BC         Vancouver ~ South Vancouve~ #cbc9e2   
+## 12       0     4      42 BC         Vancouver ~ Central Vancou~ #9e9ac8   
+## 13       0     4      43 BC         Vancouver ~ North Vancouve~ #6a51a3   
+## 14       0     5      51 BC         Northern    Northwest       #fdbe85   
+## 15       0     5      52 BC         Northern    Northern Inter~ #fd8d3c   
+## 16       0     5      53 BC         Northern    Northeast       #d94701   
+## # ... with 1 more variable: color_hsda_label &lt;chr&gt;
+</code></pre>
+
+<pre><code class="r"># this is the structure that we will use to think through the logical tests
+# and how they can be encoded into scripted commands
+# compare it to a manually constructed fictional case
+fictional_case
+</code></pre>
+
+<pre><code>## # A tibble: 16 x 14
+##    disease   year label_prov label_ha  label_hsda   BC_F  BC_M  BC_T  HA_F
+##    &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;       &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+##  1 Flower ~  1995 BC         Interior  East Koote~   104    97   201    25
+##  2 Flower ~  1995 BC         Interior  Kootenay B~   104    97   201    25
+##  3 Flower ~  1995 BC         Interior  Okanagan      104    97   201    25
+##  4 Flower ~  1995 BC         Interior  Thompson C~   104    97   201    25
+##  5 Flower ~  1995 BC         Fraser    Fraser East   104    97   201    15
+##  6 Flower ~  1995 BC         Fraser    Fraser Nor~   104    97   201    15
+##  7 Flower ~  1995 BC         Fraser    Fraser Sou~   104    97   201    15
+##  8 Flower ~  1995 BC         Vancouve~ Richmond      104    97   201    20
+##  9 Flower ~  1995 BC         Vancouve~ Vancouver     104    97   201    20
+## 10 Flower ~  1995 BC         Vancouve~ North Shor~   104    97   201    20
+## 11 Flower ~  1995 BC         Vancouve~ South Vanc~   104    97   201    19
+## 12 Flower ~  1995 BC         Vancouve~ Central Va~   104    97   201    19
+## 13 Flower ~  1995 BC         Vancouve~ North Vanc~   104    97   201    19
+## 14 Flower ~  1995 BC         Northern  Northwest     104    97   201    25
+## 15 Flower ~  1995 BC         Northern  Northern I~   104    97   201    25
+## 16 Flower ~  1995 BC         Northern  Northeast     104    97   201    25
+## # ... with 5 more variables: HA_M &lt;int&gt;, HA_T &lt;int&gt;, HSDA_F &lt;int&gt;,
+## #   HSDA_M &lt;int&gt;, HSDA_T &lt;int&gt;
+</code></pre>
+
+<pre><code class="r">(names(ds) &lt;- tolower(names(ds)))
+</code></pre>
+
+<pre><code>## [1] &quot;disease&quot;     &quot;region&quot;      &quot;region_desc&quot; &quot;year&quot;        &quot;sex&quot;        
+## [6] &quot;incase&quot;
+</code></pre>
+
+<pre><code class="r">ds &lt;- ds %&gt;% 
+  dplyr::arrange(sex, region)
+# what does the data look at this point for a single frame of analysis?
+ds %&gt;% 
+  dplyr::filter(
+    disease ==  &quot;Flower Deafness&quot; # disease + year = FRAME
+    ,year    ==  &quot;2001&quot;            # disease + year = FRAME
+  ) %&gt;% 
+  print(n=nrow(.))
+</code></pre>
+
+<pre><code>## # A tibble: 96 x 6
+##    disease         region  region_desc                   year sex   incase
+##    &lt;chr&gt;           &lt;chr&gt;   &lt;chr&gt;                        &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+##  1 Flower Deafness BC      BC                            2001 F      15691
+##  2 Flower Deafness HA-01   01 Interior                   2001 F       2447
+##  3 Flower Deafness HA-02   02 Fraser                     2001 F       5727
+##  4 Flower Deafness HA-03   03 Vancouver Coastal          2001 F       3535
+##  5 Flower Deafness HA-04   04 Vancouver Island           2001 F       2813
+##  6 Flower Deafness HA-05   05 Northern                   2001 F       1111
+##  7 Flower Deafness HA-99   Unknown HA                    2001 F         58
+##  8 Flower Deafness HSDA-11 11 East Kootenay              2001 F        205
+##  9 Flower Deafness HSDA-12 12 Kootenay Boundary          2001 F        249
+## 10 Flower Deafness HSDA-13 13 Okanagan                   2001 F       1213
+## 11 Flower Deafness HSDA-14 14 Thompson Cariboo Shuswap   2001 F        780
+## 12 Flower Deafness HSDA-21 21 Fraser East                2001 F       1087
+## 13 Flower Deafness HSDA-22 22 Fraser North               2001 F       1972
+## 14 Flower Deafness HSDA-23 23 Fraser South               2001 F       2668
+## 15 Flower Deafness HSDA-31 31 Richmond                   2001 F        476
+## 16 Flower Deafness HSDA-32 32 Vancouver                  2001 F       2183
+## 17 Flower Deafness HSDA-33 33 North Shore/Coast Gariba~  2001 F        876
+## 18 Flower Deafness HSDA-41 41 South Vancouver Island     2001 F       1352
+## 19 Flower Deafness HSDA-42 42 Central Vancouver Island   2001 F        995
+## 20 Flower Deafness HSDA-43 43 North Vancouver Island     2001 F        466
+## 21 Flower Deafness HSDA-51 51 Northwest                  2001 F        280
+## 22 Flower Deafness HSDA-52 52 Northern Interior          2001 F        633
+## 23 Flower Deafness HSDA-53 53 Northeast                  2001 F        198
+## 24 Flower Deafness HSDA-99 Unknown HSDA                  2001 F         58
+## 25 Flower Deafness BC      BC                            2001 M      13722
+## 26 Flower Deafness HA-01   01 Interior                   2001 M       1992
+## 27 Flower Deafness HA-02   02 Fraser                     2001 M       5232
+## 28 Flower Deafness HA-03   03 Vancouver Coastal          2001 M       3216
+## 29 Flower Deafness HA-04   04 Vancouver Island           2001 M       2199
+## 30 Flower Deafness HA-05   05 Northern                   2001 M        988
+## 31 Flower Deafness HA-99   Unknown HA                    2001 M         95
+## 32 Flower Deafness HSDA-11 11 East Kootenay              2001 M        172
+## 33 Flower Deafness HSDA-12 12 Kootenay Boundary          2001 M        187
+## 34 Flower Deafness HSDA-13 13 Okanagan                   2001 M       1004
+## 35 Flower Deafness HSDA-14 14 Thompson Cariboo Shuswap   2001 M        629
+## 36 Flower Deafness HSDA-21 21 Fraser East                2001 M       1026
+## 37 Flower Deafness HSDA-22 22 Fraser North               2001 M       1791
+## 38 Flower Deafness HSDA-23 23 Fraser South               2001 M       2415
+## 39 Flower Deafness HSDA-31 31 Richmond                   2001 M        448
+## 40 Flower Deafness HSDA-32 32 Vancouver                  2001 M       2010
+## 41 Flower Deafness HSDA-33 33 North Shore/Coast Gariba~  2001 M        758
+## 42 Flower Deafness HSDA-41 41 South Vancouver Island     2001 M        967
+## 43 Flower Deafness HSDA-42 42 Central Vancouver Island   2001 M        845
+## 44 Flower Deafness HSDA-43 43 North Vancouver Island     2001 M        387
+## 45 Flower Deafness HSDA-51 51 Northwest                  2001 M        271
+## 46 Flower Deafness HSDA-52 52 Northern Interior          2001 M        512
+## 47 Flower Deafness HSDA-53 53 Northeast                  2001 M        205
+## 48 Flower Deafness HSDA-99 Unknown HSDA                  2001 M         95
+## 49 Flower Deafness BC      BC                            2001 T      29415
+## 50 Flower Deafness HA-01   01 Interior                   2001 T       4439
+## 51 Flower Deafness HA-02   02 Fraser                     2001 T      10961
+## 52 Flower Deafness HA-03   03 Vancouver Coastal          2001 T       6751
+## 53 Flower Deafness HA-04   04 Vancouver Island           2001 T       5012
+## 54 Flower Deafness HA-05   05 Northern                   2001 T       2099
+## 55 Flower Deafness HA-99   Unknown HA                    2001 T        153
+## 56 Flower Deafness HSDA-11 11 East Kootenay              2001 T        377
+## 57 Flower Deafness HSDA-12 12 Kootenay Boundary          2001 T        436
+## 58 Flower Deafness HSDA-13 13 Okanagan                   2001 T       2217
+## 59 Flower Deafness HSDA-14 14 Thompson Cariboo Shuswap   2001 T       1409
+## 60 Flower Deafness HSDA-21 21 Fraser East                2001 T       2114
+## 61 Flower Deafness HSDA-22 22 Fraser North               2001 T       3764
+## 62 Flower Deafness HSDA-23 23 Fraser South               2001 T       5083
+## 63 Flower Deafness HSDA-31 31 Richmond                   2001 T        924
+## 64 Flower Deafness HSDA-32 32 Vancouver                  2001 T       4193
+## 65 Flower Deafness HSDA-33 33 North Shore/Coast Gariba~  2001 T       1634
+## 66 Flower Deafness HSDA-41 41 South Vancouver Island     2001 T       2319
+## 67 Flower Deafness HSDA-42 42 Central Vancouver Island   2001 T       1840
+## 68 Flower Deafness HSDA-43 43 North Vancouver Island     2001 T        853
+## 69 Flower Deafness HSDA-51 51 Northwest                  2001 T        551
+## 70 Flower Deafness HSDA-52 52 Northern Interior          2001 T       1145
+## 71 Flower Deafness HSDA-53 53 Northeast                  2001 T        403
+## 72 Flower Deafness HSDA-99 Unknown HSDA                  2001 T        153
+## 73 Flower Deafness BC      BC                            2001 U          1
+## 74 Flower Deafness HA-01   01 Interior                   2001 U          0
+## 75 Flower Deafness HA-02   02 Fraser                     2001 U          3
+## 76 Flower Deafness HA-03   03 Vancouver Coastal          2001 U          0
+## 77 Flower Deafness HA-04   04 Vancouver Island           2001 U          0
+## 78 Flower Deafness HA-05   05 Northern                   2001 U          0
+## 79 Flower Deafness HA-99   Unknown HA                    2001 U          0
+## 80 Flower Deafness HSDA-11 11 East Kootenay              2001 U          0
+## 81 Flower Deafness HSDA-12 12 Kootenay Boundary          2001 U          0
+## 82 Flower Deafness HSDA-13 13 Okanagan                   2001 U          0
+## 83 Flower Deafness HSDA-14 14 Thompson Cariboo Shuswap   2001 U          0
+## 84 Flower Deafness HSDA-21 21 Fraser East                2001 U          3
+## 85 Flower Deafness HSDA-22 22 Fraser North               2001 U          4
+## 86 Flower Deafness HSDA-23 23 Fraser South               2001 U          0
+## 87 Flower Deafness HSDA-31 31 Richmond                   2001 U          0
+## 88 Flower Deafness HSDA-32 32 Vancouver                  2001 U          0
+## 89 Flower Deafness HSDA-33 33 North Shore/Coast Gariba~  2001 U          0
+## 90 Flower Deafness HSDA-41 41 South Vancouver Island     2001 U          0
+## 91 Flower Deafness HSDA-42 42 Central Vancouver Island   2001 U          0
+## 92 Flower Deafness HSDA-43 43 North Vancouver Island     2001 U          0
+## 93 Flower Deafness HSDA-51 51 Northwest                  2001 U          0
+## 94 Flower Deafness HSDA-52 52 Northern Interior          2001 U          0
+## 95 Flower Deafness HSDA-53 53 Northeast                  2001 U          0
+## 96 Flower Deafness HSDA-99 Unknown HSDA                  2001 U          0
+</code></pre>
+
+<pre><code class="r"># before we do anything with it, it is important or reflect that 
+# THIS is the state of the data that should result at the end of mechanized suppression
+# the whole point, the TARGET deliverable is just one additional column/field
+# logical vector, indicating decision to suppress (TRUE) or not to suppress (FALSE)
+</code></pre>
+
+<pre><code class="r"># let us create a list object `dto` to store heirarchy of flat frames disease * year
+dto &lt;- list()
+# the first thing we would like to store is the RAW state of the data
+dto[[&quot;raw&quot;]] &lt;- ds
+# at the end of the project we will augment this state with a single variable
+# which will contian a logical vectori with suppression decision 
+
+# we also store the imported meta-data with heirarchical map and other meta
+dto[[&quot;meta&quot;]] &lt;- bc_health_map
+# remember that you can shape this meta for better viewing/use by lookup_meta() 
+# finally, let&#39;s store the target shape of the data that will be crucial to keep in mind
+dto[[&quot;target&quot;]] &lt;- fictional_case
+
+dto[[&quot;FRAMED&quot;]] &lt;- list() # a shell to hold the frames of different content
+dto[[&quot;FRAMED&quot;]][[&quot;raw&quot;]] &lt;- list() # the first element will break up the raw data into digestable frame
+
+# now we will deconstruct the flat data frame into a list object in which 
+#  level-1 components correspond to diseases and 
+# level-2 componets correspond to the years for which we have surveillance data
+# Example:
+# disease A   # list
+#   - year 1  # data frame
+#   - year 2  # data frame
+# disease B   # list
+#   - year 1  # data frame
+#   - year 3  # data frame
+#   - year 3  # data frame
+
+greeted_list &lt;- list()
+# determine the years for which surveillance data is available
+diseases_available &lt;- ds %&gt;%  # or dto[[&quot;raw]]
+  dplyr::distinct(disease) %&gt;% 
+  as.list() %&gt;% unlist() %&gt;% as.character()
+# loop through available diseases
+for(disease_ in diseases_available){
+  # determine the years for which data is available for this disease
+  years_available &lt;- ds %&gt;% 
+    dplyr::filter(disease == disease_) %&gt;% 
+    dplyr::arrange(year) %&gt;% 
+    dplyr::distinct(year) %&gt;% 
+    as.list() %&gt;% unlist() %&gt;% as.character()
+  # loop through available years
+  for(year_ in years_available ){
+    d1 &lt;- ds %&gt;% 
+      dplyr::filter(disease == disease_) %&gt;% 
+      dplyr::filter(year    == year_)
+    greeted_list[[disease_]][[year_]] &lt;- d1
+  }
+}
+sapply(dto, names) 
+</code></pre>
+
+<pre><code>## $raw
+## [1] &quot;disease&quot;     &quot;region&quot;      &quot;region_desc&quot; &quot;year&quot;        &quot;sex&quot;        
+## [6] &quot;incase&quot;     
+## 
+## $meta
+##  [1] &quot;id_prov&quot;          &quot;id_ha&quot;            &quot;id_hsda&quot;         
+##  [4] &quot;id_lha&quot;           &quot;label_lha&quot;        &quot;label_hsda&quot;      
+##  [7] &quot;label_ha&quot;         &quot;label_prov&quot;       &quot;color_ha&quot;        
+## [10] &quot;color_ha_label&quot;   &quot;color_hsda&quot;       &quot;color_hsda_label&quot;
+## [13] &quot;color_prov&quot;       &quot;color_prov_label&quot;
+## 
+## $target
+##  [1] &quot;disease&quot;    &quot;year&quot;       &quot;label_prov&quot; &quot;label_ha&quot;   &quot;label_hsda&quot;
+##  [6] &quot;BC_F&quot;       &quot;BC_M&quot;       &quot;BC_T&quot;       &quot;HA_F&quot;       &quot;HA_M&quot;      
+## [11] &quot;HA_T&quot;       &quot;HSDA_F&quot;     &quot;HSDA_M&quot;     &quot;HSDA_T&quot;    
+## 
+## $FRAMED
+## [1] &quot;raw&quot;
+</code></pre>
+
+<pre><code class="r">sapply(greeted_list, names) 
+</code></pre>
+
+<pre><code>## $`Flower Deafness`
+## [1] &quot;1999&quot; &quot;2000&quot; &quot;2001&quot;
+## 
+## $`Orange Nose`
+## [1] &quot;2000&quot; &quot;2001&quot;
+</code></pre>
+
+<pre><code class="r"># this list object in which the smallest unit is the analytic frame: disease * year
+dto[[&quot;FRAMED&quot;]][[&quot;raw&quot;]] &lt;- greeted_list
+
+sapply(dto$FRAMED, names) 
+</code></pre>
+
+<pre><code>##      raw              
+## [1,] &quot;Flower Deafness&quot;
+## [2,] &quot;Orange Nose&quot;
+</code></pre>
+
+<pre><code class="r">sapply(dto$FRAMED$raw, names) 
+</code></pre>
+
+<pre><code>## $`Flower Deafness`
+## [1] &quot;1999&quot; &quot;2000&quot; &quot;2001&quot;
+## 
+## $`Orange Nose`
+## [1] &quot;2000&quot; &quot;2001&quot;
+</code></pre>
+
+<pre><code class="r">saveRDS(dto, paste0(path_save,&quot;.rds&quot;))
+</code></pre>
+
+<p>The R session information (including the OS info, R version and all
+packages used):</p>
+
+<pre><code class="r">sessionInfo()
+</code></pre>
+
+<pre><code>## R version 3.4.4 (2018-03-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows &gt;= 8 x64 (build 9200)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] grid      stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] bindrcpp_0.2.2     magrittr_1.5       RColorBrewer_1.1-2
+## [4] dichromat_2.0-0    ggplot2_3.0.0     
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_0.12.18     knitr_1.20       bindr_0.1.1      hms_0.4.1       
+##  [5] tidyselect_0.2.3 munsell_0.5.0    testit_0.8       colorspace_1.3-2
+##  [9] R6_2.2.2         rlang_0.2.2      highr_0.6        stringr_1.3.1   
+## [13] plyr_1.8.4       dplyr_0.7.6      tools_3.4.4      gtable_0.2.0    
+## [17] utf8_1.1.3       cli_1.0.0        withr_2.1.1      yaml_2.1.19     
+## [21] lazyeval_0.2.1   assertthat_0.2.0 tibble_1.4.2     crayon_1.3.4    
+## [25] purrr_0.2.5      readr_1.1.1      evaluate_0.10.1  glue_1.3.0      
+## [29] stringi_1.1.7    compiler_3.4.4   pillar_1.2.1     scales_1.0.0    
+## [33] markdown_0.8     pkgconfig_2.0.1
+</code></pre>
+
+<pre><code class="r">Sys.time()
+</code></pre>
+
+<pre><code>## [1] &quot;2018-10-21 10:26:00 PDT&quot;
+</code></pre>
+
+</body>
+
+</html>

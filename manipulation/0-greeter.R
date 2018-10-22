@@ -1,6 +1,12 @@
-# knitr::stitch_rmd(script="./manipulation/0-ellis-map.R", output="./manipulation/stitched-output/0-ellis-map.md")
-# This script reads two files: encounter counts with location mapping and encounter timelines for selected individuals
-rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is not called by knitr, because it's above the first chunk.
+# Run to stitch a tech report of this script (used only in RStudio)
+knitr::stitch_rmd(
+  script = "./manipulation/0-greeter.R",
+  output = "./manipulation/stitched_output/0-greeter.md"
+)
+
+# This script inputs the raw data and prepares it for tuning.
+rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. 
+# This is not called by knitr, because it's above the first chunk.
 
 # ---- load-sources ------------------------------------------------------------
 #Load any source files that contain/define functions, but that don't load any other types of variables
@@ -41,18 +47,18 @@ fictional_case <- readr::read_csv(path_fictional_case)
 # Components available initially:
 # ds                 - dframe - flat data file as obtained from MoH
 # bc_health_map      - dframe - heirachical map and other meta information
-# fictional_case     - dframe - a fictional case of surveillance, target shape
+# fictional_case     - dframe - a fictional case of surveillance, target shape for mechanized suppression
 
 # To be created in this script:
 # dto$raw            - dframe - flat data file as obtained from MoH
 # dto$meta           - dframe - heirachical map and other meta information
 # dto$target         - dframe - a fictional case of surveillance, target shape for mechanized suppression
-# dto$FRAMED         - list   - a list, each element of which is (disease*year) = FRAME 
+# dto$FRAMED         - list   - a list, each element of which is (DISEASE*YEAR) = FRAME 
 # dto$FRAMED$raw     - dframe [L] deconstructed `dto$raw` with each frame = disease * year
 
 # this script kick-offs a data transfer object and
 # introduces the FRAME as the focal structre in the analysis
-# the FRAME contains all data relevant to surveillance of (disease*year) unit
+# the FRAME contains all data relevant to surveillance of (DISEASE*YEAR) unit
 
 # ---- inspect-data -----------------------------------------------------------
 # surveillance file from MoH comes as a flat .csv with
