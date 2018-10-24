@@ -1,5 +1,10 @@
-# knitr::stitch_rmd(script="./manipulation/0-ellis-map.R", output="./manipulation/stitched-output/0-ellis-map.md")
-# This script reads two files: encounter counts with location mapping and encounter timelines for selected individuals
+# Run to stitch a tech report of this script (used only in RStudio)
+# knitr::stitch_rmd(
+#   script = "./manipulation/1-tuner.R",
+#   output = "./manipulation/stitched_output/1-tuner.md"
+# )
+
+# This script brings the source data into tidy format, widens it and prepares for testing
 rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is not called by knitr, because it's above the first chunk.
 
 # ---- load-sources ------------------------------------------------------------
