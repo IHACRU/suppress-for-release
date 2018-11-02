@@ -54,8 +54,8 @@ lapply(dto$FRAMED$raw, names)
 # initial target shape we need in order to apply mechanized suppression
 dto$target
 # this script will develop and apply the function that bring `greeted`` formed into `tuned` form
-dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$tuned$`Flower Deafness`$`1999`
+dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
 
 
 # ---- utility-functions ----------------------------------------------------- 
@@ -66,8 +66,8 @@ redact_clean_frame <- function(
   ,year_
 ){
   # values for testing
-  # disease_i = "Flower Deafness"
-  # year_i    = "1999"
+  # disease_ = "Multiple Sclerosis"
+  # year_    = "1999"
   (df_cleaned <- dto$FRAMED$cleaned[[disease_]][[year_]])
   (df_tuned <- dto$FRAMED$tuned[[disease_]][[year_]])
 
@@ -109,7 +109,7 @@ redact_clean_frame <- function(
 }
 # usage
 # dto$FRAMED[["redacted"]] <- dto$FRAMED$cleaned # create shell to populate
-# dto$FRAMED[["redacted"]] <- dto %>% redact_clean_frame("Flower Deafness", "1999")
+# dto$FRAMED[["redacted"]] <- dto %>% redact_clean_frame("Multiple Sclerosis", "1999")
 
 
 
@@ -124,25 +124,26 @@ dstem <- dto$meta %>%
 
 # a suppression decision is made within a context of suppression frame = disease * year 
 # pick a case to use in demonstrations
-(df <- dto$FRAMED$tuned$`Flower Deafness`$`1999`)
+(df <- dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`)
 
 
 # ----- demonstrate-redaction-mechanism ------------------------
 
 # dto$FRAMED
-(df_raw <- dto$FRAMED$raw$`Flower Deafness`$`1999`)  
-(df_cleaned <- dto$FRAMED$cleaned$`Flower Deafness`$`1999`)
-(df_tuned <- dto$FRAMED$tuned$`Flower Deafness`$`1999`)
-# (df_test1 <- dto$FRAMED$test1$`Flower Deafness`$`1999`)
-# (df_test2 <- dto$FRAMED$test2$`Flower Deafness`$`1999`)
-# (df_test3 <- dto$FRAMED$test3$`Flower Deafness`$`1999`)
+(df_raw <- dto$FRAMED$raw$`Multiple Sclerosis`$`1999`)  
+(df_cleaned <- dto$FRAMED$cleaned$`Multiple Sclerosis`$`1999`)
+(df_tuned <- dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`)
+# (df_test1 <- dto$FRAMED$test1$`Multiple Sclerosis`$`1999`)
+# (df_test2 <- dto$FRAMED$test2$`Multiple Sclerosis`$`1999`)
+# (df_test3 <- dto$FRAMED$test3$`Multiple Sclerosis`$`1999`)
 (df_tested <- df_tuned %>% combine_logical_tests() %>% 
     dplyr::mutate(
       redact_row  = censor3_single_suppression # the last test includes ALL redactions
       
     ) %>% 
     dplyr::select(-censor0, -censor1_small_cell, # we don't need them here 
-                  -censor2_recalc_triplet, -censor3_single_suppression)  
+                  -censor2_recalc_triplet, -censor3_single_suppression)
+  # consider keeping censor1, 2, and 3 as is in  order to color code our decisions
 )
 (
   prov_value <- df_tested %>% 
@@ -202,26 +203,26 @@ for(disease_i in names(dto$FRAMED$tuned)){
 
 # verify
 # compare results
-# dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$cleaned$`Flower Deafness`$`1999`
-# dto$FRAMED$tuned$`Flower Deafness`$`1999`
-# dto$FRAMED$test1$`Flower Deafness`$`1999`
-# dto$FRAMED$test2$`Flower Deafness`$`1999`
-# dto$FRAMED$test3$`Flower Deafness`$`1999`
-dto$FRAMED$redacted$`Flower Deafness`$`1999`
+# dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$cleaned$`Multiple Sclerosis`$`1999`
+# dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
+# dto$FRAMED$test1$`Multiple Sclerosis`$`1999`
+# dto$FRAMED$test2$`Multiple Sclerosis`$`1999`
+# dto$FRAMED$test3$`Multiple Sclerosis`$`1999`
+dto$FRAMED$redacted$`Multiple Sclerosis`$`1999`
 
 # ---- demonstrate-graphing-functions ------------------------
 # now we need to create a graphical representation of redaction decisions
 
 # first bring in the disease*year elements of FRAMES as variables
-disease_ = "Flower Deafness"
+disease_ = "Parkinsonism"
 year_ = "1999"
 df <- dto$FRAMED$tuned[[disease_]][[year_]] %>% 
   dplyr::mutate(disease = disease_, year = year_) %>% 
   dplyr::select(disease, year, dplyr::everything())
 # create a list object with data shape suited for plotting
 l <- df %>% prepare_for_tiling(dto$meta)
-saveRDS(df,"./data-public/derived/example-for-graph-making.rds") # a case for graphing scenario
+# saveRDS(df,"./data-public/derived/example-for-graph-making.rds") # a case for graphing scenario
 # saveRDS(l,"./data-public/derived/example-for-graph-making.rds") # a case for graphing scenario
 # generate a graph of a single logical test
 df %>% make_tile_graph(dto$meta, "censor0")
@@ -249,7 +250,7 @@ for(disease_i in names(dto$FRAMED$tuned)){
   # loop through available years
   for(year_i in names(dto$FRAMED$tuned[[disease_i]]) ){
    
-    # disease_i = "Flower Deafness"
+    # disease_i = "Multiple Sclerosis"
     # year_i = "1999"
     
     df <- dto$FRAMED$tuned[[disease_i]][[year_i]] %>% 
@@ -259,7 +260,7 @@ for(disease_i in names(dto$FRAMED$tuned)){
     df %>% print_one_frame(
       disease_ = disease_i,
       year_ = year_i,
-      folder = "./reports/demo-fiction/prints/")
+      folder = "./manipulation/prints/demo/")
     
     # store a graph with the final redaction recommendation in dto
     # this feature is currently (under consideration)
@@ -293,4 +294,4 @@ saveRDS(dto, paste0(path_save,".rds"))
 lapply(dto, names)
 
 # let us also save the flat file with with redaction recommendation augmented to it
-readr::write_csv(dto$augmented, "./reports/demo-fiction/raw_augmented.csv")
+readr::write_csv(dto$augmented, "./manipulation/prints/raw_augmented.csv")
