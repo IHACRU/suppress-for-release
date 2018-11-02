@@ -1,8 +1,8 @@
 # Run to stitch a tech report of this script (used only in RStudio)
-knitr::stitch_rmd(
-  script = "./manipulation/0-greeter.R",
-  output = "./manipulation/stitched_output/0-greeter.md"
-)
+# knitr::stitch_rmd(
+#   script = "./manipulation/0-greeter.R",
+#   output = "./manipulation/stitched_output/0-greeter.md"
+# )
 
 # This script inputs the raw data and prepares it for tuning.
 rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. 
@@ -24,7 +24,8 @@ requireNamespace("testit", quietly=TRUE)
 
 # ---- declare-globals ---------------------------------------------------------
 # declare the location of the data sources to be used in this script
-path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
+# path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
+path_input          <- "./data-unshared/raw/v2016_cdr_measures.csv"
 path_region_map     <- "./data-public/raw/bc-health-system-map.csv"
 path_fictional_case <- "./data-public/raw/fictional-cases/fictional-case-0.csv"
 # test whether the file exists / the link is good
@@ -36,7 +37,7 @@ path_save           <- "./data-unshared/derived/dto-0-greeted"
 # functions, the use of which is localized to this script
 
 # ---- load-data ---------------------------------------------------------------
-ds             <- readr::read_csv(path_input) %>% as.data.frame() %>% tibble::as_tibble()
+ds0             <- readr::read_csv(path_input) %>% as.data.frame() %>% tibble::as_tibble()
 bc_health_map  <- readr::read_csv(path_region_map)
 fictional_case <- readr::read_csv(path_fictional_case)
 
@@ -63,7 +64,7 @@ fictional_case <- readr::read_csv(path_fictional_case)
 # ---- inspect-data -----------------------------------------------------------
 # surveillance file from MoH comes as a flat .csv with
 # each row = disease * year * locale
-ds %>% dplyr::glimpse()
+ds0 %>% dplyr::glimpse()
 # we have created a logical map of heirarchical map of HSDA -> HA with some meta added
 bc_health_map %>% dplyr::glimpse()
 
@@ -82,13 +83,29 @@ bc_health_map_hsda <- bc_health_map %>%
 fictional_case
 
 # ---- tweak-data -------------------------------------------------------------
-(names(ds) <- tolower(names(ds)))
-ds <- ds %>% 
+# let us subset only the needed columns from the raw data to make workflow lighter
+(names(ds0) <- tolower(names(ds0)))
+
+ds <- ds0 %>% 
+  dplyr::select(disease, region, region_desc, year, sex ,incase) %>% 
+  # dplyr::filter(disease %in% c("Parkinsonism", "Kidney Transplant","Multiple Sclerosis") ) %>%
   dplyr::arrange(sex, region)
+
+# ds_test <- ds %>%
+#   dplyr::filter(grepl("^HSDA",x = region) ) %>% 
+#   dplyr::filter(sex %in% c("F","M")) %>%
+#   dplyr::filter(incase > 0 & incase <5) %>%
+#   dplyr::group_by(disease, year, sex) %>%
+#   dplyr::summarize(
+#     n = n()
+#   ) %>%
+#   dplyr::arrange(n)
+# ds_test %>% print(n = nrow(.))
+
 # what does the data look at this point for a single frame of analysis?
 ds %>% 
   dplyr::filter(
-    disease ==  "Flower Deafness" # disease + year = FRAME
+    disease ==  "Parkinsonism" # disease + year = FRAME
     ,year    ==  "2001"            # disease + year = FRAME
   ) %>% 
   print(n=nrow(.))
@@ -155,7 +172,7 @@ dto[["FRAMED"]][["raw"]] <- greeted_list
 
 sapply(dto$FRAMED, names) 
 sapply(dto$FRAMED$raw, names) 
-
+dto %>% pryr::object_size()
 # ---- save-to-disk --------------------
 saveRDS(dto, paste0(path_save,".rds"))
 
