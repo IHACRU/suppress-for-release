@@ -13,6 +13,7 @@ rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is 
 source("./manipulation/function-support.R")  # assisting functions for data wrangling and testing
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
+source("./scripts/suppression-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
 
 # ---- load-packages -----------------------------------------------------------
@@ -57,7 +58,8 @@ lapply(dto, names)
 lapply(dto$FRAMED, names)
 
 # select a unit for suppression decision; all transformation will be keyed to this shape
-df <- dto$FRAMED$raw$`Flower Deafness`$`2000`
+# df <- dto$FRAMED$raw$`Flower Deafness`$`2000`
+df <- dto$FRAMED$raw$`Multiple Sclerosis`$`2000`
 df %>% print(n = nrow(.))
 # compare it to the shape we need it to be to apply mechanized suppression
 dto$target
@@ -100,9 +102,9 @@ for(disease_ in names(dto$FRAMED$raw)){
 
 # ---- explore-data ------------------------------------------
 # compare results
-dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$cleaned$`Flower Deafness`$`1999`
-dto$FRAMED$tuned$`Flower Deafness`$`1999`
+dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$cleaned$`Multiple Sclerosis`$`1999`
+dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
 
 
 # ---- save-to-disk ----------------
