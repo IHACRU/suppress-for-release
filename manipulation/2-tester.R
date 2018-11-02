@@ -49,9 +49,9 @@ lapply(dto$FRAMED$greeted, names)
 # initial target shape we need in order to apply mechanized suppression
 dto$target
 # this script will develop and apply the function that bring `greeted`` formed into `tuned` form
-dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$cleaned$`Flower Deafness`$`1999`
-dto$FRAMED$tuned$`Flower Deafness`$`1999`
+dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$cleaned$`Multiple Sclerosis`$`1999`
+dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
 
 
 # ---- utility-functions ----------------------------------------------------- 
@@ -69,7 +69,7 @@ dstem <- dto$meta %>%
 
 # a suppression decision is made within a context of suppression frame = disease * year 
 # pick a case to use in demonstrations
-(df <- dto$FRAMED$tuned$`Flower Deafness`$`1999`)
+(df <- dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`)
 # dview <- df;# View(dview) # inspect before proceding
 # IMPORTANT NOTE: the subsequent functions rely on this shape of data
 # note that it is different from 
@@ -106,7 +106,7 @@ dto[["FRAMED"]][["test3"]] <- dto[["FRAMED"]][["tuned"]]
 lapply(dto$FRAMED$test1, names)
 
 
-dto$FRAMED$tuned$`Flower Deafness`$`1999` %>% detect_small_cell()
+dto$FRAMED$tuned$`Multiple Sclerosis`$`1999` %>% detect_small_cell()
 
 for(disease_ in names(dto$FRAMED$tuned)){
   # loop through available years
@@ -131,12 +131,12 @@ for(disease_ in names(dto$FRAMED$tuned)){
 # ---- explore-data ------------------------------------------
 # compare results
 # compare results
-dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$cleaned$`Flower Deafness`$`1999`
-dto$FRAMED$tuned$`Flower Deafness`$`1999`
-dto$FRAMED$test1$`Flower Deafness`$`1999`
-dto$FRAMED$test2$`Flower Deafness`$`1999`
-dto$FRAMED$test3$`Flower Deafness`$`1999`
+dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$cleaned$`Multiple Sclerosis`$`1999`
+dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
+dto$FRAMED$test1$`Multiple Sclerosis`$`1999`
+dto$FRAMED$test2$`Multiple Sclerosis`$`1999`
+dto$FRAMED$test3$`Multiple Sclerosis`$`1999`
 
 # Note, while we store the results of logical test in wide form for transparency
 # and as convenience to humans, such operations as (1) bringing back the 
