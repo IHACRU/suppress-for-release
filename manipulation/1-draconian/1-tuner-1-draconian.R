@@ -13,9 +13,8 @@ rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is 
 source("./manipulation/function-support.R")  # assisting functions for data wrangling and testing
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
-source("./scripts/suppression-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
-
+source("./scripts/suppression-functions1-draconian.R") # mechanized suppression of small cells
 # ---- load-packages -----------------------------------------------------------
 library(magrittr) # pipes
 requireNamespace("dplyr", quietly=TRUE)

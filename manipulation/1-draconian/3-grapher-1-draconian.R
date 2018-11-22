@@ -9,7 +9,7 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
-source("./scripts/suppression-functions.R")  # mechanized suppression of small cells
+source("./scripts/suppression-functions1-draconian.R") # mechanized suppression of small cells
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
 library(magrittr) # pipes
@@ -235,7 +235,7 @@ df %>% make_tile_graph(dto$meta, "censor3_single_suppression")
 # (2) a plot is committed to a hard digital form (PNG, JPG, PDF) 
 # can help us avoid going insane from trying to make it look right/useful on paper/screen
 # there are many decision about the appearance of the plot that needs to be scripted
-df %>% print_tile_graph(dto$meta, path_folder = "./manipulation/prints/", size = 3)
+df %>% print_tile_graph(dto$meta, path_folder = "./manipulation/1-draconian/prints/", size = 3)
 
 # so far, df referred to a single Data Frame = a context for a single suppression decision
 # we can use a wrapper function to loop through  a large number of frames
