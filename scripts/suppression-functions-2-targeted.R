@@ -617,6 +617,13 @@ make_tile_graph <- function(
   
   ##--##--##--##--##--##--##--##--##--##--##
   # graph the values - RIGHT SIDE OF THE TABLET   
+  censor_colors = c(
+    "0"  = NA,
+    "1"  = "#fc8d62" # red
+    ,"2" = "#66c2a5" # green
+    ,"3" = "#8da0cb" # blue
+  )
+  
   g <- l$values_long %>%  
     dplyr::mutate(
       agg_level = factor(agg_level, levels = c("HSDA","HA","PROV"))
@@ -640,7 +647,8 @@ make_tile_graph <- function(
   # g <- g + geom_text(aes_string(color = censor),hjust=.5)
   g <- g + geom_text(color = "black" ,hjust=.5)
   g <- g + facet_grid(. ~ agg_level )
-  g <- g + scale_fill_manual(values = c("0"=NA, "1"="#66c2a5", "2"="#fc8d62", "3" = "#8da0cb"))
+  # g <- g + scale_fill_manual(values = c("0"=NA, "1"="#66c2a5", "2"="#fc8d62", "3" = "#8da0cb"))
+  g <- g + scale_fill_manual(values = censor_colors)
   # g <- g + scale_fill_manual(values = c("TRUE"="black", "FALSE"="white"))
   # g <- g + scale_color_manual(values = c("TRUE"="white", "FALSE"="black"))
   
