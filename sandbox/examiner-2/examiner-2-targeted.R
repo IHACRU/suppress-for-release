@@ -9,7 +9,6 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
-source("./scripts/suppression-functions.R")  # mechanized suppression of small cells
 
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
@@ -34,6 +33,8 @@ baseSize = 10
 # ds0 <- readr::read_csv(path_input_folder)
 ds0 <- readr::read_csv(path_input)
 bc_health_map <- readr::read_csv(path_region_map)
+# source here because `bc_health_map` must be availabe to define the functions
+base::source("./scripts/suppression-functions-2-targeted.R")  # mechanized suppression of small cells
 
 # # save this example for future reference in other repos
 # list(
@@ -42,7 +43,7 @@ bc_health_map <- readr::read_csv(path_region_map)
 # ) %>% saveRDS("../../dss-ialh/graph-making-scenarios/data-public/raw/scenario-2/example-data.rds")
 
 # ---- inspect-data-1 -----------------------------------------------------------
-ds0 %>% filter(year==1995)
+ds0 %>% dplyr::filter(year==1995)
 
 bc_health_map %>% lookup_meta("prov")
 bc_health_map %>% lookup_meta("ha")
@@ -64,6 +65,7 @@ ds0
 
 
 # ----- logical-tests ---------------------------
+
 # funtion to return the test whether a cell value is less than 5
 # TEST 1: What cells are `too small` ( < 5)
 # Censor 1: What cells should be suppressed as "too small"?
@@ -100,22 +102,25 @@ d_combined_tests <- df %>% combine_logical_tests()
 # ) %>% saveRDS("../../dss-ialh/graph-making-scenarios/data-public/raw/scenario-2/example-data.rds")
 
 # ---- graphing-functions ------------------------
+base::source("./scripts/suppression-functions-2-targeted.R")  # mechanized suppression of small cells
+
 # prepare the context for suppression = smallest decision frame
 # create a list object containing required data in required shape to generate graphs
 l <- df %>% prepare_for_tiling(bc_health_map)
 
 # generate a graph of a single logical test
-df %>% make_tile_graph(bc_health_map, "censor0")
-df %>% make_tile_graph(bc_health_map, "censor1_small_cell")
-df %>% make_tile_graph(bc_health_map, "censor2_recalc_triplet")
-df %>% make_tile_graph(bc_health_map, "censor3_single_suppression")
+# df %>% make_tile_graph(bc_health_map, "censor0")
+# df %>% make_tile_graph(bc_health_map, "censor1_small_cell")
+# df %>% make_tile_graph(bc_health_map, "censor2_recalc_triplet")
+# df %>% make_tile_graph(bc_health_map, "censor3_single_suppression")
+df %>% make_tile_graph(bc_health_map)
 
 # it is very useful to segregate how
 # (1) a plot is assembled with graphing script from how
 # (2) a plot is committed to a hard digital form (PNG, JPG, PDF) 
 # can help us avoid going insane from trying to make it look right/useful on paper/screen
 # there are many decision about the appearance of the plot that needs to be scripted
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-1/prints/", size = 3)
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-2/prints/", size = 3)
 
 # so far, df referred to a single Data Frame = a context for a single suppression decision
 # we can use a wrapper function to loop through  a large number of frames
@@ -125,13 +130,14 @@ ds0 %>% # notice that it takes the file with ALL suppression framed
   print_one_frame(
     disease_ = "Flower Deafness"
     ,year_   =  1995
-    ,folder  = "./sandbox/examiner-1/prints/"
+    ,folder  = "./sandbox/examiner-2/prints/"
   )
 
 # to print multiple cases, we will use a for-loop to cycle through possible values
 
+print_folder = "./sandbox/examiner-2/prints/"
 # determine the list of diseases for which incidence counts are available
-diseases_available <- ds0 %>%  # or dto[["raw]]
+diseases_available <- ds0 %>%  # or dto[["raw"]]
   dplyr::distinct(disease) %>% 
   as.list() %>% unlist() %>% as.character()
 
@@ -143,6 +149,8 @@ for(disease_i in diseases_available){
     dplyr::arrange(year) %>% 
     dplyr::distinct(year) %>% 
     as.list() %>% unlist() %>% as.character()
+  print_folder_disease = paste0(print_folder,"/",disease_i,"/")
+  dir.create(print_folder_disease)
   
   # loop through available years
   for(year_i in years_available ){
@@ -150,7 +158,7 @@ for(disease_i in diseases_available){
       dplyr::filter(disease == disease_i) %>% 
       dplyr::filter(year    == year_i)
     # for each observable disease*year frame, produce suppression decision graph
-    d1 %>% print_one_frame(disease_ = disease_i, year_ = year_i, folder = "./sandbox/examiner-1/prints/")
+    d1 %>% print_one_frame(disease_ = disease_i, year_ = year_i, folder = print_folder_disease)
   }
 }
-  
+
