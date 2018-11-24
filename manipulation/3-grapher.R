@@ -9,7 +9,7 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
-source("./scripts/suppression-functions.R")  # mechanized suppression of small cells
+source("./scripts/suppression-functions-2-targeted.R")  # mechanized suppression of small cells
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
 library(magrittr) # pipes
@@ -39,8 +39,9 @@ dto <- readRDS(path_input)
 # dto$FRAMED$cleaned - dframe [L] tidies values in `region` and `region_desc`
 # dto$FRAMED$tuned   - dframe [W] spread into wide from `cleaned` and shape into decision frame
 # dto$FRAMED$test1   - dframe [W] results of the logical test 1 : smaller than 5
-# dto$FRAMED$test1   - dframe [W] results of the logical test 2 : gender triplet
-# dto$FRAMED$test1   - dframe [W] results of the logical test 3 : higher-order unit
+# dto$FRAMED$test2   - dframe [W] results of the logical test 2 : gender triplet
+# dto$FRAMED$test3   - dframe [W] results of the logical test 3 : higher-order unit
+# dto$FRAMED$test3d   - dframe [W] results of the logical test 3d : higher-order unit (draconian)
 
 # To be completed in this script
 # dto$FRAMED$redacted
@@ -54,8 +55,10 @@ lapply(dto$FRAMED$raw, names)
 # initial target shape we need in order to apply mechanized suppression
 dto$target
 # this script will develop and apply the function that bring `greeted`` formed into `tuned` form
-dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
-dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
+dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
+dto$FRAMED$tuned$`Flower Deafness`$`1999`
+# dto$FRAMED$raw$`Multiple Sclerosis`$`1999` %>% print(n= nrow(.))
+# dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`
 
 
 # ---- utility-functions ----------------------------------------------------- 
@@ -77,7 +80,8 @@ redact_clean_frame <- function(
         
       ) %>% 
       dplyr::select(-censor0, -censor1_small_cell, # we don't need them here 
-                    -censor2_recalc_triplet, -censor3_single_suppression)  
+                    -censor2_recalc_triplet, -censor3_single_suppression,
+                    -censor3_single_suppression_draconian, -censor_activated)  
   prov_value <- df_tested %>% 
       dplyr::filter(agg_level == "PROV") %>% 
       dplyr::distinct(label_prov, sex, value, redact_row) %>% 
@@ -110,6 +114,7 @@ redact_clean_frame <- function(
 # usage
 # dto$FRAMED[["redacted"]] <- dto$FRAMED$cleaned # create shell to populate
 # dto$FRAMED[["redacted"]] <- dto %>% redact_clean_frame("Multiple Sclerosis", "1999")
+# dto$FRAMED[["redacted"]] <- dto %>% redact_clean_frame("Flower Deafness", "1999")
 
 
 
@@ -124,7 +129,8 @@ dstem <- dto$meta %>%
 
 # a suppression decision is made within a context of suppression frame = disease * year 
 # pick a case to use in demonstrations
-(df <- dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`)
+# (df <- dto$FRAMED$tuned$`Multiple Sclerosis`$`1999`)
+(df <- dto$FRAMED$tuned$`Flower Deafness`$`1999`)
 
 
 # ----- demonstrate-redaction-mechanism ------------------------

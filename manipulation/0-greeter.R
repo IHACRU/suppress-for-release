@@ -24,8 +24,8 @@ requireNamespace("testit", quietly=TRUE)
 
 # ---- declare-globals ---------------------------------------------------------
 # declare the location of the data sources to be used in this script
-# path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
-path_input          <- "./data-unshared/raw/v2016_cdr_measures.csv"
+path_input          <- "./data-public/raw/fictional-input-from-MoH.csv"
+# path_input          <- "./data-unshared/raw/v2016_cdr_measures.csv"
 path_region_map     <- "./data-public/raw/bc-health-system-map.csv"
 path_fictional_case <- "./data-public/raw/fictional-cases/fictional-case-0.csv"
 # test whether the file exists / the link is good
@@ -105,7 +105,8 @@ ds <- ds0 %>%
 # what does the data look at this point for a single frame of analysis?
 ds %>% 
   dplyr::filter(
-    disease ==  "Parkinsonism" # disease + year = FRAME
+    # disease ==  "Parkinsonism" # disease + year = FRAME
+    disease ==  "Flower Deafness" # disease + year = FRAME
     ,year    ==  "2001"            # disease + year = FRAME
   ) %>% 
   print(n=nrow(.))
