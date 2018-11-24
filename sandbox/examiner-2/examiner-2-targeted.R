@@ -66,20 +66,24 @@ ds0
 
 # ----- logical-tests ---------------------------
 
-# funtion to return the test whether a cell value is less than 5
 # TEST 1: What cells are `too small` ( < 5)
 # Censor 1: What cells should be suppressed as "too small"?
 d1_small_cell <- df %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
 # TEST 2: What cells can help calculate the suppressed cells from the same triple?
+# because we need to remove them, otherwise they make recalculation possible.
 # Censor 2: What triples should be suppressed? (eg. F-M-T)
 # reverse calculate from:
 d2_recalc_from_triplet <- df %>% detect_recalc_triplet()
 
-# TEST 3: Is this is the only triple that is being suppressed in a higher order block?
+# TEST 3: Is this is the only triplet that is being suppressed in a higher order block?
+# because if yes, recalculation is possible
 # Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
 d3_single_suppression <- df %>% detect_single_suppression()
+
+
+d3_single_suppression_draconian <- df %>% detect_single_suppression_draconian()
 
 # ---- service-functions ------------------------
 # function to elongate the VALUE (count) in the smallest decision frame
