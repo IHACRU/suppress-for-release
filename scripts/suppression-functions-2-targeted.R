@@ -197,12 +197,195 @@ detect_recalc_triplet <- function(
 
 # TEST 3: Is this is the only triple that is being suppressed in a higher order block?
 # Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
+
 detect_single_suppression <- function(
   d
 ){
-  # browser()
-  # d <- ds0 %>% filter(case ==2) %>% select(-case)
+  # d <- ds0 %>% filter(case ==2) %>% select(-case) # to pick needed case
   # d <- df
+  (varnames <- names(d))
+  (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
+  (stem_variables <- setdiff(varnames, count_variables)) 
+  
+  # load the current suppression decisions 
+  d1 <- d %>% detect_recalc_triplet()
+  
+  ########### Single suppression at HSDA level
+  d2 <- d %>% 
+    dplyr::select_(.dots = c(stem_variables,"HSDA_F","HSDA_M", "HSDA_T")) %>% 
+    dplyr::rename(f = HSDA_F, m = HSDA_M, total_count = HSDA_T) %>%  # will help us to choose what to suppress
+    # dplyr::arrange(label_ha, HSDA_T) %>% #
+    dplyr::left_join(
+      d1 %>% # original, `suppression-ready` dataset with unsuppressed counts
+        dplyr::select(label_hsda, HSDA_F, HSDA_M,HSDA_T) 
+    ) %>%  
+    dplyr::group_by(label_ha) %>% 
+    # for INDIVIDUAL HA, let us identify the situations where
+    # 1) a single row of both M and F are suppressed # M-F   pair
+    # 2) all three values are suppressed             # M-F-T triplet
+    # we will accomplish this by
+    dplyr::mutate(
+      # counting the number of rows in the group that has M-F pair suppessed
+      n_pair_suppressed = sum(HSDA_F & HSDA_M ) # both must be TRUE to count as 1
+      # counting the number of rows in the group that has M-F-T triplet suppressed
+      ,n_triplet_suppressed = sum(HSDA_T) # must be TRUE to count (M-F will be TRUE if T is)
+    ) %>%
+    dplyr::ungroup() %>% 
+    dplyr::mutate(
+      # identify HSDAs with a single pair suppression (in a Health Authority)
+      single_pair = ifelse(n_pair_suppressed == 1 & (HSDA_F & HSDA_M), TRUE, FALSE)
+      # identify HSDAs with a single triples suppression (in a Health Authority)
+      ,single_triplet = ifelse(n_triplet_suppressed == 1 & HSDA_T, TRUE, FALSE)
+    ) %>% 
+    dplyr::select(-n_pair_suppressed, -n_triplet_suppressed) %>% 
+    # in what HAs should we further suppress?
+    dplyr::group_by(label_ha) %>% 
+    dplyr::mutate(
+      ha_with_single_pair     = any(single_pair)
+      ,ha_with_single_triplet = any(single_triplet)
+    ) %>% 
+    dplyr::ungroup() %>%
+    dplyr::arrange(label_ha, total_count) 
+    
+    d_suppress_these_hsda_pairs <- d2 %>% 
+    # keep only the HAs that require further suppression
+      dplyr::filter(ha_with_single_pair) %>% 
+      # remove the pair that has already been suppressed
+      dplyr::filter(!single_pair) %>% 
+      dplyr::group_by(label_ha) %>% 
+      dplyr::slice(which.min(total_count)) %>% 
+      dplyr::ungroup() %>% 
+      dplyr::mutate(suppress_this_hsda_pair = TRUE) %>% 
+      dplyr::select(label_ha, label_hsda, suppress_this_hsda_pair)
+   
+    d_suppress_these_hsda_triplets <- d2 %>% 
+      # keep only the HAs that require further suppression
+      dplyr::filter(ha_with_single_triplet) %>% 
+      # remove the triplet that has already been suppressed
+      dplyr::filter(!single_triplet) %>% 
+      dplyr::group_by(label_ha) %>% 
+      dplyr::slice(which.min(total_count)) %>% 
+      dplyr::ungroup() %>% 
+      dplyr::mutate(suppress_this_hsda_triplet = TRUE) %>% 
+      dplyr::select(label_ha, label_hsda, suppress_this_hsda_triplet)
+    
+    ########### Single suppression at HA level
+    d3 <- d %>% 
+      dplyr::select_(.dots = c(stem_variables,"HA_T")) %>%  
+      dplyr::rename(total_count = HA_T) %>%  # will help us to choose what to suppress
+      # dplyr::arrange(label_ha, HSDA_T) %>% #
+      dplyr::left_join(
+        d1 %>% # original, `suppression-ready` dataset with unsuppressed counts
+          dplyr::select(label_ha, label_hsda, HA_F, HA_M, HA_T) 
+      ) %>% 
+      dplyr::select(-label_hsda) %>% 
+      dplyr::distinct() %>% 
+      dplyr::group_by(label_prov) %>% 
+      # for INDIVIDUAL  PROV, let us identify the situations where
+      # 1) a single row of both M and F are suppressed # M-F   pair
+      # 2) all three values are suppressed             # M-F-T triplet
+      # we will accomplish this by
+      dplyr::mutate(
+        # counting the number of rows in the group that has M-F pair suppessed
+        n_pair_suppressed = sum(HA_F & HA_M ) # both must be TRUE to count as 1
+        # counting the number of rows in the group that has M-F-T triplet suppressed
+        ,n_triplet_suppressed = sum(HA_T) # must be TRUE to count (M-F will be TRUE if T is)
+      ) %>%
+      dplyr::ungroup() %>% 
+      dplyr::mutate(
+        # identify HSDAs with a single pair suppression (in a Health Authority)
+        single_pair = ifelse(n_pair_suppressed == 1 & (HA_F & HA_M), TRUE, FALSE)
+        # identify HSDAs with a single triples suppression (in a Health Authority)
+        ,single_triplet = ifelse(n_triplet_suppressed == 1 & HA_T, TRUE, FALSE)
+      ) %>% 
+      dplyr::select(-n_pair_suppressed, -n_triplet_suppressed) %>% 
+      dplyr::arrange(label_ha, total_count) %>% 
+      # in what PROVs should we further suppress?
+      dplyr::group_by(label_prov) %>% 
+      dplyr::mutate(
+        prov_with_single_pair     = any(single_pair)
+        ,prov_with_single_triplet = any(single_triplet)
+      ) %>% 
+      dplyr::ungroup() %>%
+      dplyr::arrange(label_ha, total_count) 
+  
+    d_suppress_these_ha_pairs <- d3 %>% 
+      # keep only the HAs that require further suppression
+      dplyr::filter(prov_with_single_pair) %>% 
+      # remove the pair that has already been suppressed
+      dplyr::filter(!single_pair) %>% 
+      dplyr::group_by(label_prov) %>% 
+      dplyr::slice(which.min(total_count)) %>% 
+      dplyr::ungroup() %>% 
+      dplyr::mutate(suppress_this_ha_pair = TRUE)%>% 
+      dplyr::select(label_ha, suppress_this_ha_pair)
+    
+    
+    d_suppress_these_ha_triplets <- d3 %>% 
+      # keep only the HAs that require further suppression
+      dplyr::filter(prov_with_single_triplet) %>% 
+      # remove the triplet that has already been suppressed
+      dplyr::filter(!single_triplet) %>% 
+      dplyr::group_by(label_prov) %>% 
+      dplyr::slice(which.min(total_count)) %>% 
+      dplyr::ungroup() %>% 
+      dplyr::mutate(suppress_this_ha_triplet = TRUE)%>% 
+      dplyr::select(label_ha, suppress_this_ha_triplet)
+    
+    
+  ###### attach suppression decision to the input data
+    d4 <- d1 %>% 
+      dplyr::left_join(d_suppress_these_hsda_pairs) %>%  
+      dplyr::left_join(d_suppress_these_hsda_triplets) %>% 
+      dplyr::left_join(d_suppress_these_ha_pairs) %>%  
+      dplyr::left_join(d_suppress_these_ha_triplets) %>% 
+      dplyr::mutate(
+        # because doesn't catch later during evaluation
+        suppress_this_hsda_pair     = ifelse(is.na(suppress_this_hsda_pair)   , FALSE, suppress_this_hsda_pair)
+        ,suppress_this_hsda_triplet = ifelse(is.na(suppress_this_hsda_triplet), FALSE, suppress_this_hsda_triplet)
+        ,suppress_this_ha_pair      = ifelse(is.na(suppress_this_ha_pair)     , FALSE, suppress_this_ha_pair)
+        ,suppress_this_ha_triplet   = ifelse(is.na(suppress_this_ha_triplet)  , FALSE, suppress_this_ha_triplet)
+        
+      )
+  
+  ###### implement redaction and remove auxillary variables
+    d5 <- d4 %>% 
+      dplyr::mutate(
+        # replace with TRUE or leave as is. adds further suppression
+        HSDA_F  = ifelse(suppress_this_hsda_pair | suppress_this_hsda_triplet, TRUE, HSDA_F)
+        ,HSDA_M = ifelse(suppress_this_hsda_pair | suppress_this_hsda_triplet, TRUE, HSDA_M)
+        ,HSDA_T = ifelse(suppress_this_hsda_triplet, TRUE, HSDA_T)
+        #
+        ,HA_F = ifelse(suppress_this_ha_pair | suppress_this_ha_triplet, TRUE, HA_F)
+        ,HA_M = ifelse(suppress_this_ha_pair | suppress_this_ha_triplet, TRUE, HA_M)
+        ,HA_T = ifelse(suppress_this_ha_triplet, TRUE, HA_T)
+        
+      ) %>% 
+      dplyr::select_(.dots = names(d))
+
+  # Enforce original sorting order (optional)
+  # d6 <- d5 %>%
+  #   elongate_values() %>%
+  #   dplyr::mutate(
+  #     column_name = factor(column_name, levels = count_variables)
+  #   ) %>%
+  #   dplyr::select(-agg_level, -sex) %>%
+  #   tidyr::spread(column_name, value)
+  
+  return(d5)  
+}
+# usage
+# d3_single_suppression <- df %>% detect_single_suppression()
+
+
+# THis test is from version 1 "Draconian", a very conservative approach
+# which removes all other units if a single unit is suppressed in a higher-order unit
+# TEST 3: Is this is the only triple that is being suppressed in a higher order block?
+# Censor 3: What cells should be suppressed as those that could be calculated from higher order count?
+detect_single_suppression_draconian <- function(
+  d
+){
+  # d <- ds0 %>% filter(case ==2) %>% select(-case) 
   (varnames <- names(d))
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
   (stem_variables <- setdiff(varnames, count_variables)) 
@@ -251,88 +434,6 @@ detect_single_suppression <- function(
   
   return(d3)  
 }
-# usage
-# d3_single_suppression <- df %>% detect_single_suppression()
-
-
-# TEST 3a: Redact
-detect_single_suppression_2 <- function(
-  d
-){
-  # d <- ds0 %>% filter(case ==2) %>% select(-case)
-  d <- df
-  (varnames <- names(d))
-  (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
-  (stem_variables <- setdiff(varnames, count_variables)) 
-  ########### Single suppression at HSDA level
-  d1 <- d %>% detect_recalc_triplet()
-  d2 <- d1 %>% 
-    dplyr::group_by(label_ha) %>% 
-    # for INDIVIDUAL HA, let identify situation where
-    # 1) a single row of both M and F are suppress
-    # 2) all three values are suppressed
-    dplyr::mutate(
-      # count the number of rows in the group that has M and F supppred
-      n_sup = sum(HSDA_F & HSDA_M) # both must be TRUE to count as 1
-      # count the number of rows in the group that has all three suppressed
-      ,n_tot = sum(HSDA_T) # must be TRUE to count
-    ) %>%
-    dplyr::ungroup() %>% 
-    dplyr::mutate(
-      # identify HSDAs with a single pair suppression
-      single_pair = ifelse(n_sup == 1 & (HSDA_F & HSDA_M), TRUE, FALSE)
-      # identify HSDAs with a single triples suppression
-      ,single_triplet = ifelse(n_tot == 1 & HSDA_T, TRUE, FALSE)
-      # 
-      # # if total is TRUE then M and F are also TRUE
-      # HSDA_Tn = ifelse(n_tot == 1,TRUE,HSDA_T ),
-      # # if one or total is TRUE then other should be too  
-      # HSDA_Fn = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_F ), 
-      # HSDA_Mn = ifelse(n_sup == 1 | HSDA_T, TRUE, HSDA_M )
-    ) %>% 
-    dplyr::select(-n_sup, -n_tot)
-  
-  # define the HA where only one pair is suppressed
-  # ha_with_single_pair_suppressed <- d2 %>%
-  #   dplyr::filter(n_sup == 1) %>%
-  #   dplyr::distinct(label_ha) %>% 
-  #   as.list() %>% unlist() %>% as.character()
-  #  
-  
-  # dview <- d1
-  # dview <- d2
-  # dview <- d3
-  ########### Single suppression at HA level
-  d3 <- d2 %>% 
-    dplyr::group_by(label_prov) %>%
-    dplyr::mutate(
-      n_sup = sum(HA_F & HA_M) # both must be TRUE to count as 1
-      ,n_tot = sum(HA_T) # must be TRUE to count
-    ) %>% 
-    dplyr::ungroup() %>% 
-    dplyr::mutate(
-      # if totale is TRUE then M and F are too
-      HA_T = ifelse(n_tot == 1,TRUE,HA_T ),
-      # if one or total is TRUE then other should be too  
-      HA_F = ifelse(n_sup == 1 | HA_T, TRUE, HA_F ), 
-      HA_M = ifelse(n_sup == 1 | HA_T, TRUE, HA_M )
-    ) %>% 
-    dplyr::select(-n_sup, -n_tot)
-  
-  # Enforce original sorting order (optional)
-  # d4 <- d3 %>% 
-  #   elongate_values() %>% 
-  #   dplyr::mutate(
-  #     column_name = factor(column_name, levels = count_variables)
-  #   ) %>% 
-  #   dplyr::select(-agg_level, -sex) %>% 
-  #   tidyr::spread(column_name, value)
-  
-  return(d3)  
-}
-# usage
-# d3_single_suppression <- df %>% detect_single_suppression()
-
 # ---- tidy-functions ------------------------
 
 # function to elongate (value column in the)  smallest decision frame
@@ -402,6 +503,7 @@ combine_logical_tests <- function(
     ,"censor1_small_cell"         = d %>% detect_small_cell()         
     ,"censor2_recalc_triplet"     = d %>% detect_recalc_triplet()    
     ,"censor3_single_suppression" = d %>% detect_single_suppression() 
+    ,"censor3_single_suppression_draconian" = d %>% detect_single_suppression_draconian() 
   )
   
   combined_list <- list()
@@ -414,7 +516,15 @@ combine_logical_tests <- function(
   dd <- combined_list[["observed"]] %>% 
     dplyr::mutate(censor0=FALSE) %>% 
     dplyr::bind_cols(dvals) %>% 
-    dplyr::select(-observed)
+    dplyr::select(-observed) %>% 
+    dplyr::mutate(
+       censor_activated = ifelse(censor1_small_cell, "1-small-cell",
+                                 ifelse(censor2_recalc_triplet & !censor1_small_cell, "2-recalc-triplet",
+                                        ifelse(censor3_single_suppression & !censor2_recalc_triplet, "3-single-sup", 
+                                               ifelse(censor3_single_suppression_draconian & !censor2_recalc_triplet, "3-single-sup-draco"
+                                                      ,"0-none")))) 
+    )
+
   return(dd)
 }
 # usage
@@ -525,20 +635,16 @@ prepare_for_tiling <- function(
   # inspect if needed
   
   # d_long_labels %>% print(n=nrow(.))
-  
+  # browser()
   #(3)######## Create data for the RIGHT PANEL
   # the right panel will contain only numbers (FMT counts of variable selected for suppression)
   # d_long_values <- d %>% elongate_values(regex = "_[MTF]$") %>% 
   d_long_values <- d %>% combine_logical_tests() %>% 
-    dplyr::mutate(    
+    dplyr::mutate(     
       label_hsda = factor(label_hsda, levels = lkp_hsda$label_hsda) 
       ,label_ha   = factor(label_ha,   levels = lkp_ha$label_ha)
       ,label_hsda = factor(label_hsda, levels = rev(levels(label_hsda)) )
       ,label_ha   = factor(label_ha,   levels = rev(levels(label_ha)))
-      ,censor_activated = ifelse(censor1_small_cell, 1,
-                                 ifelse(censor2_recalc_triplet & !censor1_small_cell, 2,
-                                        ifelse(censor3_single_suppression & !censor2_recalc_triplet, 3, 0))) 
-      
     ) %>% 
     # dplyr::arrange(desc(label_ha), desc(label_hsda))
     dplyr::arrange(label_ha, label_hsda)
@@ -615,13 +721,19 @@ make_tile_graph <- function(
   g_labels <- g
   g_labels 
   
+  # browser()
   ##--##--##--##--##--##--##--##--##--##--##
-  # graph the values - RIGHT SIDE OF THE TABLET   
+  # graph the values - RIGHT SIDE OF THE TABLET  
+ # "#fc8d62" # red
+ # "#66c2a5" # green
+ # "#8da0cb" # blue
+  # source: http://colorbrewer2.org/#type=qualitative&scheme=Paired&n=4
   censor_colors = c(
-    "0"  = NA,
-    "1"  = "#fc8d62" # red
-    ,"2" = "#66c2a5" # green
-    ,"3" = "#8da0cb" # blue
+     "0-none"              = NA
+    ,"1-small-cell"        = "#fc8d62" # red
+    ,"2-recalc-triplet"   = "#66c2a5" # green
+    ,"3-single-sup"       = "#8da0cb" # blue
+    ,"3-single-sup-draco" = "grey90" 
   )
   
   g <- l$values_long %>%  
@@ -629,7 +741,7 @@ make_tile_graph <- function(
       agg_level = factor(agg_level, levels = c("HSDA","HA","PROV"))
     ) %>% 
     dplyr::mutate(
-      censor_activated = factor(censor_activated, levels = c(0,1,2,3))
+      censor_activated = factor(censor_activated, levels = names(censor_colors))
     ) %>% 
     ggplot2::ggplot(
       aes_string(
