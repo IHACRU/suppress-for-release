@@ -14,14 +14,14 @@ library(knitr) # dynamic documents
 library(rmarkdown) # dynamic
 library(kableExtra) # enhanced tables, see http://haozhu233.github.io/kableExtra/awesome_table_in_html.html
 # library(TabularManifest) # exploratory data analysis, see https://github.com/Melinae/TabularManifest
-requireNamespace("knitr", quietly=TRUE)
-requireNamespace("scales", quietly=TRUE) #For formating values in graphs
-requireNamespace("RColorBrewer", quietly=TRUE)
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
-# requireNamespace("plyr", quietly=TRUE)
-# requireNamespace("reshape2", quietly=TRUE) #For converting wide to long
-# requireNamespace("mgcv, quietly=TRUE) #For the Generalized Additive Model that smooths the longitudinal graphs.
+requireNamespace("knitr")
+requireNamespace("scales") #For formating values in graphs
+requireNamespace("RColorBrewer")
+requireNamespace("dplyr")
+requireNamespace("DT") # for dynamic tables
+# requireNamespace("plyr")
+# requireNamespace("reshape2") #For converting wide to long
+# requireNamespace("mgcv) #For the Generalized Additive Model that smooths the longitudinal graphs.
 
 # ---- load-sources ------------------------------------------------------------
 #Load any source files that contain/define functions, but that don't load any other types of variables

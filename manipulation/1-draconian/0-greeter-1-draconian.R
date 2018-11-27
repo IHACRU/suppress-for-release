@@ -18,9 +18,9 @@ source("./scripts/graphing/graph-presets.R") # font and color conventions
 
 # ---- load-packages -----------------------------------------------------------
 library(magrittr) # pipes
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("readr", quietly=TRUE)
-requireNamespace("testit", quietly=TRUE)
+requireNamespace("dplyr")
+requireNamespace("readr")
+requireNamespace("testit")
 
 # ---- declare-globals ---------------------------------------------------------
 # declare the location of the data sources to be used in this script

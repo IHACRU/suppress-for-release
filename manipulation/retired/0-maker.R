@@ -14,11 +14,11 @@ library(ggplot2) #For graphing
 library(dplyr)
 library(magrittr) #Pipes
 
-requireNamespace("knitr", quietly=TRUE)
-requireNamespace("scales", quietly=TRUE) #For formating values in graphs
-requireNamespace("RColorBrewer", quietly=TRUE)
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
+requireNamespace("knitr")
+requireNamespace("scales") #For formating values in graphs
+requireNamespace("RColorBrewer")
+requireNamespace("dplyr")
+requireNamespace("DT") # for dynamic tables
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping

@@ -17,10 +17,10 @@ source("./scripts/graphing/graph-presets.R") # font and color conventions
 source("./scripts/suppression-functions1-draconian.R") # mechanized suppression of small cells
 # ---- load-packages -----------------------------------------------------------
 library(magrittr) # pipes
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("readr", quietly=TRUE)
-requireNamespace("testit", quietly=TRUE)
-requireNamespace("tidyr", quietly=TRUE)
+requireNamespace("dplyr")
+requireNamespace("readr")
+requireNamespace("testit")
+requireNamespace("tidyr")
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping

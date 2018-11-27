@@ -15,14 +15,14 @@ library(dplyr)
 library(magrittr) #Pipes
 requireNamespace("readxl")
 
-requireNamespace("knitr", quietly=TRUE)
-requireNamespace("scales", quietly=TRUE) #For formating values in graphs
-requireNamespace("RColorBrewer", quietly=TRUE)
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("DT", quietly=TRUE) # for dynamic tables
-# requireNamespace("plyr", quietly=TRUE)
-# requireNamespace("reshape2", quietly=TRUE) #For converting wide to long
-# requireNamespace("mgcv, quietly=TRUE) #For the Generalized Additive Model that smooths the longitudinal graphs.
+requireNamespace("knitr")
+requireNamespace("scales") #For formating values in graphs
+requireNamespace("RColorBrewer")
+requireNamespace("dplyr")
+requireNamespace("DT") # for dynamic tables
+# requireNamespace("plyr")
+# requireNamespace("reshape2") #For converting wide to long
+# requireNamespace("mgcv) #For the Generalized Additive Model that smooths the longitudinal graphs.
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping

@@ -13,11 +13,11 @@ source("./scripts/suppression-functions1-draconian.R") # mechanized suppression 
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
 library(magrittr) # pipes
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("readr", quietly=TRUE)
-requireNamespace("testit", quietly=TRUE)
-requireNamespace("tidyr", quietly=TRUE)
-requireNamespace("rmarkdown", quietly=TRUE)
+requireNamespace("dplyr")
+requireNamespace("readr")
+requireNamespace("testit")
+requireNamespace("tidyr")
+requireNamespace("rmarkdown")
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping

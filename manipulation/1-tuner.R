@@ -18,10 +18,10 @@ source("./scripts/suppression-functions-2-targeted.R") # mechanized suppression 
 
 # ---- load-packages -----------------------------------------------------------
 library(magrittr) # pipes
-requireNamespace("dplyr", quietly=TRUE)
-requireNamespace("readr", quietly=TRUE)
-requireNamespace("testit", quietly=TRUE)
-requireNamespace("tidyr", quietly=TRUE)
+requireNamespace("dplyr")
+requireNamespace("readr")
+requireNamespace("testit")
+requireNamespace("tidyr")
 
 # ---- declare-globals ---------------------------------------------------------
 # link to the source of the location mapping
