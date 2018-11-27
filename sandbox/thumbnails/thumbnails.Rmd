@@ -1,0 +1,64 @@
+---
+output:
+  html_document:
+    keep_md: yes
+    self_contained: false
+---
+
+All Figures in Book
+=================================================
+This report displays all images in all chapters.
+
+<!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of only one directory.-->
+```{r, echo=FALSE, message=F}
+library(knitr)
+knitr::opts_knit$set(root.dir='../')  #Don't combine this call with any other chunk -especially one that uses file paths.
+```
+
+<!-- Set the report-wide options, and point to the external code file. -->
+```{r set-options, echo=FALSE, results='hide'}
+report_render_start_time <- Sys.time()
+opts_chunk$set(
+  results = 'show',
+  message = TRUE,
+  comment = NA,
+  tidy = FALSE,
+  fig.width = 5.5,
+  fig.height = 1.6,
+  out.width = "550px", #This affects only the markdown, not the underlying png file.  The height will be scaled appropriately.
+  fig.path = 'figure-png/',
+  dev = "png",
+  dpi = 400
+  # fig.path = 'figure-pdf/',
+  # dev = "pdf"
+)
+echo_chunks <- FALSE
+options(width=80) # Default width
+read_chunk("./thumbnails/thumbnails.R")
+```
+<!-- Load the packages.  Suppress the output when loading packages. -->
+```{r load-packages, echo=echo_chunks, message=FALSE}
+```
+
+<!-- Load any Global functions and variables declared in the R file.  Suppress the output. -->
+```{r declare-globals, echo=echo_chunks, results='show', message=FALSE}
+```
+
+<!-- Declare any global functions specific to a Rmd output.  Suppress the output. -->
+```{r, echo=echo_chunks, message=FALSE}
+```
+
+<!-- Load the datasets.   -->
+```{r load-data, echo=echo_chunks, message=FALSE}
+```
+
+<!-- Tweak the datasets.   -->
+```{r tweak-data, echo=echo_chunks, message=FALSE}
+```
+
+```{r display, echo=echo_chunks, results='asis'}
+```
+
+<!-- The footer that's common to all reports. -->
+```{r, child = "../common-code/footer.Rmd"}
+```
