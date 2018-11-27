@@ -5,8 +5,8 @@ library(magrittr)
 library(rlang)
 
 # ---- declare-globals ------------------------------------------------------
-url_repo      <- "https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/blob/master"
-pattern_code  <- "^(https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/blob/master/.+?/).+$"
+url_repo      <- "https://github.com/IHACRU/suppress-for-release/blob/master"
+pattern_code  <- "^(https://github.com/IHACRU/suppress-for-release/blob/master/.+?/).+$"
 image_width   <- 300L
 
 # ---- load-data ------------------------------------------------------

@@ -12,7 +12,7 @@ This report displays all images in all chapters.
 <!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of only one directory.-->
 ```{r, echo=FALSE, message=F}
 library(knitr)
-knitr::opts_knit$set(root.dir='../')  #Don't combine this call with any other chunk -especially one that uses file paths.
+knitr::opts_knit$set(root.dir='../../')  #Don't combine this call with any other chunk -especially one that uses file paths.
 ```
 
 <!-- Set the report-wide options, and point to the external code file. -->
@@ -34,7 +34,7 @@ opts_chunk$set(
 )
 echo_chunks <- FALSE
 options(width=80) # Default width
-read_chunk("./thumbnails/thumbnails.R")
+read_chunk("./sandbox/thumbnails/thumbnails.R")
 ```
 <!-- Load the packages.  Suppress the output when loading packages. -->
 ```{r load-packages, echo=echo_chunks, message=FALSE}
@@ -60,5 +60,5 @@ read_chunk("./thumbnails/thumbnails.R")
 ```
 
 <!-- The footer that's common to all reports. -->
-```{r, child = "../common-code/footer.Rmd"}
+```{r, child = "/footer.Rmd"}
 ```
