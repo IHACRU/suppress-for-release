@@ -31,6 +31,7 @@ devtools.zip
 /data-unshared/*
 /data/unshared/*
 
+sandbox/examiner-2/prints/*/*.png
 # Dataset Exceptions
 !utility/package-dependency-list.csv
 
