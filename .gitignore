@@ -32,6 +32,7 @@ devtools.zip
 /data/unshared/*
 
 sandbox/examiner-2/prints/*/*.png
+sandbox/examiner-2/prints/*.png
 # Dataset Exceptions
 !utility/package-dependency-list.csv
 
@@ -66,3 +67,5 @@ Desktop.ini
 manipulation/prints/*.png
 sandbox/examiner-1/prints/*.png
 
+sandbox/thumbnails/thumbnails.html
+sandbox/thumbnails/thumbnails.md
