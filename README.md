@@ -26,8 +26,8 @@ The following scripts comprise the workflow of the mechanized redaction of small
 
 
 # Team & Funders
-- [Anothoy Leamon](mailto:Anthony.Leamon@viha.ca ), Regional Epidemiologist, Island Health
-- [Sylvia ElKurdi](mailto:Sylvia.ElKurdi@bccdc.ca), Epidemiologist, [Observatory for Population & Public Health][observatory] of British Columbia (BCOPPH)
+- [Anothoy Leamon](mailto:Anthony.Leamon@viha.ca ), Regional Epidemiologist, Island Health, [BC OPPH][observatory]
+- [Sylvia ElKurdi](mailto:Sylvia.ElKurdi@bccdc.ca), Regional Epidemiologist, [Observatory for Population & Public Health][observatory] of British Columbia (BCOPPH)
 -  [Brent Harris](mailto:Brent.andrew.harris@gmail.com), Regional Epidemiologist with Interior Health Authority of British Columbia, [BCPOPPH][observatory] 
 -  [Andriy Koval](mailto:koval.andrey@gmail.com), [Health System Impact Fellow (2017)][hsif], [Observatory for Population & Public Health][observatory] of British Columbia (BCOPPH)
 
