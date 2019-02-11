@@ -49,7 +49,7 @@ lapply(dto$FRAMED$greeted, names)
 
 # initial target shape we need in order to apply mechanized suppression
 dto$target
-# this script will develop and apply the function that bring `greeted`` formed into `tuned` form
+# the tuner script  developed and applied the function that brought `raw`` formed into `tuned` form
 dto$FRAMED$raw$`Flower Deafness`$`1999` %>% print(n= nrow(.))
 dto$FRAMED$cleaned$`Flower Deafness`$`1999`
 dto$FRAMED$tuned$`Flower Deafness`$`1999`
