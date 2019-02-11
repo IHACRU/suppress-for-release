@@ -76,6 +76,7 @@ redact_clean_frame <- function(
 
   df_tested <- df_tuned %>% combine_logical_tests() %>% 
       dplyr::mutate(
+        # the censors cannot reverse redaction decision, they are cumulative
         redact_row  = censor3_single_suppression # the last test includes ALL redactions
         
       ) %>% 

@@ -153,7 +153,7 @@ detect_small_cell <- function(
   
   # define the rule for detecting a small cell
   cellistoosmall <- function(x){
-    toosmall <- ifelse(x >0 & x < 5, TRUE, FALSE)
+    toosmall <- ifelse(x > 0 & x < 5, TRUE, FALSE)
   }
   d_small <- dplyr::bind_cols(
     d %>% dplyr::select_(.dots = stem_variables),        # 1st argument
@@ -166,17 +166,17 @@ detect_small_cell <- function(
 # d_small_cell <- df %>% detect_small_cell()
 # creates a replica of the data, with count values are replaced by TRUE/FALSE according to test
 
-# TEST 2: What cells can help calculate the suppressed cells from the same triple?
-# Censor 2: What triples should be suppressed? (eg. F-M-T)
+# TEST 2: What cells can help calculate the suppressed cells from the same triplet?
+# Censor 2: What triplets should be suppressed? (eg. F-M-T)
 # reverse calculate from:
 detect_recalc_triplet <- function(
-  d # smallest decision unit: disease-year-labels-values
+  d # smallest decision unit: disease-year
 ){
   # d <- ds
   # split varnames into two groups
-  (varnames <- names(d))
+  (varnames        <- names(d))
   (count_variables <- grep("_[MFT]$",varnames, value = T)) # which ends with `_F` or `_M` or `_T`
-  (stem_variables <- setdiff(varnames, count_variables)) 
+  (stem_variables  <- setdiff(varnames, count_variables)) 
   
   d1 <- d  %>% detect_small_cell()
   
@@ -217,16 +217,17 @@ detect_single_suppression <- function(
     # dplyr::arrange(label_ha, HSDA_T) %>% #
     dplyr::left_join(
       d1 %>% # original, `suppression-ready` dataset with unsuppressed counts
-        dplyr::select(label_hsda, HSDA_F, HSDA_M,HSDA_T) 
+        dplyr::select(label_hsda, HSDA_F, HSDA_M, HSDA_T) 
     ) %>%  
-    dplyr::group_by(label_ha) %>% 
+    dplyr::group_by(label_ha) %>%
+    # The above place numerical and logical values into the same view
     # for INDIVIDUAL HA, let us identify the situations where
     # 1) a single row of both M and F are suppressed # M-F   pair
     # 2) all three values are suppressed             # M-F-T triplet
     # we will accomplish this by
     dplyr::mutate(
       # counting the number of rows in the group that has M-F pair suppessed
-      n_pair_suppressed = sum(HSDA_F & HSDA_M ) # both must be TRUE to count as 1
+      n_pair_suppressed = sum(HSDA_F & HSDA_M) # both must be TRUE to count as 1
       # counting the number of rows in the group that has M-F-T triplet suppressed
       ,n_triplet_suppressed = sum(HSDA_T) # must be TRUE to count (M-F will be TRUE if T is)
     ) %>%
@@ -247,6 +248,7 @@ detect_single_suppression <- function(
     dplyr::ungroup() %>%
     dplyr::arrange(label_ha, total_count) 
     
+    # pairs in what HDSA(s) must be suppressed?
     d_suppress_these_hsda_pairs <- d2 %>% 
     # keep only the HAs that require further suppression
       dplyr::filter(ha_with_single_pair) %>% 
@@ -270,6 +272,7 @@ detect_single_suppression <- function(
       dplyr::select(label_ha, label_hsda, suppress_this_hsda_triplet)
     
     ########### Single suppression at HA level
+    # No need to get M/F columns because it is caught by the previous logical test (recal_triplet)
     d3 <- d %>% 
       dplyr::select_(.dots = c(stem_variables,"HA_T")) %>%  
       dplyr::rename(total_count = HA_T) %>%  # will help us to choose what to suppress
