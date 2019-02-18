@@ -1,0 +1,2179 @@
+DISEASE,REGION,REGION_DESC,YEAR,SEX,AGEGRP,INCASE,INC_AND_PREV_CASE
+Flower Deafness,BC,BC,1999,F,1-19,200,1440
+Flower Deafness,BC,BC,1999,F,20-34,661,4461
+Flower Deafness,BC,BC,1999,F,35-49,2159,15953
+Flower Deafness,BC,BC,1999,F,50-64,3755,32495
+Flower Deafness,BC,BC,1999,F,65-79,3325,39123
+Flower Deafness,BC,BC,1999,F,80 +,1078,16620
+Flower Deafness,BC,BC,1999,M,1-19,214,1653
+Flower Deafness,BC,BC,1999,M,20-34,513,3994
+Flower Deafness,BC,BC,1999,M,35-49,2703,18150
+Flower Deafness,BC,BC,1999,M,50-64,4997,43785
+Flower Deafness,BC,BC,1999,M,65-79,3876,45570
+Flower Deafness,BC,BC,1999,M,80 +,824,12703
+Flower Deafness,BC,BC,1999,T,1-19,414,3093
+Flower Deafness,BC,BC,1999,T,20-34,1175,8455
+Flower Deafness,BC,BC,1999,T,35-49,4863,34104
+Flower Deafness,BC,BC,1999,T,50-64,8752,76285
+Flower Deafness,BC,BC,1999,T,65-79,7206,84739
+Flower Deafness,BC,BC,1999,T,80 +,1908,29470
+Flower Deafness,BC,BC,2000,F,1-19,202,1515
+Flower Deafness,BC,BC,2000,F,20-34,635,4691
+Flower Deafness,BC,BC,2000,F,35-49,2350,17399
+Flower Deafness,BC,BC,2000,F,50-64,4125,35796
+Flower Deafness,BC,BC,2000,F,65-79,3288,41677
+Flower Deafness,BC,BC,2000,F,80 +,1222,18284
+Flower Deafness,BC,BC,2000,M,1-19,222,1724
+Flower Deafness,BC,BC,2000,M,20-34,522,4128
+Flower Deafness,BC,BC,2000,M,35-49,2867,19424
+Flower Deafness,BC,BC,2000,M,50-64,5270,47914
+Flower Deafness,BC,BC,2000,M,65-79,3834,48919
+Flower Deafness,BC,BC,2000,M,80 +,849,13931
+Flower Deafness,BC,BC,2000,T,1-19,424,3239
+Flower Deafness,BC,BC,2000,T,20-34,1158,8820
+Flower Deafness,BC,BC,2000,T,35-49,5218,36823
+Flower Deafness,BC,BC,2000,T,50-64,9398,83715
+Flower Deafness,BC,BC,2000,T,65-79,7127,90641
+Flower Deafness,BC,BC,2000,T,80 +,2079,32351
+Flower Deafness,BC,BC,2001,F,1-19,218,1582
+Flower Deafness,BC,BC,2001,F,20-34,664,4994
+Flower Deafness,BC,BC,2001,F,35-49,2231,18550
+Flower Deafness,BC,BC,2001,F,50-64,4186,39185
+Flower Deafness,BC,BC,2001,F,65-79,3490,44268
+Flower Deafness,BC,BC,2001,F,80 +,1403,20354
+Flower Deafness,BC,BC,2001,M,1-19,249,1807
+Flower Deafness,BC,BC,2001,M,20-34,578,4351
+Flower Deafness,BC,BC,2001,M,35-49,2705,20426
+Flower Deafness,BC,BC,2001,M,50-64,5442,51989
+Flower Deafness,BC,BC,2001,M,65-79,3983,52424
+Flower Deafness,BC,BC,2001,M,80 +,1018,15542
+Flower Deafness,BC,BC,2001,T,1-19,467,3389
+Flower Deafness,BC,BC,2001,T,20-34,1243,9345
+Flower Deafness,BC,BC,2001,T,35-49,4937,38977
+Flower Deafness,BC,BC,2001,T,50-64,9629,91180
+Flower Deafness,BC,BC,2001,T,65-79,7476,96727
+Flower Deafness,BC,BC,2001,T,80 +,2427,36018
+Flower Deafness,HA-01,01 Interior,1999,F,1-19,34,312
+Flower Deafness,HA-01,01 Interior,1999,F,20-34,87,640
+Flower Deafness,HA-01,01 Interior,1999,F,35-49,298,2241
+Flower Deafness,HA-01,01 Interior,1999,F,50-64,589,5148
+Flower Deafness,HA-01,01 Interior,1999,F,65-79,601,7057
+Flower Deafness,HA-01,01 Interior,1999,F,80 +,170,2983
+Flower Deafness,HA-01,01 Interior,1999,M,1-19,33,328
+Flower Deafness,HA-01,01 Interior,1999,M,20-34,57,595
+Flower Deafness,HA-01,01 Interior,1999,M,35-49,338,2430
+Flower Deafness,HA-01,01 Interior,1999,M,50-64,774,6852
+Flower Deafness,HA-01,01 Interior,1999,M,65-79,778,8809
+Flower Deafness,HA-01,01 Interior,1999,M,80 +,140,2505
+Flower Deafness,HA-01,01 Interior,1999,T,1-19,68,641
+Flower Deafness,HA-01,01 Interior,1999,T,20-34,145,1235
+Flower Deafness,HA-01,01 Interior,1999,T,35-49,636,4672
+Flower Deafness,HA-01,01 Interior,1999,T,50-64,1363,12001
+Flower Deafness,HA-01,01 Interior,1999,T,65-79,1380,15872
+Flower Deafness,HA-01,01 Interior,1999,T,80 +,311,5509
+Flower Deafness,HA-01,01 Interior,2000,F,1-19,36,318
+Flower Deafness,HA-01,01 Interior,2000,F,20-34,93,676
+Flower Deafness,HA-01,01 Interior,2000,F,35-49,332,2429
+Flower Deafness,HA-01,01 Interior,2000,F,50-64,645,5646
+Flower Deafness,HA-01,01 Interior,2000,F,65-79,632,7523
+Flower Deafness,HA-01,01 Interior,2000,F,80 +,203,3318
+Flower Deafness,HA-01,01 Interior,2000,M,1-19,37,323
+Flower Deafness,HA-01,01 Interior,2000,M,20-34,86,651
+Flower Deafness,HA-01,01 Interior,2000,M,35-49,367,2517
+Flower Deafness,HA-01,01 Interior,2000,M,50-64,865,7475
+Flower Deafness,HA-01,01 Interior,2000,M,65-79,838,9588
+Flower Deafness,HA-01,01 Interior,2000,M,80 +,169,2712
+Flower Deafness,HA-01,01 Interior,2000,T,1-19,73,642
+Flower Deafness,HA-01,01 Interior,2000,T,20-34,180,1328
+Flower Deafness,HA-01,01 Interior,2000,T,35-49,699,4946
+Flower Deafness,HA-01,01 Interior,2000,T,50-64,1511,13121
+Flower Deafness,HA-01,01 Interior,2000,T,65-79,1470,17117
+Flower Deafness,HA-01,01 Interior,2000,T,80 +,373,6049
+Flower Deafness,HA-01,01 Interior,2001,F,1-19,37,323
+Flower Deafness,HA-01,01 Interior,2001,F,20-34,96,742
+Flower Deafness,HA-01,01 Interior,2001,F,35-49,294,2570
+Flower Deafness,HA-01,01 Interior,2001,F,50-64,673,6089
+Flower Deafness,HA-01,01 Interior,2001,F,65-79,677,8041
+Flower Deafness,HA-01,01 Interior,2001,F,80 +,228,3629
+Flower Deafness,HA-01,01 Interior,2001,M,1-19,52,363
+Flower Deafness,HA-01,01 Interior,2001,M,20-34,74,684
+Flower Deafness,HA-01,01 Interior,2001,M,35-49,298,2571
+Flower Deafness,HA-01,01 Interior,2001,M,50-64,859,8115
+Flower Deafness,HA-01,01 Interior,2001,M,65-79,812,10210
+Flower Deafness,HA-01,01 Interior,2001,M,80 +,213,3046
+Flower Deafness,HA-01,01 Interior,2001,T,1-19,90,687
+Flower Deafness,HA-01,01 Interior,2001,T,20-34,171,1427
+Flower Deafness,HA-01,01 Interior,2001,T,35-49,592,5142
+Flower Deafness,HA-01,01 Interior,2001,T,50-64,1533,14204
+Flower Deafness,HA-01,01 Interior,2001,T,65-79,1489,18256
+Flower Deafness,HA-01,01 Interior,2001,T,80 +,442,6695
+Flower Deafness,HA-02,02 Fraser,1999,F,1-19,75,504
+Flower Deafness,HA-02,02 Fraser,1999,F,20-34,268,1727
+Flower Deafness,HA-02,02 Fraser,1999,F,35-49,774,5814
+Flower Deafness,HA-02,02 Fraser,1999,F,50-64,1244,11529
+Flower Deafness,HA-02,02 Fraser,1999,F,65-79,1043,12735
+Flower Deafness,HA-02,02 Fraser,1999,F,80 +,313,5196
+Flower Deafness,HA-02,02 Fraser,1999,M,1-19,80,621
+Flower Deafness,HA-02,02 Fraser,1999,M,20-34,215,1525
+Flower Deafness,HA-02,02 Fraser,1999,M,35-49,983,7052
+Flower Deafness,HA-02,02 Fraser,1999,M,50-64,1653,15713
+Flower Deafness,HA-02,02 Fraser,1999,M,65-79,1149,14558
+Flower Deafness,HA-02,02 Fraser,1999,M,80 +,263,3987
+Flower Deafness,HA-02,02 Fraser,1999,T,1-19,155,1125
+Flower Deafness,HA-02,02 Fraser,1999,T,20-34,483,3252
+Flower Deafness,HA-02,02 Fraser,1999,T,35-49,1758,12866
+Flower Deafness,HA-02,02 Fraser,1999,T,50-64,2897,27242
+Flower Deafness,HA-02,02 Fraser,1999,T,65-79,2194,27313
+Flower Deafness,HA-02,02 Fraser,1999,T,80 +,578,9239
+Flower Deafness,HA-02,02 Fraser,2000,F,1-19,73,529
+Flower Deafness,HA-02,02 Fraser,2000,F,20-34,240,1826
+Flower Deafness,HA-02,02 Fraser,2000,F,35-49,865,6471
+Flower Deafness,HA-02,02 Fraser,2000,F,50-64,1417,12719
+Flower Deafness,HA-02,02 Fraser,2000,F,65-79,1042,13608
+Flower Deafness,HA-02,02 Fraser,2000,F,80 +,345,5648
+Flower Deafness,HA-02,02 Fraser,2000,M,1-19,85,642
+Flower Deafness,HA-02,02 Fraser,2000,M,20-34,193,1584
+Flower Deafness,HA-02,02 Fraser,2000,M,35-49,1115,7655
+Flower Deafness,HA-02,02 Fraser,2000,M,50-64,1790,17153
+Flower Deafness,HA-02,02 Fraser,2000,M,65-79,1139,15652
+Flower Deafness,HA-02,02 Fraser,2000,M,80 +,259,4399
+Flower Deafness,HA-02,02 Fraser,2000,T,1-19,158,1172
+Flower Deafness,HA-02,02 Fraser,2000,T,20-34,433,3411
+Flower Deafness,HA-02,02 Fraser,2000,T,35-49,1981,14127
+Flower Deafness,HA-02,02 Fraser,2000,T,50-64,3208,29872
+Flower Deafness,HA-02,02 Fraser,2000,T,65-79,2184,29281
+Flower Deafness,HA-02,02 Fraser,2000,T,80 +,608,10101
+Flower Deafness,HA-02,02 Fraser,2001,F,1-19,86,575
+Flower Deafness,HA-02,02 Fraser,2001,F,20-34,268,1921
+Flower Deafness,HA-02,02 Fraser,2001,F,35-49,907,7147
+Flower Deafness,HA-02,02 Fraser,2001,F,50-64,1545,14236
+Flower Deafness,HA-02,02 Fraser,2001,F,65-79,1181,14610
+Flower Deafness,HA-02,02 Fraser,2001,F,80 +,449,6421
+Flower Deafness,HA-02,02 Fraser,2001,M,1-19,92,673
+Flower Deafness,HA-02,02 Fraser,2001,M,20-34,233,1681
+Flower Deafness,HA-02,02 Fraser,2001,M,35-49,1163,8354
+Flower Deafness,HA-02,02 Fraser,2001,M,50-64,1950,18831
+Flower Deafness,HA-02,02 Fraser,2001,M,65-79,1235,17006
+Flower Deafness,HA-02,02 Fraser,2001,M,80 +,331,4956
+Flower Deafness,HA-02,02 Fraser,2001,T,1-19,179,1248
+Flower Deafness,HA-02,02 Fraser,2001,T,20-34,501,3602
+Flower Deafness,HA-02,02 Fraser,2001,T,35-49,2070,15501
+Flower Deafness,HA-02,02 Fraser,2001,T,50-64,3495,33068
+Flower Deafness,HA-02,02 Fraser,2001,T,65-79,2416,31630
+Flower Deafness,HA-02,02 Fraser,2001,T,80 +,782,11427
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,1-19,39,240
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,20-34,153,994
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,35-49,571,4011
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,50-64,956,7846
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,65-79,842,10015
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,F,80 +,281,4354
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,1-19,37,246
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,20-34,130,892
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,35-49,729,4652
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,50-64,1237,10330
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,65-79,916,10825
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,M,80 +,187,3025
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,1-19,76,486
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,20-34,284,1887
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,35-49,1300,8663
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,50-64,2194,18178
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,65-79,1759,20845
+Flower Deafness,HA-03,03 Vancouver Coastal,1999,T,80 +,469,7404
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,1-19,41,265
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,20-34,171,1073
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,35-49,571,4249
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,50-64,1044,8636
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,65-79,800,10633
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,F,80 +,317,4763
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,1-19,39,266
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,20-34,128,875
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,35-49,753,4960
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,50-64,1241,11327
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,65-79,895,11517
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,M,80 +,191,3309
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,1-19,81,532
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,20-34,299,1948
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,35-49,1325,9210
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,50-64,2286,19965
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,65-79,1696,22156
+Flower Deafness,HA-03,03 Vancouver Coastal,2000,T,80 +,510,8093
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,1-19,47,275
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,20-34,169,1140
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,35-49,515,4419
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,50-64,970,9250
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,65-79,788,11187
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,F,80 +,356,5231
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,1-19,47,279
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,20-34,152,942
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,35-49,710,5124
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,50-64,1195,12137
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,65-79,886,12137
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,M,80 +,206,3633
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,1-19,94,554
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,20-34,321,2082
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,35-49,1225,9544
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,50-64,2166,21390
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,65-79,1675,23327
+Flower Deafness,HA-03,03 Vancouver Coastal,2001,T,80 +,563,8882
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,1-19,31,242
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,20-34,99,693
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,35-49,343,2548
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,50-64,684,5405
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,65-79,669,7152
+Flower Deafness,HA-04,04 Vancouver Island,1999,F,80 +,272,3449
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,1-19,42,299
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,20-34,60,610
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,35-49,406,2561
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,50-64,924,7397
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,65-79,809,8836
+Flower Deafness,HA-04,04 Vancouver Island,1999,M,80 +,198,2719
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,1-19,74,542
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,20-34,160,1304
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,35-49,750,5110
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,50-64,1608,12804
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,65-79,1480,15999
+Flower Deafness,HA-04,04 Vancouver Island,1999,T,80 +,473,6200
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,1-19,37,264
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,20-34,68,688
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,35-49,376,2772
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,50-64,731,5989
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,65-79,637,7586
+Flower Deafness,HA-04,04 Vancouver Island,2000,F,80 +,295,3811
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,1-19,34,313
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,20-34,65,637
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,35-49,410,2711
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,50-64,947,8139
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,65-79,728,9361
+Flower Deafness,HA-04,04 Vancouver Island,2000,M,80 +,194,3001
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,1-19,72,577
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,20-34,134,1325
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,35-49,786,5483
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,50-64,1679,14130
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,65-79,1365,16957
+Flower Deafness,HA-04,04 Vancouver Island,2000,T,80 +,491,6840
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,1-19,27,266
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,20-34,71,730
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,35-49,325,2893
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,50-64,699,6590
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,65-79,643,7946
+Flower Deafness,HA-04,04 Vancouver Island,2001,F,80 +,324,4273
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,1-19,33,307
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,20-34,61,655
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,35-49,313,2738
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,50-64,945,8835
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,65-79,815,10097
+Flower Deafness,HA-04,04 Vancouver Island,2001,M,80 +,227,3304
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,1-19,60,574
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,20-34,132,1385
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,35-49,639,5631
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,50-64,1645,15426
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,65-79,1460,18053
+Flower Deafness,HA-04,04 Vancouver Island,2001,T,80 +,554,7602
+Flower Deafness,HA-05,05 Northern,1999,F,1-19,19,137
+Flower Deafness,HA-05,05 Northern,1999,F,20-34,50,377
+Flower Deafness,HA-05,05 Northern,1999,F,35-49,164,1292
+Flower Deafness,HA-05,05 Northern,1999,F,50-64,269,2425
+Flower Deafness,HA-05,05 Northern,1999,F,65-79,157,2059
+Flower Deafness,HA-05,05 Northern,1999,F,80 +,38,600
+Flower Deafness,HA-05,05 Northern,1999,M,1-19,20,157
+Flower Deafness,HA-05,05 Northern,1999,M,20-34,39,303
+Flower Deafness,HA-05,05 Northern,1999,M,35-49,211,1338
+Flower Deafness,HA-05,05 Northern,1999,M,50-64,364,3205
+Flower Deafness,HA-05,05 Northern,1999,M,65-79,213,2423
+Flower Deafness,HA-05,05 Northern,1999,M,80 +,34,438
+Flower Deafness,HA-05,05 Northern,1999,T,1-19,39,294
+Flower Deafness,HA-05,05 Northern,1999,T,20-34,90,680
+Flower Deafness,HA-05,05 Northern,1999,T,35-49,376,2631
+Flower Deafness,HA-05,05 Northern,1999,T,50-64,633,5631
+Flower Deafness,HA-05,05 Northern,1999,T,65-79,370,4488
+Flower Deafness,HA-05,05 Northern,1999,T,80 +,73,1054
+Flower Deafness,HA-05,05 Northern,2000,F,1-19,14,134
+Flower Deafness,HA-05,05 Northern,2000,F,20-34,57,391
+Flower Deafness,HA-05,05 Northern,2000,F,35-49,199,1399
+Flower Deafness,HA-05,05 Northern,2000,F,50-64,279,2650
+Flower Deafness,HA-05,05 Northern,2000,F,65-79,165,2211
+Flower Deafness,HA-05,05 Northern,2000,F,80 +,58,680
+Flower Deafness,HA-05,05 Northern,2000,M,1-19,21,166
+Flower Deafness,HA-05,05 Northern,2000,M,20-34,34,298
+Flower Deafness,HA-05,05 Northern,2000,M,35-49,176,1398
+Flower Deafness,HA-05,05 Northern,2000,M,50-64,379,3492
+Flower Deafness,HA-05,05 Northern,2000,M,65-79,224,2667
+Flower Deafness,HA-05,05 Northern,2000,M,80 +,33,482
+Flower Deafness,HA-05,05 Northern,2000,T,1-19,36,300
+Flower Deafness,HA-05,05 Northern,2000,T,20-34,92,689
+Flower Deafness,HA-05,05 Northern,2000,T,35-49,376,2797
+Flower Deafness,HA-05,05 Northern,2000,T,50-64,660,6144
+Flower Deafness,HA-05,05 Northern,2000,T,65-79,392,4883
+Flower Deafness,HA-05,05 Northern,2000,T,80 +,93,1179
+Flower Deafness,HA-05,05 Northern,2001,F,1-19,19,130
+Flower Deafness,HA-05,05 Northern,2001,F,20-34,50,416
+Flower Deafness,HA-05,05 Northern,2001,F,35-49,180,1441
+Flower Deafness,HA-05,05 Northern,2001,F,50-64,286,2904
+Flower Deafness,HA-05,05 Northern,2001,F,65-79,194,2374
+Flower Deafness,HA-05,05 Northern,2001,F,80 +,41,745
+Flower Deafness,HA-05,05 Northern,2001,M,1-19,21,176
+Flower Deafness,HA-05,05 Northern,2001,M,20-34,34,307
+Flower Deafness,HA-05,05 Northern,2001,M,35-49,183,1438
+Flower Deafness,HA-05,05 Northern,2001,M,50-64,458,3848
+Flower Deafness,HA-05,05 Northern,2001,M,65-79,222,2862
+Flower Deafness,HA-05,05 Northern,2001,M,80 +,39,562
+Flower Deafness,HA-05,05 Northern,2001,T,1-19,40,307
+Flower Deafness,HA-05,05 Northern,2001,T,20-34,85,723
+Flower Deafness,HA-05,05 Northern,2001,T,35-49,364,2880
+Flower Deafness,HA-05,05 Northern,2001,T,50-64,744,6753
+Flower Deafness,HA-05,05 Northern,2001,T,65-79,418,5242
+Flower Deafness,HA-05,05 Northern,2001,T,80 +,81,1319
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,1-19,5,36
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,20-34,10,64
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,35-49,37,257
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,50-64,66,525
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,65-79,52,655
+Flower Deafness,HSDA-11,11 East Kootenay,1999,F,80 +,11,281
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,1-19,5,34
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,20-34,2,72
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,35-49,36,269
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,50-64,71,689
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,65-79,56,788
+Flower Deafness,HSDA-11,11 East Kootenay,1999,M,80 +,11,182
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,1-19,11,71
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,20-34,12,137
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,35-49,73,527
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,50-64,137,1215
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,65-79,109,1446
+Flower Deafness,HSDA-11,11 East Kootenay,1999,T,80 +,22,467
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,1-19,7,40
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,20-34,14,73
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,35-49,49,284
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,50-64,72,571
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,65-79,67,711
+Flower Deafness,HSDA-11,11 East Kootenay,2000,F,80 +,15,314
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,1-19,2,29
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,20-34,14,81
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,35-49,42,280
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,50-64,98,765
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,65-79,93,859
+Flower Deafness,HSDA-11,11 East Kootenay,2000,M,80 +,12,209
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,1-19,10,69
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,20-34,29,154
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,35-49,92,565
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,50-64,170,1337
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,65-79,161,1573
+Flower Deafness,HSDA-11,11 East Kootenay,2000,T,80 +,28,527
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,1-19,9,48
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,20-34,12,80
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,35-49,30,283
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,50-64,101,674
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,65-79,55,740
+Flower Deafness,HSDA-11,11 East Kootenay,2001,F,80 +,23,360
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,1-19,3,30
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,20-34,9,76
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,35-49,24,290
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,50-64,110,872
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,65-79,74,890
+Flower Deafness,HSDA-11,11 East Kootenay,2001,M,80 +,14,233
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,1-19,15,78
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,20-34,21,156
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,35-49,55,574
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,50-64,211,1546
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,65-79,129,1631
+Flower Deafness,HSDA-11,11 East Kootenay,2001,T,80 +,38,596
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,1-19,4,30
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,20-34,4,58
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,35-49,23,210
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,50-64,56,631
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,65-79,73,876
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,F,80 +,18,400
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,1-19,0,44
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,20-34,7,64
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,35-49,43,279
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,50-64,75,817
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,65-79,81,956
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,M,80 +,11,275
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,1-19,4,74
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,20-34,12,123
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,35-49,67,490
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,50-64,131,1449
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,65-79,154,1832
+Flower Deafness,HSDA-12,12 Kootenay Boundary,1999,T,80 +,29,676
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,1-19,1,29
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,20-34,2,50
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,35-49,33,224
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,50-64,72,681
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,65-79,66,904
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,F,80 +,27,422
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,1-19,5,45
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,20-34,5,63
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,35-49,22,269
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,50-64,95,852
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,65-79,71,1004
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,M,80 +,13,269
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,1-19,4,74
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,20-34,7,114
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,35-49,56,494
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,50-64,167,1534
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,65-79,137,1908
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2000,T,80 +,40,693
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,1-19,3,29
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,20-34,2,48
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,35-49,15,205
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,50-64,60,698
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,65-79,59,923
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,F,80 +,20,440
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,1-19,5,44
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,20-34,5,64
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,35-49,23,250
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,50-64,90,897
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,65-79,76,1021
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,M,80 +,19,295
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,1-19,9,73
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,20-34,7,113
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,35-49,39,455
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,50-64,151,1596
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,65-79,136,1944
+Flower Deafness,HSDA-12,12 Kootenay Boundary,2001,T,80 +,39,737
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,1-19,12,137
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,20-34,41,290
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,35-49,129,937
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,50-64,287,2193
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,65-79,315,3475
+Flower Deafness,HSDA-13,13 Okanagan,1999,F,80 +,75,1591
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,1-19,19,149
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,20-34,28,260
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,35-49,151,1022
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,50-64,380,2941
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,65-79,448,4514
+Flower Deafness,HSDA-13,13 Okanagan,1999,M,80 +,90,1482
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,1-19,31,287
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,20-34,69,551
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,35-49,280,1959
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,50-64,668,5134
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,65-79,764,7992
+Flower Deafness,HSDA-13,13 Okanagan,1999,T,80 +,165,3087
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,1-19,12,140
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,20-34,41,299
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,35-49,154,1047
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,50-64,309,2454
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,65-79,332,3729
+Flower Deafness,HSDA-13,13 Okanagan,2000,F,80 +,114,1772
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,1-19,14,147
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,20-34,41,297
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,35-49,184,1090
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,50-64,412,3288
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,65-79,453,4914
+Flower Deafness,HSDA-13,13 Okanagan,2000,M,80 +,98,1616
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,1-19,27,288
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,20-34,83,596
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,35-49,339,2138
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,50-64,722,5742
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,65-79,785,8646
+Flower Deafness,HSDA-13,13 Okanagan,2000,T,80 +,213,3402
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,1-19,12,143
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,20-34,39,336
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,35-49,134,1144
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,50-64,307,2665
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,65-79,391,4056
+Flower Deafness,HSDA-13,13 Okanagan,2001,F,80 +,123,1924
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,1-19,21,170
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,20-34,42,328
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,35-49,151,1145
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,50-64,428,3620
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,65-79,464,5306
+Flower Deafness,HSDA-13,13 Okanagan,2001,M,80 +,142,1807
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,1-19,33,313
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,20-34,82,665
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,35-49,285,2289
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,50-64,735,6286
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,65-79,855,9363
+Flower Deafness,HSDA-13,13 Okanagan,2001,T,80 +,265,3743
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,1-19,12,107
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,20-34,31,226
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,35-49,108,835
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,50-64,179,1798
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,65-79,160,2049
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,80 +,65,709
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,1-19,9,100
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,20-34,19,198
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,35-49,107,859
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,50-64,246,2404
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,65-79,192,2550
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,80 +,28,565
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,1-19,21,208
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,20-34,50,424
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,35-49,215,1695
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,50-64,426,4202
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,65-79,352,4601
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,80 +,93,1277
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,1-19,14,107
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,20-34,34,252
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,35-49,94,872
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,50-64,191,1938
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,65-79,165,2178
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,80 +,46,807
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,1-19,14,101
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,20-34,24,209
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,35-49,117,876
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,50-64,259,2569
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,65-79,220,2809
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,80 +,45,617
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,1-19,29,209
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,20-34,59,462
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,35-49,211,1748
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,50-64,450,4507
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,65-79,386,4988
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,80 +,91,1426
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,1-19,12,102
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,20-34,42,278
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,35-49,113,937
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,50-64,203,2051
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,65-79,171,2321
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,80 +,60,904
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,1-19,19,118
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,20-34,16,214
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,35-49,99,885
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,50-64,231,2724
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,65-79,197,2993
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,80 +,37,709
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,1-19,31,220
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,20-34,59,492
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,35-49,213,1822
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,50-64,435,4775
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,65-79,368,5316
+Flower Deafness,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,80 +,99,1616
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,1-19,12,105
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,20-34,40,300
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,35-49,132,985
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,50-64,227,2026
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,65-79,201,2515
+Flower Deafness,HSDA-21,21 Fraser East,1999,F,80 +,59,1013
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,1-19,18,127
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,20-34,31,238
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,35-49,152,1137
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,50-64,270,2631
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,65-79,261,2971
+Flower Deafness,HSDA-21,21 Fraser East,1999,M,80 +,59,885
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,1-19,30,232
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,20-34,72,539
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,35-49,285,2123
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,50-64,498,4658
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,65-79,464,5499
+Flower Deafness,HSDA-21,21 Fraser East,1999,T,80 +,119,1908
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,1-19,12,109
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,20-34,47,340
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,35-49,131,1054
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,50-64,233,2232
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,65-79,217,2724
+Flower Deafness,HSDA-21,21 Fraser East,2000,F,80 +,85,1148
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,1-19,15,127
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,20-34,37,275
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,35-49,170,1207
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,50-64,300,2872
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,65-79,229,3182
+Flower Deafness,HSDA-21,21 Fraser East,2000,M,80 +,61,975
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,1-19,28,236
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,20-34,84,615
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,35-49,302,2261
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,50-64,534,5105
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,65-79,448,5916
+Flower Deafness,HSDA-21,21 Fraser East,2000,T,80 +,148,2137
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,1-19,18,110
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,20-34,48,354
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,35-49,156,1187
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,50-64,286,2527
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,65-79,274,2947
+Flower Deafness,HSDA-21,21 Fraser East,2001,F,80 +,90,1291
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,1-19,21,135
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,20-34,30,290
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,35-49,176,1330
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,50-64,338,3147
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,65-79,288,3521
+Flower Deafness,HSDA-21,21 Fraser East,2001,M,80 +,81,1083
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,1-19,39,246
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,20-34,78,645
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,35-49,333,2518
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,50-64,624,5674
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,65-79,563,6475
+Flower Deafness,HSDA-21,21 Fraser East,2001,T,80 +,171,2387
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,1-19,34,166
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,20-34,105,590
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,35-49,286,2166
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,50-64,413,4154
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,65-79,357,4756
+Flower Deafness,HSDA-22,22 Fraser North,1999,F,80 +,123,2054
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,1-19,27,205
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,20-34,69,585
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,35-49,374,2665
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,50-64,605,5980
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,65-79,383,5386
+Flower Deafness,HSDA-22,22 Fraser North,1999,M,80 +,80,1430
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,1-19,61,372
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,20-34,175,1176
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,35-49,660,4832
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,50-64,1018,10134
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,65-79,740,10146
+Flower Deafness,HSDA-22,22 Fraser North,1999,T,80 +,205,3510
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,1-19,28,172
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,20-34,74,598
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,35-49,329,2426
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,50-64,513,4568
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,65-79,356,4974
+Flower Deafness,HSDA-22,22 Fraser North,2000,F,80 +,117,2194
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,1-19,29,214
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,20-34,66,584
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,35-49,440,2887
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,50-64,641,6449
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,65-79,423,5816
+Flower Deafness,HSDA-22,22 Fraser North,2000,M,80 +,83,1529
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,1-19,57,387
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,20-34,140,1182
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,35-49,769,5314
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,50-64,1155,11017
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,65-79,781,10796
+Flower Deafness,HSDA-22,22 Fraser North,2000,T,80 +,202,3747
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,1-19,30,187
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,20-34,105,642
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,35-49,325,2590
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,50-64,549,5081
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,65-79,411,5334
+Flower Deafness,HSDA-22,22 Fraser North,2001,F,80 +,163,2409
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,1-19,27,228
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,20-34,67,603
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,35-49,430,3112
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,50-64,653,6921
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,65-79,444,6264
+Flower Deafness,HSDA-22,22 Fraser North,2001,M,80 +,104,1704
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,1-19,57,416
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,20-34,173,1245
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,35-49,756,5703
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,50-64,1203,12002
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,65-79,855,11603
+Flower Deafness,HSDA-22,22 Fraser North,2001,T,80 +,268,4137
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,1-19,28,232
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,20-34,121,835
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,35-49,355,2661
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,50-64,602,5347
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,65-79,484,5463
+Flower Deafness,HSDA-23,23 Fraser South,1999,F,80 +,129,2128
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,1-19,34,288
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,20-34,113,701
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,35-49,457,3248
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,50-64,777,7101
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,65-79,504,6200
+Flower Deafness,HSDA-23,23 Fraser South,1999,M,80 +,123,1672
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,1-19,63,520
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,20-34,235,1536
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,35-49,812,5910
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,50-64,1380,12449
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,65-79,989,11668
+Flower Deafness,HSDA-23,23 Fraser South,1999,T,80 +,253,3820
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,1-19,32,247
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,20-34,118,887
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,35-49,404,2990
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,50-64,670,5918
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,65-79,468,5909
+Flower Deafness,HSDA-23,23 Fraser South,2000,F,80 +,143,2306
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,1-19,40,300
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,20-34,90,725
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,35-49,504,3559
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,50-64,848,7832
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,65-79,485,6653
+Flower Deafness,HSDA-23,23 Fraser South,2000,M,80 +,113,1894
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,1-19,73,548
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,20-34,208,1612
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,35-49,909,6550
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,50-64,1519,13750
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,65-79,954,12567
+Flower Deafness,HSDA-23,23 Fraser South,2000,T,80 +,256,4216
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,1-19,38,276
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,20-34,113,924
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,35-49,424,3369
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,50-64,708,6628
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,65-79,494,6328
+Flower Deafness,HSDA-23,23 Fraser South,2001,F,80 +,196,2720
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,1-19,43,308
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,20-34,135,787
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,35-49,555,3910
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,50-64,959,8763
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,65-79,502,7219
+Flower Deafness,HSDA-23,23 Fraser South,2001,M,80 +,145,2169
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,1-19,82,585
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,20-34,249,1711
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,35-49,980,7279
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,50-64,1667,15391
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,65-79,997,13550
+Flower Deafness,HSDA-23,23 Fraser South,2001,T,80 +,342,4902
+Flower Deafness,HSDA-31,31 Richmond,1999,F,1-19,9,40
+Flower Deafness,HSDA-31,31 Richmond,1999,F,20-34,15,129
+Flower Deafness,HSDA-31,31 Richmond,1999,F,35-49,96,699
+Flower Deafness,HSDA-31,31 Richmond,1999,F,50-64,187,1492
+Flower Deafness,HSDA-31,31 Richmond,1999,F,65-79,134,1750
+Flower Deafness,HSDA-31,31 Richmond,1999,F,80 +,33,640
+Flower Deafness,HSDA-31,31 Richmond,1999,M,1-19,4,48
+Flower Deafness,HSDA-31,31 Richmond,1999,M,20-34,15,128
+Flower Deafness,HSDA-31,31 Richmond,1999,M,35-49,151,904
+Flower Deafness,HSDA-31,31 Richmond,1999,M,50-64,235,2114
+Flower Deafness,HSDA-31,31 Richmond,1999,M,65-79,154,1793
+Flower Deafness,HSDA-31,31 Richmond,1999,M,80 +,24,491
+Flower Deafness,HSDA-31,31 Richmond,1999,T,1-19,14,88
+Flower Deafness,HSDA-31,31 Richmond,1999,T,20-34,31,257
+Flower Deafness,HSDA-31,31 Richmond,1999,T,35-49,247,1604
+Flower Deafness,HSDA-31,31 Richmond,1999,T,50-64,422,3606
+Flower Deafness,HSDA-31,31 Richmond,1999,T,65-79,288,3544
+Flower Deafness,HSDA-31,31 Richmond,1999,T,80 +,58,1135
+Flower Deafness,HSDA-31,31 Richmond,2000,F,1-19,7,44
+Flower Deafness,HSDA-31,31 Richmond,2000,F,20-34,30,139
+Flower Deafness,HSDA-31,31 Richmond,2000,F,35-49,118,763
+Flower Deafness,HSDA-31,31 Richmond,2000,F,50-64,214,1673
+Flower Deafness,HSDA-31,31 Richmond,2000,F,65-79,136,1875
+Flower Deafness,HSDA-31,31 Richmond,2000,F,80 +,46,698
+Flower Deafness,HSDA-31,31 Richmond,2000,M,1-19,7,46
+Flower Deafness,HSDA-31,31 Richmond,2000,M,20-34,27,132
+Flower Deafness,HSDA-31,31 Richmond,2000,M,35-49,143,966
+Flower Deafness,HSDA-31,31 Richmond,2000,M,50-64,246,2345
+Flower Deafness,HSDA-31,31 Richmond,2000,M,65-79,173,1959
+Flower Deafness,HSDA-31,31 Richmond,2000,M,80 +,27,560
+Flower Deafness,HSDA-31,31 Richmond,2000,T,1-19,15,91
+Flower Deafness,HSDA-31,31 Richmond,2000,T,20-34,57,271
+Flower Deafness,HSDA-31,31 Richmond,2000,T,35-49,261,1729
+Flower Deafness,HSDA-31,31 Richmond,2000,T,50-64,460,4019
+Flower Deafness,HSDA-31,31 Richmond,2000,T,65-79,309,3836
+Flower Deafness,HSDA-31,31 Richmond,2000,T,80 +,73,1261
+Flower Deafness,HSDA-31,31 Richmond,2001,F,1-19,7,45
+Flower Deafness,HSDA-31,31 Richmond,2001,F,20-34,20,152
+Flower Deafness,HSDA-31,31 Richmond,2001,F,35-49,103,814
+Flower Deafness,HSDA-31,31 Richmond,2001,F,50-64,201,1879
+Flower Deafness,HSDA-31,31 Richmond,2001,F,65-79,118,2010
+Flower Deafness,HSDA-31,31 Richmond,2001,F,80 +,56,805
+Flower Deafness,HSDA-31,31 Richmond,2001,M,1-19,9,53
+Flower Deafness,HSDA-31,31 Richmond,2001,M,20-34,24,153
+Flower Deafness,HSDA-31,31 Richmond,2001,M,35-49,127,1004
+Flower Deafness,HSDA-31,31 Richmond,2001,M,50-64,236,2584
+Flower Deafness,HSDA-31,31 Richmond,2001,M,65-79,151,2125
+Flower Deafness,HSDA-31,31 Richmond,2001,M,80 +,28,617
+Flower Deafness,HSDA-31,31 Richmond,2001,T,1-19,16,99
+Flower Deafness,HSDA-31,31 Richmond,2001,T,20-34,45,306
+Flower Deafness,HSDA-31,31 Richmond,2001,T,35-49,231,1818
+Flower Deafness,HSDA-31,31 Richmond,2001,T,50-64,438,4464
+Flower Deafness,HSDA-31,31 Richmond,2001,T,65-79,269,4136
+Flower Deafness,HSDA-31,31 Richmond,2001,T,80 +,84,1424
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,1-19,19,115
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,20-34,116,652
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,35-49,361,2589
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,50-64,571,4794
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,65-79,498,6217
+Flower Deafness,HSDA-32,32 Vancouver,1999,F,80 +,178,2838
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,1-19,21,113
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,20-34,87,548
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,35-49,457,2924
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,50-64,703,5941
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,65-79,511,6512
+Flower Deafness,HSDA-32,32 Vancouver,1999,M,80 +,111,1830
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,1-19,40,228
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,20-34,203,1201
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,35-49,819,5514
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,50-64,1274,10736
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,65-79,1009,12733
+Flower Deafness,HSDA-32,32 Vancouver,1999,T,80 +,290,4688
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,1-19,19,129
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,20-34,110,698
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,35-49,353,2721
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,50-64,610,5222
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,65-79,465,6558
+Flower Deafness,HSDA-32,32 Vancouver,2000,F,80 +,175,3082
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,1-19,16,121
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,20-34,83,527
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,35-49,453,3077
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,50-64,702,6478
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,65-79,491,6912
+Flower Deafness,HSDA-32,32 Vancouver,2000,M,80 +,113,1976
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,1-19,36,251
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,20-34,193,1225
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,35-49,806,5798
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,50-64,1312,11701
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,65-79,956,13473
+Flower Deafness,HSDA-32,32 Vancouver,2000,T,80 +,289,5074
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,1-19,21,130
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,20-34,110,728
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,35-49,317,2797
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,50-64,564,5518
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,65-79,489,6833
+Flower Deafness,HSDA-32,32 Vancouver,2001,F,80 +,209,3323
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,1-19,21,120
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,20-34,99,577
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,35-49,450,3183
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,50-64,669,6896
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,65-79,495,7205
+Flower Deafness,HSDA-32,32 Vancouver,2001,M,80 +,111,2145
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,1-19,42,251
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,20-34,209,1306
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,35-49,768,5981
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,50-64,1234,12415
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,65-79,984,14042
+Flower Deafness,HSDA-32,32 Vancouver,2001,T,80 +,321,5481
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,1-19,11,83
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,20-34,21,212
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,35-49,112,722
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,50-64,198,1559
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,65-79,210,2047
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,80 +,69,876
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,1-19,10,85
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,20-34,27,215
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,35-49,120,822
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,50-64,298,2274
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,65-79,250,2519
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,80 +,50,703
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,1-19,21,168
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,20-34,48,427
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,35-49,233,1545
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,50-64,497,3835
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,65-79,460,4568
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,80 +,120,1579
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,1-19,14,91
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,20-34,30,234
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,35-49,99,764
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,50-64,219,1739
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,65-79,198,2199
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,80 +,95,982
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,1-19,14,97
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,20-34,18,215
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,35-49,157,916
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,50-64,293,2503
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,65-79,231,2645
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,80 +,50,773
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,1-19,29,189
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,20-34,48,450
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,35-49,256,1681
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,50-64,512,4244
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,65-79,429,4846
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,80 +,147,1757
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,1-19,18,99
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,20-34,38,259
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,35-49,93,807
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,50-64,203,1852
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,65-79,181,2343
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,80 +,90,1102
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,1-19,16,105
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,20-34,28,210
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,35-49,131,935
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,50-64,289,2656
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,65-79,240,2805
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,80 +,66,871
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,1-19,34,204
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,20-34,66,469
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,35-49,225,1743
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,50-64,493,4511
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,65-79,421,5148
+Flower Deafness,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,80 +,157,1976
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,1-19,18,113
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,20-34,56,374
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,35-49,158,1247
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,50-64,332,2475
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,65-79,318,3465
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,F,80 +,158,1981
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,1-19,18,137
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,20-34,34,336
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,35-49,201,1217
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,50-64,414,3281
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,65-79,349,3896
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,M,80 +,108,1524
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,1-19,36,250
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,20-34,91,711
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,35-49,360,2465
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,50-64,747,5756
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,65-79,669,7364
+Flower Deafness,HSDA-41,41 South Vancouver Island,1999,T,80 +,268,3516
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,1-19,14,121
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,20-34,41,367
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,35-49,203,1367
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,50-64,339,2749
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,65-79,312,3606
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,F,80 +,180,2184
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,1-19,4,138
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,20-34,38,355
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,35-49,203,1304
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,50-64,391,3566
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,65-79,342,4057
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,M,80 +,110,1696
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,1-19,27,260
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,20-34,80,722
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,35-49,407,2672
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,50-64,730,6315
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,65-79,654,7666
+Flower Deafness,HSDA-41,41 South Vancouver Island,2000,T,80 +,290,3892
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,1-19,14,123
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,20-34,34,398
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,35-49,175,1438
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,50-64,344,3037
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,65-79,347,3757
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,F,80 +,183,2437
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,1-19,12,132
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,20-34,30,346
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,35-49,164,1325
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,50-64,423,3876
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,65-79,368,4307
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,M,80 +,138,1863
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,1-19,27,255
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,20-34,65,745
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,35-49,340,2764
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,50-64,768,6913
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,65-79,716,8069
+Flower Deafness,HSDA-41,41 South Vancouver Island,2001,T,80 +,323,4310
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,1-19,10,88
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,20-34,30,241
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,35-49,130,881
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,50-64,250,2019
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,65-79,268,2710
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,F,80 +,84,1127
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,1-19,16,96
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,20-34,19,190
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,35-49,128,885
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,50-64,349,2871
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,65-79,332,3622
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,M,80 +,73,914
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,1-19,27,185
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,20-34,49,431
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,35-49,259,1766
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,50-64,599,4892
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,65-79,600,6336
+Flower Deafness,HSDA-42,42 Central Vancouver Island,1999,T,80 +,158,2058
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,1-19,15,99
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,20-34,19,227
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,35-49,120,986
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,50-64,265,2213
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,65-79,235,2896
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,F,80 +,81,1254
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,1-19,12,101
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,20-34,19,194
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,35-49,151,965
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,50-64,374,3195
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,65-79,294,3858
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,M,80 +,66,1012
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,1-19,28,200
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,20-34,38,421
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,35-49,271,1951
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,50-64,640,5410
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,65-79,529,6757
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2000,T,80 +,148,2280
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,1-19,3,104
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,20-34,25,237
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,35-49,99,1012
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,50-64,251,2448
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,65-79,214,3051
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,F,80 +,108,1391
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,1-19,11,97
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,20-34,21,207
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,35-49,94,956
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,50-64,369,3491
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,65-79,312,4178
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,M,80 +,74,1122
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,1-19,20,201
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,20-34,47,444
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,35-49,193,1968
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,50-64,620,5941
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,65-79,526,7231
+Flower Deafness,HSDA-42,42 Central Vancouver Island,2001,T,80 +,182,2524
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,1-19,3,40
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,20-34,12,77
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,35-49,54,420
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,50-64,101,910
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,65-79,82,976
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,F,80 +,29,340
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,1-19,7,66
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,20-34,4,83
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,35-49,76,458
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,50-64,160,1244
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,65-79,127,1318
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,M,80 +,16,280
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,1-19,11,106
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,20-34,19,161
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,35-49,130,878
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,50-64,261,2155
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,65-79,210,2298
+Flower Deafness,HSDA-43,43 North Vancouver Island,1999,T,80 +,46,624
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,1-19,6,43
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,20-34,7,93
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,35-49,51,417
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,50-64,126,1026
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,65-79,90,1083
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,F,80 +,33,372
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,1-19,10,73
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,20-34,7,87
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,35-49,55,441
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,50-64,182,1377
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,65-79,91,1445
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,M,80 +,18,292
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,1-19,16,116
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,20-34,15,181
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,35-49,107,859
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,50-64,308,2404
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,65-79,181,2532
+Flower Deafness,HSDA-43,43 North Vancouver Island,2000,T,80 +,51,666
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,1-19,3,39
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,20-34,10,93
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,35-49,50,441
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,50-64,103,1103
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,65-79,82,1136
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,F,80 +,32,444
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,1-19,10,77
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,20-34,10,101
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,35-49,54,455
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,50-64,152,1468
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,65-79,135,1611
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,M,80 +,14,318
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,1-19,13,116
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,20-34,20,195
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,35-49,104,897
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,50-64,255,2571
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,65-79,217,2752
+Flower Deafness,HSDA-43,43 North Vancouver Island,2001,T,80 +,48,767
+Flower Deafness,HSDA-51,51 Northwest,1999,F,1-19,5,38
+Flower Deafness,HSDA-51,51 Northwest,1999,F,20-34,11,93
+Flower Deafness,HSDA-51,51 Northwest,1999,F,35-49,43,387
+Flower Deafness,HSDA-51,51 Northwest,1999,F,50-64,78,713
+Flower Deafness,HSDA-51,51 Northwest,1999,F,65-79,43,622
+Flower Deafness,HSDA-51,51 Northwest,1999,F,80 +,7,148
+Flower Deafness,HSDA-51,51 Northwest,1999,M,1-19,7,41
+Flower Deafness,HSDA-51,51 Northwest,1999,M,20-34,11,95
+Flower Deafness,HSDA-51,51 Northwest,1999,M,35-49,51,393
+Flower Deafness,HSDA-51,51 Northwest,1999,M,50-64,107,949
+Flower Deafness,HSDA-51,51 Northwest,1999,M,65-79,63,720
+Flower Deafness,HSDA-51,51 Northwest,1999,M,80 +,7,124
+Flower Deafness,HSDA-51,51 Northwest,1999,T,1-19,13,80
+Flower Deafness,HSDA-51,51 Northwest,1999,T,20-34,22,189
+Flower Deafness,HSDA-51,51 Northwest,1999,T,35-49,95,781
+Flower Deafness,HSDA-51,51 Northwest,1999,T,50-64,185,1663
+Flower Deafness,HSDA-51,51 Northwest,1999,T,65-79,107,1344
+Flower Deafness,HSDA-51,51 Northwest,1999,T,80 +,15,276
+Flower Deafness,HSDA-51,51 Northwest,2000,F,1-19,1,29
+Flower Deafness,HSDA-51,51 Northwest,2000,F,20-34,20,100
+Flower Deafness,HSDA-51,51 Northwest,2000,F,35-49,60,426
+Flower Deafness,HSDA-51,51 Northwest,2000,F,50-64,71,765
+Flower Deafness,HSDA-51,51 Northwest,2000,F,65-79,56,673
+Flower Deafness,HSDA-51,51 Northwest,2000,F,80 +,11,154
+Flower Deafness,HSDA-51,51 Northwest,2000,M,1-19,4,41
+Flower Deafness,HSDA-51,51 Northwest,2000,M,20-34,6,91
+Flower Deafness,HSDA-51,51 Northwest,2000,M,35-49,43,396
+Flower Deafness,HSDA-51,51 Northwest,2000,M,50-64,112,1021
+Flower Deafness,HSDA-51,51 Northwest,2000,M,65-79,51,772
+Flower Deafness,HSDA-51,51 Northwest,2000,M,80 +,5,142
+Flower Deafness,HSDA-51,51 Northwest,2000,T,1-19,5,71
+Flower Deafness,HSDA-51,51 Northwest,2000,T,20-34,27,191
+Flower Deafness,HSDA-51,51 Northwest,2000,T,35-49,104,822
+Flower Deafness,HSDA-51,51 Northwest,2000,T,50-64,183,1786
+Flower Deafness,HSDA-51,51 Northwest,2000,T,65-79,109,1447
+Flower Deafness,HSDA-51,51 Northwest,2000,T,80 +,16,300
+Flower Deafness,HSDA-51,51 Northwest,2001,F,1-19,4,29
+Flower Deafness,HSDA-51,51 Northwest,2001,F,20-34,13,105
+Flower Deafness,HSDA-51,51 Northwest,2001,F,35-49,51,422
+Flower Deafness,HSDA-51,51 Northwest,2001,F,50-64,68,833
+Flower Deafness,HSDA-51,51 Northwest,2001,F,65-79,59,711
+Flower Deafness,HSDA-51,51 Northwest,2001,F,80 +,9,176
+Flower Deafness,HSDA-51,51 Northwest,2001,M,1-19,9,45
+Flower Deafness,HSDA-51,51 Northwest,2001,M,20-34,5,77
+Flower Deafness,HSDA-51,51 Northwest,2001,M,35-49,48,414
+Flower Deafness,HSDA-51,51 Northwest,2001,M,50-64,128,1118
+Flower Deafness,HSDA-51,51 Northwest,2001,M,65-79,64,836
+Flower Deafness,HSDA-51,51 Northwest,2001,M,80 +,11,173
+Flower Deafness,HSDA-51,51 Northwest,2001,T,1-19,13,74
+Flower Deafness,HSDA-51,51 Northwest,2001,T,20-34,19,182
+Flower Deafness,HSDA-51,51 Northwest,2001,T,35-49,100,836
+Flower Deafness,HSDA-51,51 Northwest,2001,T,50-64,197,1951
+Flower Deafness,HSDA-51,51 Northwest,2001,T,65-79,123,1550
+Flower Deafness,HSDA-51,51 Northwest,2001,T,80 +,20,354
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,1-19,10,71
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,20-34,29,208
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,35-49,87,652
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,50-64,142,1287
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,65-79,85,1051
+Flower Deafness,HSDA-52,52 Northern Interior,1999,F,80 +,21,331
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,1-19,10,87
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,20-34,16,137
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,35-49,103,683
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,50-64,201,1728
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,65-79,107,1278
+Flower Deafness,HSDA-52,52 Northern Interior,1999,M,80 +,16,220
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,1-19,20,158
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,20-34,46,345
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,35-49,191,1336
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,50-64,343,3016
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,65-79,192,2331
+Flower Deafness,HSDA-52,52 Northern Interior,1999,T,80 +,38,558
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,1-19,9,73
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,20-34,25,212
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,35-49,99,706
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,50-64,146,1405
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,65-79,82,1131
+Flower Deafness,HSDA-52,52 Northern Interior,2000,F,80 +,29,378
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,1-19,6,87
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,20-34,20,138
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,35-49,93,704
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,50-64,197,1887
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,65-79,134,1437
+Flower Deafness,HSDA-52,52 Northern Interior,2000,M,80 +,20,238
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,1-19,15,161
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,20-34,46,350
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,35-49,192,1410
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,50-64,343,3293
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,65-79,217,2571
+Flower Deafness,HSDA-52,52 Northern Interior,2000,T,80 +,49,622
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,1-19,10,71
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,20-34,23,222
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,35-49,100,742
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,50-64,154,1525
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,65-79,102,1239
+Flower Deafness,HSDA-52,52 Northern Interior,2001,F,80 +,23,415
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,1-19,5,86
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,20-34,19,151
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,35-49,91,722
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,50-64,237,2061
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,65-79,126,1549
+Flower Deafness,HSDA-52,52 Northern Interior,2001,M,80 +,19,264
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,1-19,15,157
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,20-34,42,373
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,35-49,191,1465
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,50-64,392,3586
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,65-79,229,2791
+Flower Deafness,HSDA-52,52 Northern Interior,2001,T,80 +,42,681
+Flower Deafness,HSDA-53,53 Northeast,1999,F,1-19,3,27
+Flower Deafness,HSDA-53,53 Northeast,1999,F,20-34,10,74
+Flower Deafness,HSDA-53,53 Northeast,1999,F,35-49,32,252
+Flower Deafness,HSDA-53,53 Northeast,1999,F,50-64,48,424
+Flower Deafness,HSDA-53,53 Northeast,1999,F,65-79,28,386
+Flower Deafness,HSDA-53,53 Northeast,1999,F,80 +,9,120
+Flower Deafness,HSDA-53,53 Northeast,1999,M,1-19,2,27
+Flower Deafness,HSDA-53,53 Northeast,1999,M,20-34,11,71
+Flower Deafness,HSDA-53,53 Northeast,1999,M,35-49,56,261
+Flower Deafness,HSDA-53,53 Northeast,1999,M,50-64,55,527
+Flower Deafness,HSDA-53,53 Northeast,1999,M,65-79,42,424
+Flower Deafness,HSDA-53,53 Northeast,1999,M,80 +,10,92
+Flower Deafness,HSDA-53,53 Northeast,1999,T,1-19,5,55
+Flower Deafness,HSDA-53,53 Northeast,1999,T,20-34,21,146
+Flower Deafness,HSDA-53,53 Northeast,1999,T,35-49,89,514
+Flower Deafness,HSDA-53,53 Northeast,1999,T,50-64,103,951
+Flower Deafness,HSDA-53,53 Northeast,1999,T,65-79,71,811
+Flower Deafness,HSDA-53,53 Northeast,1999,T,80 +,19,218
+Flower Deafness,HSDA-53,53 Northeast,2000,F,1-19,4,31
+Flower Deafness,HSDA-53,53 Northeast,2000,F,20-34,11,78
+Flower Deafness,HSDA-53,53 Northeast,2000,F,35-49,39,266
+Flower Deafness,HSDA-53,53 Northeast,2000,F,50-64,61,478
+Flower Deafness,HSDA-53,53 Northeast,2000,F,65-79,27,406
+Flower Deafness,HSDA-53,53 Northeast,2000,F,80 +,18,147
+Flower Deafness,HSDA-53,53 Northeast,2000,M,1-19,10,36
+Flower Deafness,HSDA-53,53 Northeast,2000,M,20-34,7,68
+Flower Deafness,HSDA-53,53 Northeast,2000,M,35-49,39,297
+Flower Deafness,HSDA-53,53 Northeast,2000,M,50-64,69,584
+Flower Deafness,HSDA-53,53 Northeast,2000,M,65-79,38,457
+Flower Deafness,HSDA-53,53 Northeast,2000,M,80 +,7,101
+Flower Deafness,HSDA-53,53 Northeast,2000,T,1-19,14,68
+Flower Deafness,HSDA-53,53 Northeast,2000,T,20-34,19,147
+Flower Deafness,HSDA-53,53 Northeast,2000,T,35-49,78,563
+Flower Deafness,HSDA-53,53 Northeast,2000,T,50-64,132,1064
+Flower Deafness,HSDA-53,53 Northeast,2000,T,65-79,65,863
+Flower Deafness,HSDA-53,53 Northeast,2000,T,80 +,27,256
+Flower Deafness,HSDA-53,53 Northeast,2001,F,1-19,4,30
+Flower Deafness,HSDA-53,53 Northeast,2001,F,20-34,13,88
+Flower Deafness,HSDA-53,53 Northeast,2001,F,35-49,28,275
+Flower Deafness,HSDA-53,53 Northeast,2001,F,50-64,63,546
+Flower Deafness,HSDA-53,53 Northeast,2001,F,65-79,32,424
+Flower Deafness,HSDA-53,53 Northeast,2001,F,80 +,9,153
+Flower Deafness,HSDA-53,53 Northeast,2001,M,1-19,6,44
+Flower Deafness,HSDA-53,53 Northeast,2001,M,20-34,10,78
+Flower Deafness,HSDA-53,53 Northeast,2001,M,35-49,43,302
+Flower Deafness,HSDA-53,53 Northeast,2001,M,50-64,92,668
+Flower Deafness,HSDA-53,53 Northeast,2001,M,65-79,31,476
+Flower Deafness,HSDA-53,53 Northeast,2001,M,80 +,9,124
+Flower Deafness,HSDA-53,53 Northeast,2001,T,1-19,11,74
+Flower Deafness,HSDA-53,53 Northeast,2001,T,20-34,23,167
+Flower Deafness,HSDA-53,53 Northeast,2001,T,35-49,72,577
+Flower Deafness,HSDA-53,53 Northeast,2001,T,50-64,155,1215
+Flower Deafness,HSDA-53,53 Northeast,2001,T,65-79,64,900
+Flower Deafness,HSDA-53,53 Northeast,2001,T,80 +,18,283
+Orange Nose,BC,BC,1999,F,20-34,1306,9185
+Orange Nose,BC,BC,1999,F,35-49,5944,41752
+Orange Nose,BC,BC,1999,F,50-64,11038,103475
+Orange Nose,BC,BC,1999,F,65-79,9795,134539
+Orange Nose,BC,BC,1999,F,80 +,3635,76038
+Orange Nose,BC,BC,1999,M,20-34,1111,6233
+Orange Nose,BC,BC,1999,M,35-49,5716,40265
+Orange Nose,BC,BC,1999,M,50-64,10842,98225
+Orange Nose,BC,BC,1999,M,65-79,9021,111166
+Orange Nose,BC,BC,1999,M,80 +,2343,38668
+Orange Nose,BC,BC,1999,T,20-34,2417,15419
+Orange Nose,BC,BC,1999,T,35-49,11661,82017
+Orange Nose,BC,BC,1999,T,50-64,21884,201715
+Orange Nose,BC,BC,1999,T,65-79,18824,245868
+Orange Nose,BC,BC,1999,T,80 +,6000,115345
+Orange Nose,BC,BC,2000,F,20-34,1380,9363
+Orange Nose,BC,BC,2000,F,35-49,6084,44659
+Orange Nose,BC,BC,2000,F,50-64,11667,112673
+Orange Nose,BC,BC,2000,F,65-79,9898,141453
+Orange Nose,BC,BC,2000,F,80 +,3698,82591
+Orange Nose,BC,BC,2000,M,20-34,1178,6447
+Orange Nose,BC,BC,2000,M,35-49,6207,43073
+Orange Nose,BC,BC,2000,M,50-64,11242,107064
+Orange Nose,BC,BC,2000,M,65-79,9027,118704
+Orange Nose,BC,BC,2000,M,80 +,2436,42964
+Orange Nose,BC,BC,2000,T,20-34,2559,15811
+Orange Nose,BC,BC,2000,T,35-49,12292,87732
+Orange Nose,BC,BC,2000,T,50-64,22914,219753
+Orange Nose,BC,BC,2000,T,65-79,18929,260295
+Orange Nose,BC,BC,2000,T,80 +,6148,126141
+Orange Nose,BC,BC,2001,F,20-34,1411,9512
+Orange Nose,BC,BC,2001,F,35-49,6170,47308
+Orange Nose,BC,BC,2001,F,50-64,12156,122064
+Orange Nose,BC,BC,2001,F,65-79,9774,148013
+Orange Nose,BC,BC,2001,F,80 +,3715,89282
+Orange Nose,BC,BC,2001,M,20-34,1192,6600
+Orange Nose,BC,BC,2001,M,35-49,6280,45686
+Orange Nose,BC,BC,2001,M,50-64,11830,116330
+Orange Nose,BC,BC,2001,M,65-79,9090,126321
+Orange Nose,BC,BC,2001,M,80 +,2503,47313
+Orange Nose,BC,BC,2001,T,20-34,2603,16112
+Orange Nose,BC,BC,2001,T,35-49,12451,92995
+Orange Nose,BC,BC,2001,T,50-64,23988,238405
+Orange Nose,BC,BC,2001,T,65-79,18872,274453
+Orange Nose,BC,BC,2001,T,80 +,6232,137128
+Orange Nose,HA-01,01 Interior,1999,F,20-34,172,1268
+Orange Nose,HA-01,01 Interior,1999,F,35-49,824,6132
+Orange Nose,HA-01,01 Interior,1999,F,50-64,1909,18484
+Orange Nose,HA-01,01 Interior,1999,F,65-79,1980,26249
+Orange Nose,HA-01,01 Interior,1999,F,80 +,639,13489
+Orange Nose,HA-01,01 Interior,1999,M,20-34,128,745
+Orange Nose,HA-01,01 Interior,1999,M,35-49,764,5674
+Orange Nose,HA-01,01 Interior,1999,M,50-64,1913,16545
+Orange Nose,HA-01,01 Interior,1999,M,65-79,1901,22225
+Orange Nose,HA-01,01 Interior,1999,M,80 +,506,7193
+Orange Nose,HA-01,01 Interior,1999,T,20-34,300,2014
+Orange Nose,HA-01,01 Interior,1999,T,35-49,1589,11807
+Orange Nose,HA-01,01 Interior,1999,T,50-64,3823,35031
+Orange Nose,HA-01,01 Interior,1999,T,65-79,3882,48486
+Orange Nose,HA-01,01 Interior,1999,T,80 +,1152,20782
+Orange Nose,HA-01,01 Interior,2000,F,20-34,169,1290
+Orange Nose,HA-01,01 Interior,2000,F,35-49,868,6479
+Orange Nose,HA-01,01 Interior,2000,F,50-64,2007,19939
+Orange Nose,HA-01,01 Interior,2000,F,65-79,1904,27600
+Orange Nose,HA-01,01 Interior,2000,F,80 +,686,14767
+Orange Nose,HA-01,01 Interior,2000,M,20-34,116,749
+Orange Nose,HA-01,01 Interior,2000,M,35-49,788,5951
+Orange Nose,HA-01,01 Interior,2000,M,50-64,1874,17976
+Orange Nose,HA-01,01 Interior,2000,M,65-79,1919,23837
+Orange Nose,HA-01,01 Interior,2000,M,80 +,480,8068
+Orange Nose,HA-01,01 Interior,2000,T,20-34,285,2039
+Orange Nose,HA-01,01 Interior,2000,T,35-49,1657,12430
+Orange Nose,HA-01,01 Interior,2000,T,50-64,3881,37917
+Orange Nose,HA-01,01 Interior,2000,T,65-79,3823,51447
+Orange Nose,HA-01,01 Interior,2000,T,80 +,1168,22920
+Orange Nose,HA-01,01 Interior,2001,F,20-34,181,1308
+Orange Nose,HA-01,01 Interior,2001,F,35-49,871,6731
+Orange Nose,HA-01,01 Interior,2001,F,50-64,2099,21554
+Orange Nose,HA-01,01 Interior,2001,F,65-79,1993,29016
+Orange Nose,HA-01,01 Interior,2001,F,80 +,752,16054
+Orange Nose,HA-01,01 Interior,2001,M,20-34,134,778
+Orange Nose,HA-01,01 Interior,2001,M,35-49,750,6097
+Orange Nose,HA-01,01 Interior,2001,M,50-64,2042,19499
+Orange Nose,HA-01,01 Interior,2001,M,65-79,1998,25638
+Orange Nose,HA-01,01 Interior,2001,M,80 +,549,8977
+Orange Nose,HA-01,01 Interior,2001,T,20-34,315,2086
+Orange Nose,HA-01,01 Interior,2001,T,35-49,1621,12828
+Orange Nose,HA-01,01 Interior,2001,T,50-64,4141,41056
+Orange Nose,HA-01,01 Interior,2001,T,65-79,3992,54662
+Orange Nose,HA-01,01 Interior,2001,T,80 +,1308,25116
+Orange Nose,HA-02,02 Fraser,1999,F,20-34,534,3622
+Orange Nose,HA-02,02 Fraser,1999,F,35-49,2153,14996
+Orange Nose,HA-02,02 Fraser,1999,F,50-64,3663,34265
+Orange Nose,HA-02,02 Fraser,1999,F,65-79,2994,42664
+Orange Nose,HA-02,02 Fraser,1999,F,80 +,1067,23295
+Orange Nose,HA-02,02 Fraser,1999,M,20-34,453,2355
+Orange Nose,HA-02,02 Fraser,1999,M,35-49,2221,15478
+Orange Nose,HA-02,02 Fraser,1999,M,50-64,3501,33135
+Orange Nose,HA-02,02 Fraser,1999,M,65-79,2648,34069
+Orange Nose,HA-02,02 Fraser,1999,M,80 +,664,11971
+Orange Nose,HA-02,02 Fraser,1999,T,20-34,987,5977
+Orange Nose,HA-02,02 Fraser,1999,T,35-49,4375,30474
+Orange Nose,HA-02,02 Fraser,1999,T,50-64,7165,67405
+Orange Nose,HA-02,02 Fraser,1999,T,65-79,5645,76804
+Orange Nose,HA-02,02 Fraser,1999,T,80 +,1738,35534
+Orange Nose,HA-02,02 Fraser,2000,F,20-34,519,3618
+Orange Nose,HA-02,02 Fraser,2000,F,35-49,2248,16371
+Orange Nose,HA-02,02 Fraser,2000,F,50-64,3894,37546
+Orange Nose,HA-02,02 Fraser,2000,F,65-79,3074,44928
+Orange Nose,HA-02,02 Fraser,2000,F,80 +,1032,25372
+Orange Nose,HA-02,02 Fraser,2000,M,20-34,487,2487
+Orange Nose,HA-02,02 Fraser,2000,M,35-49,2396,16730
+Orange Nose,HA-02,02 Fraser,2000,M,50-64,3736,36368
+Orange Nose,HA-02,02 Fraser,2000,M,65-79,2721,36529
+Orange Nose,HA-02,02 Fraser,2000,M,80 +,672,13201
+Orange Nose,HA-02,02 Fraser,2000,T,20-34,1007,6106
+Orange Nose,HA-02,02 Fraser,2000,T,35-49,4644,33102
+Orange Nose,HA-02,02 Fraser,2000,T,50-64,7632,73919
+Orange Nose,HA-02,02 Fraser,2000,T,65-79,5799,81520
+Orange Nose,HA-02,02 Fraser,2000,T,80 +,1711,38827
+Orange Nose,HA-02,02 Fraser,2001,F,20-34,577,3763
+Orange Nose,HA-02,02 Fraser,2001,F,35-49,2305,17727
+Orange Nose,HA-02,02 Fraser,2001,F,50-64,4070,41228
+Orange Nose,HA-02,02 Fraser,2001,F,65-79,2909,47056
+Orange Nose,HA-02,02 Fraser,2001,F,80 +,999,27452
+Orange Nose,HA-02,02 Fraser,2001,M,20-34,485,2613
+Orange Nose,HA-02,02 Fraser,2001,M,35-49,2501,18190
+Orange Nose,HA-02,02 Fraser,2001,M,50-64,3796,39858
+Orange Nose,HA-02,02 Fraser,2001,M,65-79,2535,38870
+Orange Nose,HA-02,02 Fraser,2001,M,80 +,641,14602
+Orange Nose,HA-02,02 Fraser,2001,T,20-34,1062,6376
+Orange Nose,HA-02,02 Fraser,2001,T,35-49,4807,35918
+Orange Nose,HA-02,02 Fraser,2001,T,50-64,7868,81089
+Orange Nose,HA-02,02 Fraser,2001,T,65-79,5447,85981
+Orange Nose,HA-02,02 Fraser,2001,T,80 +,1644,42288
+Orange Nose,HA-03,03 Vancouver Coastal,1999,F,20-34,254,1785
+Orange Nose,HA-03,03 Vancouver Coastal,1999,F,35-49,1385,9584
+Orange Nose,HA-03,03 Vancouver Coastal,1999,F,50-64,2468,23501
+Orange Nose,HA-03,03 Vancouver Coastal,1999,F,65-79,2368,31489
+Orange Nose,HA-03,03 Vancouver Coastal,1999,F,80 +,932,19096
+Orange Nose,HA-03,03 Vancouver Coastal,1999,M,20-34,263,1663
+Orange Nose,HA-03,03 Vancouver Coastal,1999,M,35-49,1359,9677
+Orange Nose,HA-03,03 Vancouver Coastal,1999,M,50-64,2425,22440
+Orange Nose,HA-03,03 Vancouver Coastal,1999,M,65-79,2048,25850
+Orange Nose,HA-03,03 Vancouver Coastal,1999,M,80 +,457,9029
+Orange Nose,HA-03,03 Vancouver Coastal,1999,T,20-34,518,3449
+Orange Nose,HA-03,03 Vancouver Coastal,1999,T,35-49,2744,19262
+Orange Nose,HA-03,03 Vancouver Coastal,1999,T,50-64,4894,45946
+Orange Nose,HA-03,03 Vancouver Coastal,1999,T,65-79,4417,57354
+Orange Nose,HA-03,03 Vancouver Coastal,1999,T,80 +,1390,28207
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,20-34,285,1791
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,35-49,1454,10176
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,50-64,2677,25339
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,65-79,2417,33173
+Orange Nose,HA-03,03 Vancouver Coastal,2000,F,80 +,968,20567
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,20-34,306,1675
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,35-49,1629,10496
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,50-64,2624,24453
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,65-79,2036,27416
+Orange Nose,HA-03,03 Vancouver Coastal,2000,M,80 +,575,9964
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,20-34,591,3467
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,35-49,3084,20673
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,50-64,5302,49795
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,65-79,4453,60605
+Orange Nose,HA-03,03 Vancouver Coastal,2000,T,80 +,1543,30595
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,20-34,294,1791
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,35-49,1460,10690
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,50-64,2890,27176
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,65-79,2295,34597
+Orange Nose,HA-03,03 Vancouver Coastal,2001,F,80 +,890,21941
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,20-34,306,1671
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,35-49,1556,11032
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,50-64,2762,26355
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,65-79,2011,28844
+Orange Nose,HA-03,03 Vancouver Coastal,2001,M,80 +,501,10801
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,20-34,600,3463
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,35-49,3016,21723
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,50-64,5653,53531
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,65-79,4308,63453
+Orange Nose,HA-03,03 Vancouver Coastal,2001,T,80 +,1391,32795
+Orange Nose,HA-04,04 Vancouver Island,1999,F,20-34,236,1668
+Orange Nose,HA-04,04 Vancouver Island,1999,F,35-49,1031,7480
+Orange Nose,HA-04,04 Vancouver Island,1999,F,50-64,2171,19270
+Orange Nose,HA-04,04 Vancouver Island,1999,F,65-79,2065,27520
+Orange Nose,HA-04,04 Vancouver Island,1999,F,80 +,877,17618
+Orange Nose,HA-04,04 Vancouver Island,1999,M,20-34,158,910
+Orange Nose,HA-04,04 Vancouver Island,1999,M,35-49,870,6167
+Orange Nose,HA-04,04 Vancouver Island,1999,M,50-64,2082,18176
+Orange Nose,HA-04,04 Vancouver Island,1999,M,65-79,1950,23033
+Orange Nose,HA-04,04 Vancouver Island,1999,M,80 +,614,9095
+Orange Nose,HA-04,04 Vancouver Island,1999,T,20-34,395,2579
+Orange Nose,HA-04,04 Vancouver Island,1999,T,35-49,1901,13647
+Orange Nose,HA-04,04 Vancouver Island,1999,T,50-64,4254,37449
+Orange Nose,HA-04,04 Vancouver Island,1999,T,65-79,4020,50599
+Orange Nose,HA-04,04 Vancouver Island,1999,T,80 +,1496,26861
+Orange Nose,HA-04,04 Vancouver Island,2000,F,20-34,291,1785
+Orange Nose,HA-04,04 Vancouver Island,2000,F,35-49,972,7857
+Orange Nose,HA-04,04 Vancouver Island,2000,F,50-64,2238,21163
+Orange Nose,HA-04,04 Vancouver Island,2000,F,65-79,2080,28690
+Orange Nose,HA-04,04 Vancouver Island,2000,F,80 +,916,19094
+Orange Nose,HA-04,04 Vancouver Island,2000,M,20-34,165,944
+Orange Nose,HA-04,04 Vancouver Island,2000,M,35-49,880,6408
+Orange Nose,HA-04,04 Vancouver Island,2000,M,50-64,2140,19818
+Orange Nose,HA-04,04 Vancouver Island,2000,M,65-79,1878,24333
+Orange Nose,HA-04,04 Vancouver Island,2000,M,80 +,629,10212
+Orange Nose,HA-04,04 Vancouver Island,2000,T,20-34,457,2730
+Orange Nose,HA-04,04 Vancouver Island,2000,T,35-49,1852,14265
+Orange Nose,HA-04,04 Vancouver Island,2000,T,50-64,4379,40985
+Orange Nose,HA-04,04 Vancouver Island,2000,T,65-79,3959,53061
+Orange Nose,HA-04,04 Vancouver Island,2000,T,80 +,1550,29450
+Orange Nose,HA-04,04 Vancouver Island,2001,F,20-34,249,1819
+Orange Nose,HA-04,04 Vancouver Island,2001,F,35-49,1046,8249
+Orange Nose,HA-04,04 Vancouver Island,2001,F,50-64,2270,23042
+Orange Nose,HA-04,04 Vancouver Island,2001,F,65-79,2170,29935
+Orange Nose,HA-04,04 Vancouver Island,2001,F,80 +,941,20676
+Orange Nose,HA-04,04 Vancouver Island,2001,M,20-34,161,963
+Orange Nose,HA-04,04 Vancouver Island,2001,M,35-49,915,6689
+Orange Nose,HA-04,04 Vancouver Island,2001,M,50-64,2231,21586
+Orange Nose,HA-04,04 Vancouver Island,2001,M,65-79,2053,26057
+Orange Nose,HA-04,04 Vancouver Island,2001,M,80 +,711,11239
+Orange Nose,HA-04,04 Vancouver Island,2001,T,20-34,410,2783
+Orange Nose,HA-04,04 Vancouver Island,2001,T,35-49,1962,14939
+Orange Nose,HA-04,04 Vancouver Island,2001,T,50-64,4502,44631
+Orange Nose,HA-04,04 Vancouver Island,2001,T,65-79,4226,56028
+Orange Nose,HA-04,04 Vancouver Island,2001,T,80 +,1655,32044
+Orange Nose,HA-05,05 Northern,1999,F,20-34,105,788
+Orange Nose,HA-05,05 Northern,1999,F,35-49,529,3378
+Orange Nose,HA-05,05 Northern,1999,F,50-64,773,7423
+Orange Nose,HA-05,05 Northern,1999,F,65-79,374,6289
+Orange Nose,HA-05,05 Northern,1999,F,80 +,113,2316
+Orange Nose,HA-05,05 Northern,1999,M,20-34,90,502
+Orange Nose,HA-05,05 Northern,1999,M,35-49,463,3054
+Orange Nose,HA-05,05 Northern,1999,M,50-64,826,7255
+Orange Nose,HA-05,05 Northern,1999,M,65-79,449,5704
+Orange Nose,HA-05,05 Northern,1999,M,80 +,98,1290
+Orange Nose,HA-05,05 Northern,1999,T,20-34,196,1291
+Orange Nose,HA-05,05 Northern,1999,T,35-49,992,6432
+Orange Nose,HA-05,05 Northern,1999,T,50-64,1599,14681
+Orange Nose,HA-05,05 Northern,1999,T,65-79,823,12012
+Orange Nose,HA-05,05 Northern,1999,T,80 +,213,3647
+Orange Nose,HA-05,05 Northern,2000,F,20-34,105,796
+Orange Nose,HA-05,05 Northern,2000,F,35-49,512,3554
+Orange Nose,HA-05,05 Northern,2000,F,50-64,806,8110
+Orange Nose,HA-05,05 Northern,2000,F,65-79,402,6677
+Orange Nose,HA-05,05 Northern,2000,F,80 +,84,2526
+Orange Nose,HA-05,05 Northern,2000,M,20-34,82,499
+Orange Nose,HA-05,05 Northern,2000,M,35-49,459,3197
+Orange Nose,HA-05,05 Northern,2000,M,50-64,786,7772
+Orange Nose,HA-05,05 Northern,2000,M,65-79,437,6223
+Orange Nose,HA-05,05 Northern,2000,M,80 +,74,1419
+Orange Nose,HA-05,05 Northern,2000,T,20-34,188,1295
+Orange Nose,HA-05,05 Northern,2000,T,35-49,972,6752
+Orange Nose,HA-05,05 Northern,2000,T,50-64,1594,15886
+Orange Nose,HA-05,05 Northern,2000,T,65-79,839,12913
+Orange Nose,HA-05,05 Northern,2000,T,80 +,158,3982
+Orange Nose,HA-05,05 Northern,2001,F,20-34,104,774
+Orange Nose,HA-05,05 Northern,2001,F,35-49,472,3741
+Orange Nose,HA-05,05 Northern,2001,F,50-64,787,8665
+Orange Nose,HA-05,05 Northern,2001,F,65-79,393,7049
+Orange Nose,HA-05,05 Northern,2001,F,80 +,116,2824
+Orange Nose,HA-05,05 Northern,2001,M,20-34,85,491
+Orange Nose,HA-05,05 Northern,2001,M,35-49,494,3387
+Orange Nose,HA-05,05 Northern,2001,M,50-64,944,8544
+Orange Nose,HA-05,05 Northern,2001,M,65-79,478,6631
+Orange Nose,HA-05,05 Northern,2001,M,80 +,94,1597
+Orange Nose,HA-05,05 Northern,2001,T,20-34,190,1266
+Orange Nose,HA-05,05 Northern,2001,T,35-49,966,7128
+Orange Nose,HA-05,05 Northern,2001,T,50-64,1732,17212
+Orange Nose,HA-05,05 Northern,2001,T,65-79,873,13691
+Orange Nose,HA-05,05 Northern,2001,T,80 +,211,4455
+Orange Nose,HSDA-11,11 East Kootenay,1999,F,20-34,14,139
+Orange Nose,HSDA-11,11 East Kootenay,1999,F,35-49,77,628
+Orange Nose,HSDA-11,11 East Kootenay,1999,F,50-64,200,2043
+Orange Nose,HSDA-11,11 East Kootenay,1999,F,65-79,152,2415
+Orange Nose,HSDA-11,11 East Kootenay,1999,F,80 +,59,1277
+Orange Nose,HSDA-11,11 East Kootenay,1999,M,20-34,15,90
+Orange Nose,HSDA-11,11 East Kootenay,1999,M,35-49,78,610
+Orange Nose,HSDA-11,11 East Kootenay,1999,M,50-64,198,1755
+Orange Nose,HSDA-11,11 East Kootenay,1999,M,65-79,155,2105
+Orange Nose,HSDA-11,11 East Kootenay,1999,M,80 +,40,610
+Orange Nose,HSDA-11,11 East Kootenay,1999,T,20-34,30,229
+Orange Nose,HSDA-11,11 East Kootenay,1999,T,35-49,156,1239
+Orange Nose,HSDA-11,11 East Kootenay,1999,T,50-64,398,3798
+Orange Nose,HSDA-11,11 East Kootenay,1999,T,65-79,307,4525
+Orange Nose,HSDA-11,11 East Kootenay,1999,T,80 +,101,1893
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,20-34,19,138
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,35-49,113,681
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,50-64,208,2195
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,65-79,169,2505
+Orange Nose,HSDA-11,11 East Kootenay,2000,F,80 +,58,1369
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,20-34,5,85
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,35-49,89,627
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,50-64,199,1897
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,65-79,207,2273
+Orange Nose,HSDA-11,11 East Kootenay,2000,M,80 +,46,694
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,20-34,24,223
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,35-49,202,1309
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,50-64,407,4093
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,65-79,376,4781
+Orange Nose,HSDA-11,11 East Kootenay,2000,T,80 +,104,2068
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,20-34,15,135
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,35-49,87,683
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,50-64,181,2306
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,65-79,155,2552
+Orange Nose,HSDA-11,11 East Kootenay,2001,F,80 +,57,1489
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,20-34,11,87
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,35-49,63,615
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,50-64,202,2025
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,65-79,210,2437
+Orange Nose,HSDA-11,11 East Kootenay,2001,M,80 +,54,772
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,20-34,27,223
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,35-49,151,1299
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,50-64,384,4331
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,65-79,366,4991
+Orange Nose,HSDA-11,11 East Kootenay,2001,T,80 +,111,2266
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,F,20-34,21,134
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,F,35-49,82,720
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,F,50-64,205,2211
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,F,65-79,182,2934
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,F,80 +,66,1628
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,M,20-34,15,67
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,M,35-49,98,690
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,M,50-64,227,1990
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,M,65-79,167,2352
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,M,80 +,37,767
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,T,20-34,37,201
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,T,35-49,180,1410
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,T,50-64,432,4201
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,T,65-79,350,5287
+Orange Nose,HSDA-12,12 Kootenay Boundary,1999,T,80 +,103,2407
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,20-34,14,125
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,35-49,91,737
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,50-64,216,2301
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,65-79,206,3042
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,F,80 +,75,1728
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,20-34,10,66
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,35-49,67,690
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,50-64,218,2109
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,65-79,180,2489
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,M,80 +,55,811
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,20-34,24,191
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,35-49,158,1428
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,50-64,435,4410
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,65-79,386,5532
+Orange Nose,HSDA-12,12 Kootenay Boundary,2000,T,80 +,130,2548
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,20-34,14,121
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,35-49,85,722
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,50-64,228,2426
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,65-79,210,3158
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,F,80 +,77,1778
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,20-34,10,60
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,35-49,87,674
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,50-64,262,2223
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,65-79,191,2606
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,M,80 +,45,866
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,20-34,24,182
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,35-49,173,1397
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,50-64,491,4650
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,65-79,402,5764
+Orange Nose,HSDA-12,12 Kootenay Boundary,2001,T,80 +,122,2650
+Orange Nose,HSDA-13,13 Okanagan,1999,F,20-34,63,499
+Orange Nose,HSDA-13,13 Okanagan,1999,F,35-49,368,2570
+Orange Nose,HSDA-13,13 Okanagan,1999,F,50-64,904,8215
+Orange Nose,HSDA-13,13 Okanagan,1999,F,65-79,1176,13906
+Orange Nose,HSDA-13,13 Okanagan,1999,F,80 +,395,7688
+Orange Nose,HSDA-13,13 Okanagan,1999,M,20-34,50,344
+Orange Nose,HSDA-13,13 Okanagan,1999,M,35-49,330,2401
+Orange Nose,HSDA-13,13 Okanagan,1999,M,50-64,880,7343
+Orange Nose,HSDA-13,13 Okanagan,1999,M,65-79,1061,11741
+Orange Nose,HSDA-13,13 Okanagan,1999,M,80 +,323,4300
+Orange Nose,HSDA-13,13 Okanagan,1999,T,20-34,113,843
+Orange Nose,HSDA-13,13 Okanagan,1999,T,35-49,698,4972
+Orange Nose,HSDA-13,13 Okanagan,1999,T,50-64,1785,15558
+Orange Nose,HSDA-13,13 Okanagan,1999,T,65-79,2238,25654
+Orange Nose,HSDA-13,13 Okanagan,1999,T,80 +,724,12044
+Orange Nose,HSDA-13,13 Okanagan,2000,F,20-34,68,521
+Orange Nose,HSDA-13,13 Okanagan,2000,F,35-49,392,2764
+Orange Nose,HSDA-13,13 Okanagan,2000,F,50-64,957,8939
+Orange Nose,HSDA-13,13 Okanagan,2000,F,65-79,1015,14606
+Orange Nose,HSDA-13,13 Okanagan,2000,F,80 +,396,8427
+Orange Nose,HSDA-13,13 Okanagan,2000,M,20-34,50,326
+Orange Nose,HSDA-13,13 Okanagan,2000,M,35-49,385,2590
+Orange Nose,HSDA-13,13 Okanagan,2000,M,50-64,839,8041
+Orange Nose,HSDA-13,13 Okanagan,2000,M,65-79,1033,12541
+Orange Nose,HSDA-13,13 Okanagan,2000,M,80 +,285,4857
+Orange Nose,HSDA-13,13 Okanagan,2000,T,20-34,119,848
+Orange Nose,HSDA-13,13 Okanagan,2000,T,35-49,777,5355
+Orange Nose,HSDA-13,13 Okanagan,2000,T,50-64,1797,16981
+Orange Nose,HSDA-13,13 Okanagan,2000,T,65-79,2048,27153
+Orange Nose,HSDA-13,13 Okanagan,2000,T,80 +,682,13331
+Orange Nose,HSDA-13,13 Okanagan,2001,F,20-34,83,560
+Orange Nose,HSDA-13,13 Okanagan,2001,F,35-49,413,2918
+Orange Nose,HSDA-13,13 Okanagan,2001,F,50-64,1032,9767
+Orange Nose,HSDA-13,13 Okanagan,2001,F,65-79,1115,15415
+Orange Nose,HSDA-13,13 Okanagan,2001,F,80 +,473,9248
+Orange Nose,HSDA-13,13 Okanagan,2001,M,20-34,64,339
+Orange Nose,HSDA-13,13 Okanagan,2001,M,35-49,331,2701
+Orange Nose,HSDA-13,13 Okanagan,2001,M,50-64,928,8750
+Orange Nose,HSDA-13,13 Okanagan,2001,M,65-79,1048,13489
+Orange Nose,HSDA-13,13 Okanagan,2001,M,80 +,333,5353
+Orange Nose,HSDA-13,13 Okanagan,2001,T,20-34,147,899
+Orange Nose,HSDA-13,13 Okanagan,2001,T,35-49,744,5619
+Orange Nose,HSDA-13,13 Okanagan,2001,T,50-64,1960,18519
+Orange Nose,HSDA-13,13 Okanagan,2001,T,65-79,2164,28910
+Orange Nose,HSDA-13,13 Okanagan,2001,T,80 +,811,14654
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,20-34,73,495
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,35-49,296,2213
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,50-64,598,6014
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,65-79,468,6992
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,F,80 +,117,2895
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,20-34,46,243
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,35-49,256,1971
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,50-64,607,5457
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,65-79,516,6026
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,M,80 +,104,1515
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,20-34,119,739
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,35-49,553,4184
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,50-64,1207,11473
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,65-79,986,13020
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,1999,T,80 +,223,4436
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,20-34,66,504
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,35-49,271,2294
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,50-64,624,6502
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,65-79,513,7446
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,F,80 +,155,3242
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,20-34,49,271
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,35-49,246,2042
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,50-64,616,5928
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,65-79,498,6534
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,M,80 +,93,1704
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,20-34,116,775
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,35-49,518,4337
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,50-64,1240,12432
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,65-79,1012,13980
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2000,T,80 +,250,4972
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,20-34,67,490
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,35-49,284,2406
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,50-64,657,7053
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,65-79,511,7890
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,F,80 +,144,3538
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,20-34,48,290
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,35-49,268,2105
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,50-64,648,6499
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,65-79,547,7105
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,M,80 +,117,1986
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,20-34,116,781
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,35-49,552,4512
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,50-64,1305,13554
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,65-79,1059,14996
+Orange Nose,HSDA-14,14 Thompson Cariboo Shuswap,2001,T,80 +,262,5544
+Orange Nose,HSDA-21,21 Fraser East,1999,F,20-34,80,600
+Orange Nose,HSDA-21,21 Fraser East,1999,F,35-49,296,2183
+Orange Nose,HSDA-21,21 Fraser East,1999,F,50-64,615,5659
+Orange Nose,HSDA-21,21 Fraser East,1999,F,65-79,608,8628
+Orange Nose,HSDA-21,21 Fraser East,1999,F,80 +,205,4480
+Orange Nose,HSDA-21,21 Fraser East,1999,M,20-34,73,384
+Orange Nose,HSDA-21,21 Fraser East,1999,M,35-49,330,2366
+Orange Nose,HSDA-21,21 Fraser East,1999,M,50-64,549,5232
+Orange Nose,HSDA-21,21 Fraser East,1999,M,65-79,590,7031
+Orange Nose,HSDA-21,21 Fraser East,1999,M,80 +,136,2555
+Orange Nose,HSDA-21,21 Fraser East,1999,T,20-34,153,985
+Orange Nose,HSDA-21,21 Fraser East,1999,T,35-49,626,4549
+Orange Nose,HSDA-21,21 Fraser East,1999,T,50-64,1165,10894
+Orange Nose,HSDA-21,21 Fraser East,1999,T,65-79,1201,15687
+Orange Nose,HSDA-21,21 Fraser East,1999,T,80 +,342,7082
+Orange Nose,HSDA-21,21 Fraser East,2000,F,20-34,85,648
+Orange Nose,HSDA-21,21 Fraser East,2000,F,35-49,335,2399
+Orange Nose,HSDA-21,21 Fraser East,2000,F,50-64,629,6163
+Orange Nose,HSDA-21,21 Fraser East,2000,F,65-79,641,9102
+Orange Nose,HSDA-21,21 Fraser East,2000,F,80 +,183,4919
+Orange Nose,HSDA-21,21 Fraser East,2000,M,20-34,74,400
+Orange Nose,HSDA-21,21 Fraser East,2000,M,35-49,368,2551
+Orange Nose,HSDA-21,21 Fraser East,2000,M,50-64,592,5775
+Orange Nose,HSDA-21,21 Fraser East,2000,M,65-79,561,7465
+Orange Nose,HSDA-21,21 Fraser East,2000,M,80 +,145,2848
+Orange Nose,HSDA-21,21 Fraser East,2000,T,20-34,160,1049
+Orange Nose,HSDA-21,21 Fraser East,2000,T,35-49,704,4950
+Orange Nose,HSDA-21,21 Fraser East,2000,T,50-64,1222,11940
+Orange Nose,HSDA-21,21 Fraser East,2000,T,65-79,1203,16590
+Orange Nose,HSDA-21,21 Fraser East,2000,T,80 +,330,7821
+Orange Nose,HSDA-21,21 Fraser East,2001,F,20-34,94,661
+Orange Nose,HSDA-21,21 Fraser East,2001,F,35-49,362,2667
+Orange Nose,HSDA-21,21 Fraser East,2001,F,50-64,671,6849
+Orange Nose,HSDA-21,21 Fraser East,2001,F,65-79,614,9538
+Orange Nose,HSDA-21,21 Fraser East,2001,F,80 +,229,5379
+Orange Nose,HSDA-21,21 Fraser East,2001,M,20-34,95,452
+Orange Nose,HSDA-21,21 Fraser East,2001,M,35-49,385,2780
+Orange Nose,HSDA-21,21 Fraser East,2001,M,50-64,672,6463
+Orange Nose,HSDA-21,21 Fraser East,2001,M,65-79,551,8028
+Orange Nose,HSDA-21,21 Fraser East,2001,M,80 +,138,3150
+Orange Nose,HSDA-21,21 Fraser East,2001,T,20-34,190,1113
+Orange Nose,HSDA-21,21 Fraser East,2001,T,35-49,748,5447
+Orange Nose,HSDA-21,21 Fraser East,2001,T,50-64,1344,13313
+Orange Nose,HSDA-21,21 Fraser East,2001,T,65-79,1165,17584
+Orange Nose,HSDA-21,21 Fraser East,2001,T,80 +,370,8578
+Orange Nose,HSDA-22,22 Fraser North,1999,F,20-34,193,1136
+Orange Nose,HSDA-22,22 Fraser North,1999,F,35-49,806,5554
+Orange Nose,HSDA-22,22 Fraser North,1999,F,50-64,1343,12783
+Orange Nose,HSDA-22,22 Fraser North,1999,F,65-79,1102,15441
+Orange Nose,HSDA-22,22 Fraser North,1999,F,80 +,395,8849
+Orange Nose,HSDA-22,22 Fraser North,1999,M,20-34,166,872
+Orange Nose,HSDA-22,22 Fraser North,1999,M,35-49,908,5842
+Orange Nose,HSDA-22,22 Fraser North,1999,M,50-64,1332,12405
+Orange Nose,HSDA-22,22 Fraser North,1999,M,65-79,933,12222
+Orange Nose,HSDA-22,22 Fraser North,1999,M,80 +,232,4081
+Orange Nose,HSDA-22,22 Fraser North,1999,T,20-34,360,2009
+Orange Nose,HSDA-22,22 Fraser North,1999,T,35-49,1715,11396
+Orange Nose,HSDA-22,22 Fraser North,1999,T,50-64,2675,25190
+Orange Nose,HSDA-22,22 Fraser North,1999,T,65-79,2035,27683
+Orange Nose,HSDA-22,22 Fraser North,1999,T,80 +,629,13047
+Orange Nose,HSDA-22,22 Fraser North,2000,F,20-34,202,1144
+Orange Nose,HSDA-22,22 Fraser North,2000,F,35-49,934,6135
+Orange Nose,HSDA-22,22 Fraser North,2000,F,50-64,1466,13858
+Orange Nose,HSDA-22,22 Fraser North,2000,F,65-79,1103,16247
+Orange Nose,HSDA-22,22 Fraser North,2000,F,80 +,389,9533
+Orange Nose,HSDA-22,22 Fraser North,2000,M,20-34,184,928
+Orange Nose,HSDA-22,22 Fraser North,2000,M,35-49,980,6361
+Orange Nose,HSDA-22,22 Fraser North,2000,M,50-64,1336,13448
+Orange Nose,HSDA-22,22 Fraser North,2000,M,65-79,1023,13230
+Orange Nose,HSDA-22,22 Fraser North,2000,M,80 +,214,4436
+Orange Nose,HSDA-22,22 Fraser North,2000,T,20-34,387,2072
+Orange Nose,HSDA-22,22 Fraser North,2000,T,35-49,1914,12496
+Orange Nose,HSDA-22,22 Fraser North,2000,T,50-64,2802,27307
+Orange Nose,HSDA-22,22 Fraser North,2000,T,65-79,2128,29497
+Orange Nose,HSDA-22,22 Fraser North,2000,T,80 +,605,14077
+Orange Nose,HSDA-22,22 Fraser North,2001,F,20-34,214,1207
+Orange Nose,HSDA-22,22 Fraser North,2001,F,35-49,921,6677
+Orange Nose,HSDA-22,22 Fraser North,2001,F,50-64,1480,14956
+Orange Nose,HSDA-22,22 Fraser North,2001,F,65-79,1039,17057
+Orange Nose,HSDA-22,22 Fraser North,2001,F,80 +,352,10095
+Orange Nose,HSDA-22,22 Fraser North,2001,M,20-34,166,922
+Orange Nose,HSDA-22,22 Fraser North,2001,M,35-49,964,6833
+Orange Nose,HSDA-22,22 Fraser North,2001,M,50-64,1358,14574
+Orange Nose,HSDA-22,22 Fraser North,2001,M,65-79,897,14023
+Orange Nose,HSDA-22,22 Fraser North,2001,M,80 +,228,4842
+Orange Nose,HSDA-22,22 Fraser North,2001,T,20-34,380,2129
+Orange Nose,HSDA-22,22 Fraser North,2001,T,35-49,1886,13511
+Orange Nose,HSDA-22,22 Fraser North,2001,T,50-64,2840,29532
+Orange Nose,HSDA-22,22 Fraser North,2001,T,65-79,1937,31101
+Orange Nose,HSDA-22,22 Fraser North,2001,T,80 +,581,15040
+Orange Nose,HSDA-23,23 Fraser South,1999,F,20-34,260,1884
+Orange Nose,HSDA-23,23 Fraser South,1999,F,35-49,1050,7258
+Orange Nose,HSDA-23,23 Fraser South,1999,F,50-64,1705,15822
+Orange Nose,HSDA-23,23 Fraser South,1999,F,65-79,1283,18594
+Orange Nose,HSDA-23,23 Fraser South,1999,F,80 +,466,9965
+Orange Nose,HSDA-23,23 Fraser South,1999,M,20-34,213,1098
+Orange Nose,HSDA-23,23 Fraser South,1999,M,35-49,982,7270
+Orange Nose,HSDA-23,23 Fraser South,1999,M,50-64,1619,15497
+Orange Nose,HSDA-23,23 Fraser South,1999,M,65-79,1124,14814
+Orange Nose,HSDA-23,23 Fraser South,1999,M,80 +,296,5334
+Orange Nose,HSDA-23,23 Fraser South,1999,T,20-34,473,2983
+Orange Nose,HSDA-23,23 Fraser South,1999,T,35-49,2033,14528
+Orange Nose,HSDA-23,23 Fraser South,1999,T,50-64,3324,31320
+Orange Nose,HSDA-23,23 Fraser South,1999,T,65-79,2408,33434
+Orange Nose,HSDA-23,23 Fraser South,1999,T,80 +,766,15403
+Orange Nose,HSDA-23,23 Fraser South,2000,F,20-34,231,1824
+Orange Nose,HSDA-23,23 Fraser South,2000,F,35-49,978,7837
+Orange Nose,HSDA-23,23 Fraser South,2000,F,50-64,1798,17524
+Orange Nose,HSDA-23,23 Fraser South,2000,F,65-79,1329,19579
+Orange Nose,HSDA-23,23 Fraser South,2000,F,80 +,458,10918
+Orange Nose,HSDA-23,23 Fraser South,2000,M,20-34,228,1159
+Orange Nose,HSDA-23,23 Fraser South,2000,M,35-49,1046,7818
+Orange Nose,HSDA-23,23 Fraser South,2000,M,50-64,1806,17145
+Orange Nose,HSDA-23,23 Fraser South,2000,M,65-79,1137,15833
+Orange Nose,HSDA-23,23 Fraser South,2000,M,80 +,313,5916
+Orange Nose,HSDA-23,23 Fraser South,2000,T,20-34,459,2984
+Orange Nose,HSDA-23,23 Fraser South,2000,T,35-49,2025,15655
+Orange Nose,HSDA-23,23 Fraser South,2000,T,50-64,3606,34671
+Orange Nose,HSDA-23,23 Fraser South,2000,T,65-79,2467,35433
+Orange Nose,HSDA-23,23 Fraser South,2000,T,80 +,776,16927
+Orange Nose,HSDA-23,23 Fraser South,2001,F,20-34,268,1893
+Orange Nose,HSDA-23,23 Fraser South,2001,F,35-49,1021,8383
+Orange Nose,HSDA-23,23 Fraser South,2001,F,50-64,1918,19422
+Orange Nose,HSDA-23,23 Fraser South,2001,F,65-79,1256,20459
+Orange Nose,HSDA-23,23 Fraser South,2001,F,80 +,416,11977
+Orange Nose,HSDA-23,23 Fraser South,2001,M,20-34,223,1239
+Orange Nose,HSDA-23,23 Fraser South,2001,M,35-49,1151,8576
+Orange Nose,HSDA-23,23 Fraser South,2001,M,50-64,1766,18821
+Orange Nose,HSDA-23,23 Fraser South,2001,M,65-79,1087,16818
+Orange Nose,HSDA-23,23 Fraser South,2001,M,80 +,273,6609
+Orange Nose,HSDA-23,23 Fraser South,2001,T,20-34,491,3133
+Orange Nose,HSDA-23,23 Fraser South,2001,T,35-49,2172,16959
+Orange Nose,HSDA-23,23 Fraser South,2001,T,50-64,3684,38243
+Orange Nose,HSDA-23,23 Fraser South,2001,T,65-79,2345,37296
+Orange Nose,HSDA-23,23 Fraser South,2001,T,80 +,691,18669
+Orange Nose,HSDA-31,31 Richmond,1999,F,20-34,41,271
+Orange Nose,HSDA-31,31 Richmond,1999,F,35-49,284,1774
+Orange Nose,HSDA-31,31 Richmond,1999,F,50-64,529,4478
+Orange Nose,HSDA-31,31 Richmond,1999,F,65-79,397,5374
+Orange Nose,HSDA-31,31 Richmond,1999,F,80 +,114,2692
+Orange Nose,HSDA-31,31 Richmond,1999,M,20-34,43,256
+Orange Nose,HSDA-31,31 Richmond,1999,M,35-49,250,1852
+Orange Nose,HSDA-31,31 Richmond,1999,M,50-64,475,4433
+Orange Nose,HSDA-31,31 Richmond,1999,M,65-79,339,4202
+Orange Nose,HSDA-31,31 Richmond,1999,M,80 +,54,1356
+Orange Nose,HSDA-31,31 Richmond,1999,T,20-34,85,528
+Orange Nose,HSDA-31,31 Richmond,1999,T,35-49,534,3627
+Orange Nose,HSDA-31,31 Richmond,1999,T,50-64,1005,8912
+Orange Nose,HSDA-31,31 Richmond,1999,T,65-79,737,9578
+Orange Nose,HSDA-31,31 Richmond,1999,T,80 +,169,4064
+Orange Nose,HSDA-31,31 Richmond,2000,F,20-34,43,283
+Orange Nose,HSDA-31,31 Richmond,2000,F,35-49,273,1852
+Orange Nose,HSDA-31,31 Richmond,2000,F,50-64,565,5001
+Orange Nose,HSDA-31,31 Richmond,2000,F,65-79,411,5679
+Orange Nose,HSDA-31,31 Richmond,2000,F,80 +,122,2938
+Orange Nose,HSDA-31,31 Richmond,2000,M,20-34,48,262
+Orange Nose,HSDA-31,31 Richmond,2000,M,35-49,290,2006
+Orange Nose,HSDA-31,31 Richmond,2000,M,50-64,504,4895
+Orange Nose,HSDA-31,31 Richmond,2000,M,65-79,358,4525
+Orange Nose,HSDA-31,31 Richmond,2000,M,80 +,90,1554
+Orange Nose,HSDA-31,31 Richmond,2000,T,20-34,92,546
+Orange Nose,HSDA-31,31 Richmond,2000,T,35-49,564,3859
+Orange Nose,HSDA-31,31 Richmond,2000,T,50-64,1070,9898
+Orange Nose,HSDA-31,31 Richmond,2000,T,65-79,769,10205
+Orange Nose,HSDA-31,31 Richmond,2000,T,80 +,213,4502
+Orange Nose,HSDA-31,31 Richmond,2001,F,20-34,47,280
+Orange Nose,HSDA-31,31 Richmond,2001,F,35-49,296,2021
+Orange Nose,HSDA-31,31 Richmond,2001,F,50-64,611,5576
+Orange Nose,HSDA-31,31 Richmond,2001,F,65-79,402,5975
+Orange Nose,HSDA-31,31 Richmond,2001,F,80 +,120,3221
+Orange Nose,HSDA-31,31 Richmond,2001,M,20-34,63,281
+Orange Nose,HSDA-31,31 Richmond,2001,M,35-49,334,2145
+Orange Nose,HSDA-31,31 Richmond,2001,M,50-64,595,5435
+Orange Nose,HSDA-31,31 Richmond,2001,M,65-79,332,4904
+Orange Nose,HSDA-31,31 Richmond,2001,M,80 +,75,1700
+Orange Nose,HSDA-31,31 Richmond,2001,T,20-34,110,562
+Orange Nose,HSDA-31,31 Richmond,2001,T,35-49,631,4166
+Orange Nose,HSDA-31,31 Richmond,2001,T,50-64,1207,11012
+Orange Nose,HSDA-31,31 Richmond,2001,T,65-79,734,10880
+Orange Nose,HSDA-31,31 Richmond,2001,T,80 +,196,4930
+Orange Nose,HSDA-32,32 Vancouver,1999,F,20-34,158,1108
+Orange Nose,HSDA-32,32 Vancouver,1999,F,35-49,799,5634
+Orange Nose,HSDA-32,32 Vancouver,1999,F,50-64,1323,13481
+Orange Nose,HSDA-32,32 Vancouver,1999,F,65-79,1342,18317
+Orange Nose,HSDA-32,32 Vancouver,1999,F,80 +,570,11687
+Orange Nose,HSDA-32,32 Vancouver,1999,M,20-34,170,1113
+Orange Nose,HSDA-32,32 Vancouver,1999,M,35-49,835,5951
+Orange Nose,HSDA-32,32 Vancouver,1999,M,50-64,1351,12646
+Orange Nose,HSDA-32,32 Vancouver,1999,M,65-79,1154,15175
+Orange Nose,HSDA-32,32 Vancouver,1999,M,80 +,289,5439
+Orange Nose,HSDA-32,32 Vancouver,1999,T,20-34,329,2222
+Orange Nose,HSDA-32,32 Vancouver,1999,T,35-49,1634,11586
+Orange Nose,HSDA-32,32 Vancouver,1999,T,50-64,2675,26130
+Orange Nose,HSDA-32,32 Vancouver,1999,T,65-79,2496,33501
+Orange Nose,HSDA-32,32 Vancouver,1999,T,80 +,861,17181
+Orange Nose,HSDA-32,32 Vancouver,2000,F,20-34,187,1116
+Orange Nose,HSDA-32,32 Vancouver,2000,F,35-49,890,6028
+Orange Nose,HSDA-32,32 Vancouver,2000,F,50-64,1432,14352
+Orange Nose,HSDA-32,32 Vancouver,2000,F,65-79,1398,19278
+Orange Nose,HSDA-32,32 Vancouver,2000,F,80 +,604,12494
+Orange Nose,HSDA-32,32 Vancouver,2000,M,20-34,207,1118
+Orange Nose,HSDA-32,32 Vancouver,2000,M,35-49,1005,6430
+Orange Nose,HSDA-32,32 Vancouver,2000,M,50-64,1476,13676
+Orange Nose,HSDA-32,32 Vancouver,2000,M,65-79,1190,16089
+Orange Nose,HSDA-32,32 Vancouver,2000,M,80 +,348,5928
+Orange Nose,HSDA-32,32 Vancouver,2000,T,20-34,394,2235
+Orange Nose,HSDA-32,32 Vancouver,2000,T,35-49,1895,12458
+Orange Nose,HSDA-32,32 Vancouver,2000,T,50-64,2908,28030
+Orange Nose,HSDA-32,32 Vancouver,2000,T,65-79,2588,35378
+Orange Nose,HSDA-32,32 Vancouver,2000,T,80 +,952,18468
+Orange Nose,HSDA-32,32 Vancouver,2001,F,20-34,185,1126
+Orange Nose,HSDA-32,32 Vancouver,2001,F,35-49,880,6268
+Orange Nose,HSDA-32,32 Vancouver,2001,F,50-64,1574,15158
+Orange Nose,HSDA-32,32 Vancouver,2001,F,65-79,1301,20053
+Orange Nose,HSDA-32,32 Vancouver,2001,F,80 +,501,13103
+Orange Nose,HSDA-32,32 Vancouver,2001,M,20-34,197,1092
+Orange Nose,HSDA-32,32 Vancouver,2001,M,35-49,921,6753
+Orange Nose,HSDA-32,32 Vancouver,2001,M,50-64,1492,14594
+Orange Nose,HSDA-32,32 Vancouver,2001,M,65-79,1159,16776
+Orange Nose,HSDA-32,32 Vancouver,2001,M,80 +,282,6348
+Orange Nose,HSDA-32,32 Vancouver,2001,T,20-34,383,2218
+Orange Nose,HSDA-32,32 Vancouver,2001,T,35-49,1802,13022
+Orange Nose,HSDA-32,32 Vancouver,2001,T,50-64,3066,29753
+Orange Nose,HSDA-32,32 Vancouver,2001,T,65-79,2461,36838
+Orange Nose,HSDA-32,32 Vancouver,2001,T,80 +,784,19486
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,20-34,54,405
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,35-49,302,2175
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,50-64,615,5542
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,65-79,628,7797
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,F,80 +,246,4716
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,20-34,49,293
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,35-49,273,1873
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,50-64,598,5360
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,65-79,555,6473
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,M,80 +,113,2233
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,20-34,103,698
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,35-49,575,4048
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,50-64,1213,10902
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,65-79,1184,14274
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,1999,T,80 +,360,6962
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,20-34,54,392
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,35-49,290,2294
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,50-64,679,5985
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,65-79,607,8215
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,F,80 +,241,5134
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,20-34,50,293
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,35-49,333,2059
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,50-64,643,5881
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,65-79,487,6802
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,M,80 +,137,2481
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,20-34,104,685
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,35-49,624,4354
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,50-64,1323,11866
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,65-79,1095,15021
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2000,T,80 +,378,7625
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,20-34,60,384
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,35-49,284,2400
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,50-64,704,6441
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,65-79,591,8568
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,F,80 +,268,5615
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,20-34,46,297
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,35-49,299,2133
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,50-64,675,6324
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,65-79,519,7162
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,M,80 +,143,2752
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,20-34,107,681
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,35-49,583,4533
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,50-64,1379,12766
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,65-79,1112,15734
+Orange Nose,HSDA-33,33 North Shore/Coast Garibaldi,2001,T,80 +,411,8378
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,F,20-34,137,895
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,F,35-49,509,3749
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,F,50-64,1083,9192
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,F,65-79,1075,14047
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,F,80 +,553,11080
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,M,20-34,89,533
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,M,35-49,463,3186
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,M,50-64,975,8538
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,M,65-79,903,10982
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,M,80 +,374,5463
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,T,20-34,226,1428
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,T,35-49,972,6935
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,T,50-64,2059,17731
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,T,65-79,1981,25055
+Orange Nose,HSDA-41,41 South Vancouver Island,1999,T,80 +,929,16612
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,20-34,198,1022
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,35-49,503,3957
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,50-64,1111,10027
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,65-79,1034,14367
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,F,80 +,522,11826
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,20-34,98,546
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,35-49,412,3285
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,50-64,939,9177
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,65-79,815,11287
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,M,80 +,364,6066
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,20-34,296,1568
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,35-49,916,7242
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,50-64,2051,19206
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,65-79,1850,25676
+Orange Nose,HSDA-41,41 South Vancouver Island,2000,T,80 +,888,17951
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,20-34,137,1014
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,35-49,519,4183
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,50-64,1078,10845
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,65-79,1046,14669
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,F,80 +,572,12623
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,20-34,91,542
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,35-49,436,3398
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,50-64,1030,9952
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,65-79,923,11816
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,M,80 +,389,6567
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,20-34,228,1557
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,35-49,955,7581
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,50-64,2108,20800
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,65-79,1972,26507
+Orange Nose,HSDA-41,41 South Vancouver Island,2001,T,80 +,964,19243
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,F,20-34,64,530
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,F,35-49,335,2418
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,F,50-64,708,6887
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,F,65-79,744,9892
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,F,80 +,255,4951
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,M,20-34,48,264
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,M,35-49,267,2026
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,M,50-64,733,6507
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,M,65-79,757,8731
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,M,80 +,185,2744
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,T,20-34,112,795
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,T,35-49,602,4445
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,T,50-64,1442,13395
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,T,65-79,1502,18633
+Orange Nose,HSDA-42,42 Central Vancouver Island,1999,T,80 +,444,7748
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,20-34,61,527
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,35-49,304,2560
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,50-64,751,7545
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,65-79,753,10460
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,F,80 +,296,5533
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,20-34,45,267
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,35-49,315,2146
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,50-64,814,7202
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,65-79,752,9381
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,M,80 +,209,3133
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,20-34,107,795
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,35-49,619,4706
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,50-64,1567,14749
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,65-79,1506,19850
+Orange Nose,HSDA-42,42 Central Vancouver Island,2000,T,80 +,508,8724
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,20-34,75,556
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,35-49,338,2654
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,50-64,782,8293
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,65-79,801,11118
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,F,80 +,285,6073
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,20-34,46,279
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,35-49,309,2249
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,50-64,800,7898
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,65-79,838,10259
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,M,80 +,245,3531
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,20-34,121,835
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,35-49,648,4903
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,50-64,1582,16192
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,65-79,1639,21384
+Orange Nose,HSDA-42,42 Central Vancouver Island,2001,T,80 +,530,9654
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,F,20-34,34,242
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,F,35-49,185,1313
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,F,50-64,379,3191
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,F,65-79,245,3581
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,F,80 +,68,1586
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,M,20-34,21,113
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,M,35-49,139,953
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,M,50-64,373,3130
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,M,65-79,289,3319
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,M,80 +,54,887
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,T,20-34,56,355
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,T,35-49,325,2266
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,T,50-64,752,6322
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,T,65-79,536,6910
+Orange Nose,HSDA-43,43 North Vancouver Island,1999,T,80 +,122,2500
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,20-34,31,236
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,35-49,164,1339
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,50-64,375,3590
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,65-79,291,3862
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,F,80 +,96,1734
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,20-34,22,130
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,35-49,152,976
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,50-64,385,3439
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,65-79,309,3663
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,M,80 +,56,1012
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,20-34,54,367
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,35-49,316,2316
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,50-64,760,7029
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,65-79,601,7534
+Orange Nose,HSDA-43,43 North Vancouver Island,2000,T,80 +,154,2773
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,20-34,36,248
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,35-49,189,1412
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,50-64,410,3903
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,65-79,322,4146
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,F,80 +,83,1979
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,20-34,23,142
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,35-49,169,1041
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,50-64,401,3735
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,65-79,291,3982
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,M,80 +,75,1140
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,20-34,59,391
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,35-49,358,2453
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,50-64,811,7639
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,65-79,614,8136
+Orange Nose,HSDA-43,43 North Vancouver Island,2001,T,80 +,160,3147
+Orange Nose,HSDA-51,51 Northwest,1999,F,20-34,36,242
+Orange Nose,HSDA-51,51 Northwest,1999,F,35-49,160,1027
+Orange Nose,HSDA-51,51 Northwest,1999,F,50-64,254,2109
+Orange Nose,HSDA-51,51 Northwest,1999,F,65-79,99,1746
+Orange Nose,HSDA-51,51 Northwest,1999,F,80 +,21,566
+Orange Nose,HSDA-51,51 Northwest,1999,M,20-34,25,139
+Orange Nose,HSDA-51,51 Northwest,1999,M,35-49,131,820
+Orange Nose,HSDA-51,51 Northwest,1999,M,50-64,217,2145
+Orange Nose,HSDA-51,51 Northwest,1999,M,65-79,129,1638
+Orange Nose,HSDA-51,51 Northwest,1999,M,80 +,31,379
+Orange Nose,HSDA-51,51 Northwest,1999,T,20-34,61,382
+Orange Nose,HSDA-51,51 Northwest,1999,T,35-49,291,1847
+Orange Nose,HSDA-51,51 Northwest,1999,T,50-64,472,4254
+Orange Nose,HSDA-51,51 Northwest,1999,T,65-79,228,3393
+Orange Nose,HSDA-51,51 Northwest,1999,T,80 +,54,955
+Orange Nose,HSDA-51,51 Northwest,2000,F,20-34,39,246
+Orange Nose,HSDA-51,51 Northwest,2000,F,35-49,148,1085
+Orange Nose,HSDA-51,51 Northwest,2000,F,50-64,208,2268
+Orange Nose,HSDA-51,51 Northwest,2000,F,65-79,98,1832
+Orange Nose,HSDA-51,51 Northwest,2000,F,80 +,23,624
+Orange Nose,HSDA-51,51 Northwest,2000,M,20-34,23,133
+Orange Nose,HSDA-51,51 Northwest,2000,M,35-49,128,839
+Orange Nose,HSDA-51,51 Northwest,2000,M,50-64,200,2250
+Orange Nose,HSDA-51,51 Northwest,2000,M,65-79,108,1728
+Orange Nose,HSDA-51,51 Northwest,2000,M,80 +,16,405
+Orange Nose,HSDA-51,51 Northwest,2000,T,20-34,63,379
+Orange Nose,HSDA-51,51 Northwest,2000,T,35-49,277,1925
+Orange Nose,HSDA-51,51 Northwest,2000,T,50-64,409,4518
+Orange Nose,HSDA-51,51 Northwest,2000,T,65-79,206,3567
+Orange Nose,HSDA-51,51 Northwest,2000,T,80 +,40,1038
+Orange Nose,HSDA-51,51 Northwest,2001,F,20-34,33,242
+Orange Nose,HSDA-51,51 Northwest,2001,F,35-49,154,1134
+Orange Nose,HSDA-51,51 Northwest,2001,F,50-64,189,2396
+Orange Nose,HSDA-51,51 Northwest,2001,F,65-79,85,1912
+Orange Nose,HSDA-51,51 Northwest,2001,F,80 +,30,709
+Orange Nose,HSDA-51,51 Northwest,2001,M,20-34,18,111
+Orange Nose,HSDA-51,51 Northwest,2001,M,35-49,138,925
+Orange Nose,HSDA-51,51 Northwest,2001,M,50-64,268,2457
+Orange Nose,HSDA-51,51 Northwest,2001,M,65-79,118,1821
+Orange Nose,HSDA-51,51 Northwest,2001,M,80 +,33,469
+Orange Nose,HSDA-51,51 Northwest,2001,T,20-34,51,354
+Orange Nose,HSDA-51,51 Northwest,2001,T,35-49,293,2059
+Orange Nose,HSDA-51,51 Northwest,2001,T,50-64,457,4853
+Orange Nose,HSDA-51,51 Northwest,2001,T,65-79,203,3738
+Orange Nose,HSDA-51,51 Northwest,2001,T,80 +,64,1187
+Orange Nose,HSDA-52,52 Northern Interior,1999,F,20-34,51,424
+Orange Nose,HSDA-52,52 Northern Interior,1999,F,35-49,227,1696
+Orange Nose,HSDA-52,52 Northern Interior,1999,F,50-64,342,3930
+Orange Nose,HSDA-52,52 Northern Interior,1999,F,65-79,190,3395
+Orange Nose,HSDA-52,52 Northern Interior,1999,F,80 +,55,1259
+Orange Nose,HSDA-52,52 Northern Interior,1999,M,20-34,49,276
+Orange Nose,HSDA-52,52 Northern Interior,1999,M,35-49,219,1637
+Orange Nose,HSDA-52,52 Northern Interior,1999,M,50-64,418,3881
+Orange Nose,HSDA-52,52 Northern Interior,1999,M,65-79,215,2984
+Orange Nose,HSDA-52,52 Northern Interior,1999,M,80 +,46,685
+Orange Nose,HSDA-52,52 Northern Interior,1999,T,20-34,101,701
+Orange Nose,HSDA-52,52 Northern Interior,1999,T,35-49,447,3333
+Orange Nose,HSDA-52,52 Northern Interior,1999,T,50-64,760,7811
+Orange Nose,HSDA-52,52 Northern Interior,1999,T,65-79,405,6383
+Orange Nose,HSDA-52,52 Northern Interior,1999,T,80 +,101,1963
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,20-34,40,414
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,35-49,249,1760
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,50-64,420,4309
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,65-79,209,3605
+Orange Nose,HSDA-52,52 Northern Interior,2000,F,80 +,39,1361
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,20-34,40,278
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,35-49,242,1714
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,50-64,419,4175
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,65-79,232,3315
+Orange Nose,HSDA-52,52 Northern Interior,2000,M,80 +,40,760
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,20-34,81,692
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,35-49,491,3474
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,50-64,840,8486
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,65-79,441,6924
+Orange Nose,HSDA-52,52 Northern Interior,2000,T,80 +,80,2134
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,20-34,57,406
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,35-49,219,1841
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,50-64,426,4578
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,65-79,217,3813
+Orange Nose,HSDA-52,52 Northern Interior,2001,F,80 +,61,1532
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,20-34,54,299
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,35-49,241,1750
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,50-64,483,4565
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,65-79,251,3557
+Orange Nose,HSDA-52,52 Northern Interior,2001,M,80 +,40,828
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,20-34,111,706
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,35-49,460,3591
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,50-64,909,9145
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,65-79,469,7373
+Orange Nose,HSDA-52,52 Northern Interior,2001,T,80 +,102,2373
+Orange Nose,HSDA-53,53 Northeast,1999,F,20-34,18,121
+Orange Nose,HSDA-53,53 Northeast,1999,F,35-49,142,654
+Orange Nose,HSDA-53,53 Northeast,1999,F,50-64,175,1383
+Orange Nose,HSDA-53,53 Northeast,1999,F,65-79,84,1146
+Orange Nose,HSDA-53,53 Northeast,1999,F,80 +,37,490
+Orange Nose,HSDA-53,53 Northeast,1999,M,20-34,14,86
+Orange Nose,HSDA-53,53 Northeast,1999,M,35-49,111,596
+Orange Nose,HSDA-53,53 Northeast,1999,M,50-64,190,1229
+Orange Nose,HSDA-53,53 Northeast,1999,M,65-79,104,1082
+Orange Nose,HSDA-53,53 Northeast,1999,M,80 +,20,224
+Orange Nose,HSDA-53,53 Northeast,1999,T,20-34,32,208
+Orange Nose,HSDA-53,53 Northeast,1999,T,35-49,253,1250
+Orange Nose,HSDA-53,53 Northeast,1999,T,50-64,366,2614
+Orange Nose,HSDA-53,53 Northeast,1999,T,65-79,189,2236
+Orange Nose,HSDA-53,53 Northeast,1999,T,80 +,57,728
+Orange Nose,HSDA-53,53 Northeast,2000,F,20-34,25,135
+Orange Nose,HSDA-53,53 Northeast,2000,F,35-49,114,708
+Orange Nose,HSDA-53,53 Northeast,2000,F,50-64,178,1532
+Orange Nose,HSDA-53,53 Northeast,2000,F,65-79,94,1239
+Orange Nose,HSDA-53,53 Northeast,2000,F,80 +,21,539
+Orange Nose,HSDA-53,53 Northeast,2000,M,20-34,18,87
+Orange Nose,HSDA-53,53 Northeast,2000,M,35-49,89,643
+Orange Nose,HSDA-53,53 Northeast,2000,M,50-64,166,1346
+Orange Nose,HSDA-53,53 Northeast,2000,M,65-79,96,1178
+Orange Nose,HSDA-53,53 Northeast,2000,M,80 +,16,254
+Orange Nose,HSDA-53,53 Northeast,2000,T,20-34,43,223
+Orange Nose,HSDA-53,53 Northeast,2000,T,35-49,203,1352
+Orange Nose,HSDA-53,53 Northeast,2000,T,50-64,344,2881
+Orange Nose,HSDA-53,53 Northeast,2000,T,65-79,191,2421
+Orange Nose,HSDA-53,53 Northeast,2000,T,80 +,38,808
+Orange Nose,HSDA-53,53 Northeast,2001,F,20-34,13,125
+Orange Nose,HSDA-53,53 Northeast,2001,F,35-49,98,765
+Orange Nose,HSDA-53,53 Northeast,2001,F,50-64,172,1690
+Orange Nose,HSDA-53,53 Northeast,2001,F,65-79,90,1323
+Orange Nose,HSDA-53,53 Northeast,2001,F,80 +,23,581
+Orange Nose,HSDA-53,53 Northeast,2001,M,20-34,13,80
+Orange Nose,HSDA-53,53 Northeast,2001,M,35-49,114,711
+Orange Nose,HSDA-53,53 Northeast,2001,M,50-64,192,1521
+Orange Nose,HSDA-53,53 Northeast,2001,M,65-79,109,1253
+Orange Nose,HSDA-53,53 Northeast,2001,M,80 +,20,299
+Orange Nose,HSDA-53,53 Northeast,2001,T,20-34,27,205
+Orange Nose,HSDA-53,53 Northeast,2001,T,35-49,213,1477
+Orange Nose,HSDA-53,53 Northeast,2001,T,50-64,365,3213
+Orange Nose,HSDA-53,53 Northeast,2001,T,65-79,199,2579
+Orange Nose,HSDA-53,53 Northeast,2001,T,80 +,45,894
