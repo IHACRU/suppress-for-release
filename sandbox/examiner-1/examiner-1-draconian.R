@@ -9,7 +9,7 @@ source("./manipulation/function-support.R")  # assisting functions for data wran
 source("./manipulation/object-glossary.R")   # object definitions
 source("./scripts/common-functions.R")       # reporting functions and quick views
 source("./scripts/graphing/graph-presets.R") # font and color conventions
-source("./scripts/suppression-functions.R")  # mechanized suppression of small cells
+source("./scripts/./scripts/suppression-functions-1-draconian.R")  # mechanized suppression of small cells
 
 # ---- load-packages -----------------------------------------------------------
 library(ggplot2)  # graphing
@@ -100,6 +100,9 @@ d_combined_tests <- df %>% combine_logical_tests()
 # ) %>% saveRDS("../../dss-ialh/graph-making-scenarios/data-public/raw/scenario-2/example-data.rds")
 
 # ---- graphing-functions ------------------------
+base::source("./scripts/suppression-functions-1-draconian.R")  # mechanized suppression of small cells
+
+
 # prepare the context for suppression = smallest decision frame
 # create a list object containing required data in required shape to generate graphs
 l <- df %>% prepare_for_tiling(bc_health_map)
