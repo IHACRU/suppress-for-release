@@ -736,7 +736,7 @@ make_tile_graph <- function(
     ,"1-small-cell"        = "#fc8d62" # red
     ,"2-recalc-triplet"   = "#66c2a5" # green
     ,"3-single-sup"       = "#8da0cb" # blue
-    ,"3-single-sup-draco" = "grey90" 
+    ,"3-single-sup-draco" = "#cbd5e8" # pale blue
   )
   
   g <- l$values_long %>%  
@@ -825,7 +825,7 @@ print_tile_graph <- function(
   path_save = paste0(path_folder,disease,"-",year,".png")
   png(filename = path_save, width = 900, height = 500,res = 100)
   # d %>% make_tile_graph(meta, censor = "censor_activated")
-  d %>% make_tile_graph(meta)
+  d %>% make_tile_graph(meta,...)
   dev.off()
   
 }
