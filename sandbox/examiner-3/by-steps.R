@@ -85,7 +85,7 @@ make_tile_graph <- function(
       ,"1-small-cell"       = "#fc8d62" # red
       ,"2-recalc-triplet"   = "#66c2a5" # green
       ,"3-single-sup"       = "#8da0cb" # blue
-      ,"3-single-sup-draco" = NA # pale blue
+      ,"3-single-sup-draco" = "#8da0cb" # pale blue
     )
   }
   if(steps_displayed==2L){
