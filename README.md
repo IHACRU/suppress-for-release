@@ -1,3 +1,5 @@
+-  slides for [USING REPRODUCIBLE DATA VISUALIZATIONS TO AUGMENT DECISION-MAKING DURING SUPPRESSION OF SMALL COUNTS](https://raw.githack.com/IHACRU/suppress-for-release/master/libs/materials/koval-2020-suppress-for-release.pdf) - talk at the 2020 Conference of the International Population Data Linkkage Network, Adelaide, Australia (virtual) 
+
 # suppress-for-release
 
 Demonstrates the methods of suppressing small counts in a provincial surveillance system in preparation of data for public release.
