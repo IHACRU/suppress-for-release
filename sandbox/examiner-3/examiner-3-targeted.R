@@ -122,11 +122,11 @@ df %>% make_tile_graph(bc_health_map)
 # (2) a plot is committed to a hard digital form (PNG, JPG, PDF) 
 # can help us avoid going insane from trying to make it look right/useful on paper/screen
 # there are many decision about the appearance of the plot that needs to be scripted
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/",steps_displayed = 4L )
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/",steps_displayed = 3L )
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/",steps_displayed = 2L )
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/",steps_displayed = 1L )
-df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/",steps_displayed = 0L )
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/4-",steps_displayed = 4L )
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/3-",steps_displayed = 3L )
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/2-",steps_displayed = 2L )
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/1-",steps_displayed = 1L )
+df %>% print_tile_graph(bc_health_map, path_folder = "./sandbox/examiner-3/prints/0-",steps_displayed = 0L )
 # Note: Individual steps need to be created only for demonstration purposes, so they created files are renamed manually. 
 
 # so far, df referred to a single Data Frame = a context for a single suppression decision
