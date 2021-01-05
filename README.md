@@ -1,4 +1,10 @@
--  slides for [USING REPRODUCIBLE DATA VISUALIZATIONS TO AUGMENT DECISION-MAKING DURING SUPPRESSION OF SMALL COUNTS](https://raw.githack.com/IHACRU/suppress-for-release/master/libs/materials/koval-2020-suppress-for-release.pdf) - talk at the 2020 Conference of the International Population Data Linkkage Network, Adelaide, Australia (virtual) 
+# Publications and Presentations 
+
+- Koval, A., Smolina, K., & Leamon, A. (2020). Using Reproducible Data Visualizations to Augment Decision-Making During Suppression of Small Counts. International Journal of Population Data Science, 5(5). ( talk at the 2020 Conference of the International Population Data Linkkage Network, Adelaide, Australia (virtual) [slides](https://raw.githack.com/IHACRU/suppress-for-release/master/libs/materials/koval-2020-suppress-for-release.pdf))
+
+- Koval, A., Leamon, A., Smolina, K. (2019) Suppressing Small Counts for Public Release: Applications of Reproducible Analytics in Chronic Disease Surveillance. Poster presented at the annual conference of the Canadian Association for Health Services and Policy Research, Halifax, NS. ([link](http://andriy.rbind.io/publication/koval-2019-suppress-for-release/))
+
+- Koval, A., Leamon, A., (2018) Constructing Workflows for Reproducible Analytics: Suppressing small counts for provincial chronic disease dashboard. Invited talk at the colloquium series by the Institute on Aging and Lifelong Health, Victoria, BC. ([link](https://drive.google.com/file/d/189-CqQO_MklrEBtowV4GfjQV_emvDkME/view))
 
 # suppress-for-release
 
